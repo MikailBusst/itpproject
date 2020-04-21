@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+            
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+            
+        <link href="css/main.css" rel="stylesheet">
+            
+         <!-- Bootstrap core JavaScript -->
+         <script src="vendor/jquery/jquery.min.js"></script>
+         
+         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+         
+         <script src="js/login_validation.js"></script>
+         
+         <script src="https://kit.fontawesome.com/f7797c3998.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body class="login" onload="check_size()" onresize="check_resize()">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.php">ITP Project</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link current-page" href="login.html">Sign In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="student_table.html">Student Table</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="student_registration.html">Register</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        </nav>
+        
+        <div class="main">
+            <div class="title">
+                <h1>Sign In</h1>
+            </div>
+            
+            <div class="form-area">
+                <form id="login" name="login" onsubmit="check_empty()">
+                    <card class="card-login" style="margin-bottom: 100px;">
+                        
+                        <card-left class="create-account">
+                            <p>Don't have an account?</p>
+                            <p><a href="signup.html">Create Account</a></p>
+                        </card-left><login class="login-area">
+                            <p> <i style="margin-right: 10px;" class="fas fa-envelope" aria-hidden="true"></i> Email</p>
+                            <input name="email" type="text" placeholder="example@email.com">
+                            <p style="margin-top: 50px;"><i style="margin-right: 10px;" class="fas fa-key" aria-hidden="true"></i>Password</p>
+                            <input name="password" class="effect-16" type="password" placeholder="Password">
+                            <div class="error" style="margin: 0px auto; width: 100%; margin-bottom: 10px; margin-top: 10px;"><p id="login_error"></p></div>
+                            <div class="login_links">
+                                <p style="font-size: 20px;"><a href="retrieve_email.html">Forgot Password?</a></p>
+                            </div>
+                            <div class="submit-mobile">
+                                <input id="loginbtn" ontouchstart="" type="submit" value="Sign In" style="margin-left: -10px;">
+                            </div>
+                            <login-below class="create-account-2">
+                                <p>Don't have an account? <a href="signup.html">Create Account</a></p>
+                            </login-below>
+                        </login>
+                    </card>
+                </form>
+                <p id="width"></p>
+            </div>
+        </div>
+    </body>
+</html>
