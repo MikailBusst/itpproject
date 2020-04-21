@@ -19,6 +19,14 @@
          <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
          
          <script src="js/signup_validation.js"></script>
+         
+         <style>
+             .error {
+                 width: 100%;
+                 margin-top: -10px;
+                 margin-bottom: 50px;
+             }
+        </style>
     </head>
     
     <body onload="set_values()" onresize="check_resize()">
@@ -72,13 +80,13 @@
                         <div class="error" style="margin-top: 10px; margin-bottom: 10px;"><p id="confirm_password_error"></p></div>
                         
                         <div class="card" style="border-bottom: none; width: 100%;">
-                            <div class="error" style="margin: 0 auto; margin-bottom: 30px; width: 100%;"><p id="master_error"></p></div>
+                            <div class="error"><p id="master_error"></p></div>
                         </div>
                         
                         
                        
                          <div class="card" style="border-bottom: none; width: 100%; margin-top: -40px;">
-                             <div class="proceed_section" id="proceed_section" style="margin-left: 0;">
+                             <div class="proceed_section" id="proceed_section">
                                 <input type="submit" ontouchstart="" value="Sign Up" style="width: 200px">
                             </div>
                     </div>

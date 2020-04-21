@@ -17,6 +17,12 @@
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         
         <script src="js/retrieve_email_validation.js"></script>
+        
+        <style>
+            .error {
+                margin-top: 30px;
+            }
+        </style>
     </head>
     
     <body class="body-desktop" onload="check_size()" onresize="check_resize()">
@@ -51,10 +57,10 @@
                 
                 <form name="retrieve_email" onsubmit="check_empty()">
                     <input name="email" type="text" onblur="email_validation()" placeholder="example@email.com" style="max-width: 400px; margin-top: 50px;">
-                    <div class="error" style="margin-bottom: 50px; font-weight: bold;"><p id="email_error"></p></div>
+                    <div class="error"><p id="email_error"></p></div>
                     
-                    <div class="card" style="border-bottom: none; padding-left: 0; width: 100%; margin-top: 80px;">
-                        <div class="proceed_section" id="proceed_section" style="margin-left: 0;">
+                    <div class="card" style="border-bottom: none; padding-left: 0; width: 100%; margin-top: 40px;">
+                        <div class="proceed_section" id="proceed_section">
                             <input type="submit" value="Send One Time Password  &#x276F;" style="width: 300px; margin-right: 10px; margin-left: 0px;"> <button onclick="cancel()" id="proceed-red">Cancel</button>
                         </div>
                     </div>

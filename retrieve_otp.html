@@ -17,6 +17,12 @@
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         
         <script src="js/verify_otp.js"></script>
+        
+        <style>
+            .error {
+                margin-top: 30px;
+            }
+        </style>
     </head>
     
     <body onload="check_size()" onresize="check_resize()">
@@ -52,11 +58,10 @@
                 
                 <form name="retrieve_otp" onsubmit="check_empty()">
                     <input name="password" type="password" onblur="password_validation()" placeholder="One Time Password" style="max-width: 400px; margin-top: 30px;">
-                    <div class="error" style="margin-bottom: 50px; font-weight: bold;"><p id="password_error"></p></div>
+                    <div class="error"><p id="password_error"></p></div>
                     
                     <div class="card" style="border-bottom: none; width: 100%;">
-                        <div class="error" style="margin-top: -20px; margin-bottom: 30px;"><p id="master_error"></p></div>
-                            <div class="proceed_section" id="proceed_section" style="margin-left: 0; padding-bottom: 10px;">
+                            <div class="proceed_section" id="proceed_section" style="padding-bottom: 10px;">
                                 <input type="submit" ontouchstart="" value="Validate  &#x276F;" style="width: 200px">
                             </div>
                     </div>

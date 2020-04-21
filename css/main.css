@@ -429,8 +429,8 @@ input[type=submit]:active{
     color: #B6B5B5;
 }
 
-.error{
-    margin-top: 20px;
+.error {
+    margin-bottom: 30px;
 }
 
 .error p{
@@ -1486,4 +1486,9 @@ p.subheader {
 
 #proceed_section {
     margin-top: -20px;
+    margin-left: 0px;
+}
+
+p#email_error, p#password_error {
+    font-weight: bold;
 }
