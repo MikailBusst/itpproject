@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="overflow-x: hidden;">
+<html>
     <head>
         <meta charset="utf-8">
          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,10 +23,35 @@
          <script src="js/submit_appendix_a_validation.js"></script>
          
          <style>
+             html, body {
+                 overflow-x: hidden;
+             }
+             
              .error {
                  margin-top: -30px;
                  margin-bottom: 50px;
              }
+         
+         h1 {
+             word-break: break-word;
+             margin-bottom: 20px;
+         }
+         
+         .progress {
+             margin-bottom: 20px;
+         }
+         
+         .progress-bar {
+             width: 67%;
+         }
+         
+         #proceed_section {
+             margin-left: 0;
+         }
+         
+         input[type=submit] {
+             width: 200px;
+         }
         </style>
          
          <noscript>
@@ -65,8 +90,8 @@
             <div class="card" style="margin-bottom: 30px; border-bottom: none;" onclick="window.location.href = 'itp_advisor_assigned.html'">
                 <button class="back-button">&#x276E; ITP Advisor</button>
             </div>
-            <div class="progress" style="margin-bottom: 20px;">
-              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:67%">
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                 <span class="sr-only">67% Complete</span>
               </div>
             </div>
@@ -75,7 +100,7 @@
                 <p class="subheader">Documents</p>
             </div>
             <div class="title">
-                <h1 style="word-break: break-word; margin-bottom: 20px;">Submit Appendix A</h1>
+                <h1>Submit Appendix A</h1>
             </div>
             
             <div class="card" style="border-bottom: 2px solid black; padding-bottom: 10px;">
@@ -105,20 +130,20 @@
                 <div class="upload_card">
                     <p>Letter of Undertaking</p>
                     <input type="file" ontouchstart="" id="undertaking" name="undertaking" class="file_submission" onchange="display_undertaking()">
-                        <p style="font-weight: 200; font-size: 20px;" id="undertaking_file_name"></p>
+                        <p id="undertaking_file_name"></p>
                 </div>
                 
                 <div class="upload_card">
                     <p>Offer Letter</p>
                     <input type="file" ontouchstart="" name="offer_letter" id="offer_letter" onchange="display_offer_letter()" class="file_submission">
-                        <p id="offer_letter_file_name" style="font-weight: 200; font-size: 20px;"></p>
+                        <p id="offer_letter_file_name"></p>
                 </div>
                 
             </div>
             <div class="card" style="border-bottom: none;">
                 <div class="error"><p id="master_error"></p></div>
-                <div class="proceed_section" id="proceed_section" style="margin-left: 0;">
-                    <input type="submit" ontouchstart="" value="Submit  &#x276F;" style="width: 200px;">
+                <div class="proceed_section" id="proceed_section">
+                    <input type="submit" ontouchstart="" value="Submit  &#x276F;">
                 </div>
             </div>
         </form>

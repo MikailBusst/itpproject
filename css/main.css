@@ -1286,7 +1286,7 @@ h3{
 
 
 .file_submission:hover::before, .file_submission_mobile:hover::before{
-    color: #B6B5B5;
+    background-color: #272727;
     cursor: pointer;
 }
 
