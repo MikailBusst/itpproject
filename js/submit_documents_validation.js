@@ -7,6 +7,11 @@ function check_size(){
     
     //document.getElementById("width").innerHTML = width;
     
+    if(width < 375) {
+        $("h1").removeClass("big_header");
+        $("h1").addClass("small_header");
+    }
+    
     if(width < 410){
         $("#proceed_section").removeClass("proceed_section");
         $("#proceed_section").addClass("proceed_section_mobile");
@@ -34,6 +39,15 @@ function check_resize(){
     var width = window.innerWidth;
     
     //document.getElementById("width").innerHTML = width;
+    
+    if(width < 375) {
+        $("h1").removeClass("big_header");
+        $("h1").addClass("small_header");
+    }
+    else {
+        $("h1").removeClass("small_header");
+        $("h1").addClass("big_header");
+    }
     
     if(width < 410){
           $("#proceed_section").removeClass("proceed_section");
