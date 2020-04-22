@@ -1215,10 +1215,6 @@ h3{
     margin-right: 10px;
 }
 
-document_card_mobile p{
-    
-}
-
 .download_section{
     margin: 0 auto;
     width: 95%;
@@ -1500,4 +1496,12 @@ p#email_error, p#password_error {
     margin: 0 auto;
     max-width: 1296px;
     margin-bottom: 40px;
+}
+
+card {
+    margin-bottom: 100px;
+}
+
+i {
+    margin-right: 10px;
 }
