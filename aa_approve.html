@@ -43,6 +43,20 @@
                  position: relative;
                  bottom: 250px;
              }
+         
+         h1 {
+             word-break: break-word;
+         }
+         
+         .error {
+             margin-bottom: 70px;
+         }
+         
+         input[type=submit] {
+             width: 250px;
+             margin-right: 10px;
+             margin-left: 0px;
+         }
         </style>
     </head>
     
@@ -74,9 +88,9 @@
                <p class="subheader">Approve Students</p>
            </div>
            <div class="title">
-               <h1 style="word-break: break-word;">ITP T3 2019/20 Placement Approval</h1>
+               <h1>ITP T3 2019/20 Placement Approval</h1>
            </div>
-           <div class="card" style="border-bottom: 2px solid black; padding-bottom: 10px;">
+           <div class="card" style="padding-bottom: 10px;">
                <p style="font-size: 25px; font-weight: 200;">Approve your students' ITP placement here.</p>
            </div>
            
@@ -111,9 +125,9 @@
                     </sectionrs>
                </div>
               <div class="card" style="border-bottom: none; padding-top: 0px;">
-                   <div class="error" style="margin-top: -20px; margin-bottom: 30px; margin-left: 1%;"><p id="master_error"></p></div>
-                   <div class="proceed_section" id="proceed_section" style="margin-left: 0;">
-                       <input type="submit" ontouchstart="" value="Save Changes" style="width: 250px; margin-right: 10px; margin-left: 0px;"> <button ontouchstart="" onclick="cancel()" id="proceed-red">Cancel</button>
+                   <div class="error"><p id="master_error"></p></div>
+                   <div class="proceed_section" id="proceed_section">
+                       <input type="submit" ontouchstart="" value="Save Changes"> <button ontouchstart="" onclick="cancel()" id="proceed-red">Cancel</button>
                    </div>
                </div>
            </form>
