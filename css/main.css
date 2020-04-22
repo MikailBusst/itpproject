@@ -1505,3 +1505,8 @@ card {
 i {
     margin-right: 10px;
 }
+
+p.subheader-bottom {
+    font-size: 25px;
+    font-weight: 200;
+}
