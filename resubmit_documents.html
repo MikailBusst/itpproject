@@ -22,6 +22,20 @@
          
          <script src="js/resubmit_documents.js"></script>
          
+         <style>
+             h1 {
+                 word-break: break-word;
+                 font-size: 47px;
+                 margin-bottom: 20px;
+             }
+         
+         input[type=submit] {
+             width: 250px;
+             margin-right: 10px;
+             margin-left: 0px;
+         }
+        </style>
+         
          <noscript>
              <style>
                  body{
@@ -59,7 +73,7 @@
                 <p class="subheader">Resubmit Documents</p>
             </div>
             <div class="title">
-                <h1 style="word-break: break-word; font-size: 47px; margin-bottom: 20px;">Submitted ITP Documents</h1>
+                <h1>Submitted ITP Documents</h1>
             </div>
             
             <div class="card" style="border-bottom: 2px solid black; padding-bottom: 10px;">
@@ -67,54 +81,54 @@
             </div>
             
             <form>
-                <div class="card" style="border: 3px solid black; border-radius: 10px; display: block; padding-left: 10px; padding-right: 10px;">
+                <div class="upload_card">
                     <p>Manual Registration Form</p>
                     <input type="file" id="manual_regisration_form" name="manual_registration_form" class="file_submission" onchange="display_manual_regisration_form()">
                         <p style="font-weight: 200; font-size: 20px;" id="manual_regisration_form_file_name">manual_registration.pdf</p>
                 </div>
-                <div class="card" style="border: 3px solid black; border-radius: 10px; display: block; padding-left: 10px; padding-right: 10px;">
+                <div class="upload_card">
                     <p>Checklist</p>
                     <input type="file" name="checklist" id="checklist" class="file_submission" onchange="display_checklist()">
                         <p id="checklist_file_name" style="font-weight: 200; font-size: 20px;">checklist.pdf</p>
                 </div>
-                <div class="card" style="border: 3px solid black; border-radius: 10px; display: block; padding-left: 10px; padding-right: 10px;">
+                <div class="upload_card">
                     <p>Online Transcripts</p>
                     <input type="file" name="online_transcripts" id="online_transcripts" onchange="display_online_transcripts()" class="file_submission">
                         <p id="online_transcripts_file_name" style="font-weight: 200; font-size: 20px;">transcripts.pdf</p>
                 </div>
-                <div class="card" style="border: 3px solid black; border-radius: 10px; display: block; padding-left: 10px; padding-right: 10px;">
+                <div class="upload_card">
                     <p>Course Structure</p>
                     <input type="file" name="course_structure" id="course_structure" onchange="display_course_structure()" class="file_submission">
                         <p style="font-weight: 200; font-size: 20px;" id="course_structure_file_name">course_structure.pdf</p>
                 </div>
-                <div class="card" style="border: 3px solid black; border-radius: 10px; display: block; padding-left: 10px; padding-right: 10px;">
+                <div class="upload_card">
                     <p>Insurance Payment Document (Original Copy)</p>
                     <input type="file" name="insurance" id="insurance" onchange="display_insurance()" class="file_submission">
                         <p style="font-weight: 200; font-size: 20px;" id="insurance_file_name">insurance.pdf</p>
                 </div>
-                <div class="card" style="border: 3px solid black; border-radius: 10px; display: block; padding-left: 10px; padding-right: 10px;">
+                <div class="upload_card">
                     <p>Resume</p>
                     <input type="file" name="resume" id="resume" onchange="display_resume()" class="file_submission">
                         <p style="font-weight: 200; font-size: 20px;" id="resume_file_name">cv.pdf</p>
                 </div>
-                <div class="card" style="border: 3px solid black; border-radius: 10px; display: block; padding-left: 10px; padding-right: 10px;">
+                <div class="upload_card">
                     <p>Sample Cover Letter</p>
                     <input type="file" name="cover_letter_file" id="cover_letter_file" onchange="display_cover_letter()" class="file_submission">
                         <p style="font-weight: 200; font-size: 20px;" id="cover_letter_file_name">Cover Letter 1.docx</p>
                 </div>
-                <div class="card" style="border: 3px solid black; border-radius: 10px; display: block; padding-left: 10px; padding-right: 10px;">
+                <div class="upload_card">
                     <p>Letter of Undertaking</p>
                     <input type="file" id="undertaking" name="undertaking" class="file_submission" onchange="display_undertaking()">
                         <p style="font-weight: 200; font-size: 20px;" id="undertaking_file_name">undertaking_letter.docx</p>
                 </div>
-                <div class="card" style="border: 3px solid black; border-radius: 10px; display: block; padding-left: 10px; padding-right: 10px;">
+                <div class="upload_card">
                     <p>Offer Letter</p>
                     <input type="file" name="offer_letter" id="offer_letter" onchange="display_offer_letter()" class="file_submission">
                         <p id="offer_letter_file_name" style="font-weight: 200; font-size: 20px;">offer_letter.pdf</p>
                 </div>
                 <div class="card" style="border-bottom: none;">
                     <div class="proceed_section" id="proceed_section">
-                        <input type="submit" value="Save Changes" style="width: 250px; margin-right: 10px; margin-left: 0px;"> <button onclick="cancel()" id="proceed-red">Cancel</button>
+                        <input type="submit" value="Save Changes"> <button onclick="cancel()" id="proceed-red">Cancel</button>
                     </div>
                 </div>
             </form>
