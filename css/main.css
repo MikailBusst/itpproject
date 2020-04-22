@@ -1523,5 +1523,13 @@ p.subheader-bottom {
     padding-top: 20px;
     padding-left: 10px;
     padding-right: 10px;
-    border-bottom: 2px solid black;
+}
+
+p#resume_file_name, p#manual_regisration_form_file_name, p#checklist_file_name, p#online_transcripts_file_name, p#course_structure_file_name, p#course_structure_file_name, p#insurance_file_name, p#cover_letter_file_name, p#undertaking_file_name, p#offer_letter_file_name {
+    font-weight: 200;
+    font-size: 20px;
+}
+
+input[type=file] {
+    cursor: pointer;
 }
