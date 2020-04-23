@@ -17,6 +17,8 @@ function check_size(){
 function check_resize(){
     var width = window.innerWidth;
     
+    //document.getElementById("width").innerHTML = width;
+    
     if(width < 940){
         $("input[type=file]").removeClass("file_submission");
         $("input[type=file]").addClass("file_submission_mobile");

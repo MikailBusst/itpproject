@@ -19,11 +19,6 @@ function check_size(){
         $("#filter-area").removeClass("filter-area");
         $("#filter-area").addClass("filter-area-mobile");
     }
-    
-    /*if(width < 420){
-        $("#page_number").removeClass("page_number");
-        $("#page_number").addClass("page_number_mobile");
-    }*/
 }
 
 function check_resize(){
@@ -54,15 +49,6 @@ function check_resize(){
                $("#filter-area").removeClass("filter-area-mobile");
                $("#filter-area").addClass("filter-area");
            }
-    
-    /*if(width < 420){
-        $("#page_number").removeClass("page_number");
-        $("#page_number").addClass("page_number_mobile");
-    }
-    else{
-        $("#page_number").removeClass("page_number_mobile");
-        $("#page_number").addClass("page_number");
-    }*/
 }
 
 
@@ -86,14 +72,4 @@ function activate_hundred(){
     $(".twenty_button").removeClass('active');
     $(".fifty_button").removeClass('active');
     $(".hundred_button").addClass('active');
-}
-
-function select_asc(){
-    document.getElementById("asccbx").checked = true;
-    document.getElementById("desccbx").checked = false;
-}
-
-function select_desc(){
-    document.getElementById("desccbx").checked = true;
-    document.getElementById("asccbx").checked = false;
 }

@@ -409,8 +409,6 @@ function validate_company_telephone(){
         document.getElementById("company_telephone_error").innerHTML = "Please enter the company's telephone number.";
     }
     else{
-        //var phone_number = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
-        
         if(company_telephone.length <= 14 && company_telephone.length >= 6 && !isNaN(company_telephone)){
             company_telephone_status = true;
             document.getElementById("company_telephone_error").innerHTML = "";
