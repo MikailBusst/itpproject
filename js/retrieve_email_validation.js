@@ -8,7 +8,7 @@ function check_size(){
         $("body").addClass("body-mobile");
     }
     
-    if(width < 668){
+    if(width < 723){
         $("#proceed_section").removeClass("proceed_section");
         $("#proceed_section").addClass("proceed_section_mobile");
     }
@@ -28,7 +28,7 @@ function check_resize(){
         $("body").addClass("body-desktop");
     }
     
-   if(width < 668){
+   if(width < 723){
         $("#proceed_section").removeClass("proceed_section");
         $("#proceed_section").addClass("proceed_section_mobile");
     }
