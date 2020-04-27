@@ -1,14 +1,17 @@
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+
+        <script src="disclaimer.js"></script>
     </head>
 
-    <body>
+    <body (window:resize)="onResize($event)">
         <app-menu></app-menu>
         <div class="main">
             <div class="card" style="margin-bottom: 30px; border-bottom: none;" onclick="window.location.href = 'submit_appendix_a.html'">
-                <button class="back-button">&#x276E; Submit Appendix A</button>
+                <button style="position: relative; right: 10px;" class="back-button">&#x276E; Submit Appendix A</button>
             </div>
+            
             <div class="progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                     <span class="sr-only">78% Complete</span>
@@ -23,7 +26,7 @@
             </div>
 
             <div class="card" style="border-bottom: 2px solid black; padding-bottom: 10px;">
-                <p class="subheader-bottom">By clicking on "Accept", you agree to the conditions set by the disclaimer.</p>
+                <p class="subheader-bottom">By clicking on "Agree", you will agree to the conditions set by the disclaimer.</p>
             </div>
 
             <div id="paper" class="paper">
@@ -32,9 +35,9 @@
                 <p><b>Indemnification</b><br />You hereby agree to indemnify and hold harmless <b>Faculty Of Information Science and Technology (FIST)</b> and its officers, subsidiaries, employees, licensors and agents, from and against any and all liability, loss, claims, damages, costs and/or actions (including attorney’s fees) based upon or arising out of any breach by you of your obligations under this Disclaimer.</p>
             </div>
 
-            <div class="paper" style="border: none; margin-top: 50px; margin-left: 0px;">
+            <div class="paper" style="border: none; margin-top: -10px;">
                 <div class="proceed_section" id="proceed_section">
-                    <button class="back-button" onclick="window.location.href = 'disclaimer_verification.html'" style="font-size: 30px;">Accept &#x276F;</button>
+                    <button class="back-button" onclick="window.location.href = 'disclaimer_verification.html'" style="font-size: 30px;">Agree &#x276F;</button>
                 </div>
             </div>
         </div>
