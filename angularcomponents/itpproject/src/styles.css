@@ -1,10 +1,9 @@
-@font-face {
-    font-family: "poppins";
-    src: url("assets/font/Poppins/Poppins-Medium.ttf");
-}
-
 html, body{
     overflow-x: auto;
+}
+
+html {
+    background-color: #FEFEFE;
 }
 
 body{

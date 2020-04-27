@@ -1,0 +1,7 @@
+@import url("../../../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("../../styles.css");
+
+* {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.3;
+}
