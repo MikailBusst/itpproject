@@ -9,6 +9,7 @@ import { AaWaitComponent } from './aa-wait/aa-wait.component';
 import { ItpAdvisorAssignComponent } from './itp-advisor-assign/itp-advisor-assign.component';
 import { RegistrationFailureComponent } from './registration-failure/registration-failure.component';
 import { RegistrationCompleteComponent } from './registration-complete/registration-complete.component';
+import { ItpAdvisorAssignedComponent } from './itp-advisor-assigned/itp-advisor-assigned.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RegistrationCompleteComponent } from './registration-complete/registrat
     AaWaitComponent,
     ItpAdvisorAssignComponent,
     RegistrationFailureComponent,
-    RegistrationCompleteComponent
+    RegistrationCompleteComponent,
+    ItpAdvisorAssignedComponent
   ],
   imports: [
     BrowserModule,
