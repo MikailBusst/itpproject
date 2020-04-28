@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 import { MenuComponent } from './menu/menu.component';
+import { AaWaitComponent } from './aa-wait/aa-wait.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DisclaimerComponent,
-    MenuComponent
+    MenuComponent,
+    AaWaitComponent
   ],
   imports: [
     BrowserModule,
