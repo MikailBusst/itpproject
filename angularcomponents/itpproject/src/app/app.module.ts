@@ -8,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { AaWaitComponent } from './aa-wait/aa-wait.component';
 import { ItpAdvisorAssignComponent } from './itp-advisor-assign/itp-advisor-assign.component';
 import { RegistrationFailureComponent } from './registration-failure/registration-failure.component';
+import { RegistrationCompleteComponent } from './registration-complete/registration-complete.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RegistrationFailureComponent } from './registration-failure/registratio
     MenuComponent,
     AaWaitComponent,
     ItpAdvisorAssignComponent,
-    RegistrationFailureComponent
+    RegistrationFailureComponent,
+    RegistrationCompleteComponent
   ],
   imports: [
     BrowserModule,
