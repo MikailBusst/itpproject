@@ -7,6 +7,7 @@ import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 import { MenuComponent } from './menu/menu.component';
 import { AaWaitComponent } from './aa-wait/aa-wait.component';
 import { ItpAdvisorAssignComponent } from './itp-advisor-assign/itp-advisor-assign.component';
+import { RegistrationFailureComponent } from './registration-failure/registration-failure.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ItpAdvisorAssignComponent } from './itp-advisor-assign/itp-advisor-assi
     DisclaimerComponent,
     MenuComponent,
     AaWaitComponent,
-    ItpAdvisorAssignComponent
+    ItpAdvisorAssignComponent,
+    RegistrationFailureComponent
   ],
   imports: [
     BrowserModule,
