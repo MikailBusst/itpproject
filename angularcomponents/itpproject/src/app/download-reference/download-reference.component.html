@@ -1,0 +1,45 @@
+<body (window:resize)="onResize($event)">
+    <app-menu></app-menu>
+      
+    <div class="main">
+        <div class="card" style="margin-bottom: 30px; border-bottom: none;" onclick="window.location.href = 'submit_documents.html'">
+            <button class="back-button">&#x276E; Submit Documents</button>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                <span class="sr-only">22% Complete</span>
+            </div>
+        </div>
+        
+        <div class="card" style="border-bottom: none;">
+            <p class="subheader">Reference Letter</p>
+        </div>
+        <div class="title">
+            <h1>Download Reference Letter</h1>
+        </div>
+        
+        <div class="card" style="border-bottom: 2px solid black; padding-bottom: 10px;">
+            <p class="subheader-bottom">Please download you reference letter so that you may submit it to your employer.</p>
+        </div>
+        
+        <section class="download_section">
+            <a href="Documents/Manual Registration Form.pdf" download>
+                <div id="dc" class="document_card" style="float: none; position: relative; top: 20px;">
+                    <img src="../../assets/document_icons_png/pdf.png">
+                    <div id="ct">
+                        <p>1161202389_reference.pdf</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+    
+        <div class="card" style="margin-bottom: 30px; border-bottom: none; margin-top: 80px; padding-left: 0px;">
+            <button class="back-button" onclick="window.location.href = 'registration.html'">Register Company &#x276F;</button>
+        </div>
+        
+        <p id="width"></p>
+        <div class="footer">
+            <p>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+        </div> 
+    </div>
+</body>

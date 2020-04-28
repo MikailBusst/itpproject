@@ -11,6 +11,7 @@ import { RegistrationFailureComponent } from './registration-failure/registratio
 import { RegistrationCompleteComponent } from './registration-complete/registration-complete.component';
 import { ItpAdvisorAssignedComponent } from './itp-advisor-assigned/itp-advisor-assigned.component';
 import { ItpAdvisorComponent } from './itp-advisor/itp-advisor.component';
+import { DownloadReferenceComponent } from './download-reference/download-reference.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ItpAdvisorComponent } from './itp-advisor/itp-advisor.component';
     RegistrationFailureComponent,
     RegistrationCompleteComponent,
     ItpAdvisorAssignedComponent,
-    ItpAdvisorComponent
+    ItpAdvisorComponent,
+    DownloadReferenceComponent
   ],
   imports: [
     BrowserModule,
