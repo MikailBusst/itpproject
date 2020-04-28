@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 import { MenuComponent } from './menu/menu.component';
 import { AaWaitComponent } from './aa-wait/aa-wait.component';
+import { ItpAdvisorAssignComponent } from './itp-advisor-assign/itp-advisor-assign.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DisclaimerComponent,
     MenuComponent,
-    AaWaitComponent
+    AaWaitComponent,
+    ItpAdvisorAssignComponent
   ],
   imports: [
     BrowserModule,
