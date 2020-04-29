@@ -15,6 +15,7 @@ import { DownloadReferenceComponent } from './download-reference/download-refere
 import { RedownloadReferenceComponent } from './redownload-reference/redownload-reference.component';
 import { RetrieveEmailComponent } from './retrieve-email/retrieve-email.component';
 import { RetrieveOtpComponent } from './retrieve-otp/retrieve-otp.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RetrieveOtpComponent } from './retrieve-otp/retrieve-otp.component';
     DownloadReferenceComponent,
     RedownloadReferenceComponent,
     RetrieveEmailComponent,
-    RetrieveOtpComponent
+    RetrieveOtpComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
