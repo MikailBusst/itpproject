@@ -14,6 +14,7 @@ import { ItpAdvisorComponent } from './itp-advisor/itp-advisor.component';
 import { DownloadReferenceComponent } from './download-reference/download-reference.component';
 import { RedownloadReferenceComponent } from './redownload-reference/redownload-reference.component';
 import { RetrieveEmailComponent } from './retrieve-email/retrieve-email.component';
+import { RetrieveOtpComponent } from './retrieve-otp/retrieve-otp.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RetrieveEmailComponent } from './retrieve-email/retrieve-email.componen
     ItpAdvisorComponent,
     DownloadReferenceComponent,
     RedownloadReferenceComponent,
-    RetrieveEmailComponent
+    RetrieveEmailComponent,
+    RetrieveOtpComponent
   ],
   imports: [
     BrowserModule,

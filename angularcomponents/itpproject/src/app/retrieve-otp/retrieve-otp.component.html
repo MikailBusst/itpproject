@@ -1,0 +1,25 @@
+<body (window:resize)="onResize($event)">
+    <app-menu></app-menu>
+    
+    <div class="main">
+        <div class="card">
+            <p class="subheader">Reset Password</p>
+        </div>
+        <div class="title">
+            <h1>Type in the One Time Password</h1>
+            <p style="margin-top: 20px; font-size: 20px;">Type in the One Time Password we have sent to your email. (The hardcoded password is "password")</p>
+            
+            <form name="retrieve_otp" onsubmit="check_empty()">
+                <input name="password" type="password" onblur="password_validation()" placeholder="One Time Password">
+                <div class="error"><p id="password_error"></p></div>
+                
+                <div class="card" style="width: 100%; margin-top: 80px; margin-bottom: 50px;">
+                        <div class="proceed_section" id="proceed_section">
+                            <input type="submit" ontouchstart="" value="Validate  &#x276F;">
+                        </div>
+                </div>
+            </form>
+            <p id="width"></p>
+        </div>
+    </div>
+</body>
