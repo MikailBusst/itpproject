@@ -1,0 +1,70 @@
+<body (window:resize)="onResize($event)">
+    <app-menu></app-menu>
+
+    <div class="main">
+        <div class="card" style="border-bottom: none;">
+            <p class="subheader">Resubmit Documents</p>
+        </div>
+        <div class="title">
+            <h1>Submitted ITP Documents</h1>
+        </div>
+        
+        <div class="card" style="border-bottom: 2px solid black; padding-bottom: 10px;">
+            <p class="subheader-bottom">You may resubmit any of the documents below.</p>
+        </div>
+        
+        <form>
+            <div class="upload_card">
+                <p>Manual Registration Form</p>
+                <input type="file" id="manual_regisration_form" name="manual_registration_form" class="file_submission" onchange="display_manual_regisration_form()">
+                    <p id="manual_regisration_form_file_name">manual_registration.pdf</p>
+            </div>
+            <div class="upload_card">
+                <p>Checklist</p>
+                <input type="file" name="checklist" id="checklist" class="file_submission" onchange="display_checklist()">
+                    <p id="checklist_file_name">checklist.pdf</p>
+            </div>
+            <div class="upload_card">
+                <p>Online Transcripts</p>
+                <input type="file" name="online_transcripts" id="online_transcripts" onchange="display_online_transcripts()" class="file_submission">
+                    <p id="online_transcripts_file_name">transcripts.pdf</p>
+            </div>
+            <div class="upload_card">
+                <p>Course Structure</p>
+                <input type="file" name="course_structure" id="course_structure" onchange="display_course_structure()" class="file_submission">
+                    <p id="course_structure_file_name">course_structure.pdf</p>
+            </div>
+            <div class="upload_card">
+                <p>Insurance Payment Document (Original Copy)</p>
+                <input type="file" name="insurance" id="insurance" onchange="display_insurance()" class="file_submission">
+                    <p id="insurance_file_name">insurance.pdf</p>
+            </div>
+            <div class="upload_card">
+                <p>Resume</p>
+                <input type="file" name="resume" id="resume" onchange="display_resume()" class="file_submission">
+                    <p id="resume_file_name">cv.pdf</p>
+            </div>
+            <div class="upload_card">
+                <p>Sample Cover Letter</p>
+                <input type="file" name="cover_letter_file" id="cover_letter_file" onchange="display_cover_letter()" class="file_submission">
+                    <p id="cover_letter_file_name">Cover Letter 1.docx</p>
+            </div>
+            <div class="upload_card">
+                <p>Letter of Undertaking</p>
+                <input type="file" id="undertaking" name="undertaking" class="file_submission" onchange="display_undertaking()">
+                    <p id="undertaking_file_name">undertaking_letter.docx</p>
+            </div>
+            <div class="upload_card">
+                <p>Offer Letter</p>
+                <input type="file" name="offer_letter" id="offer_letter" onchange="display_offer_letter()" class="file_submission">
+                    <p id="offer_letter_file_name">offer_letter.pdf</p>
+            </div>
+            <div class="card" style="border-bottom: none; margin-top: 50px;">
+                <div class="proceed_section" id="proceed_section">
+                    <input type="submit" value="Save Changes"> <button onclick="cancel()" id="proceed-red">Cancel</button>
+                </div>
+            </div>
+        </form>
+        <p id="width"></p>
+    </div>
+</body>
