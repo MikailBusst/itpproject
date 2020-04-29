@@ -13,6 +13,7 @@ import { ItpAdvisorAssignedComponent } from './itp-advisor-assigned/itp-advisor-
 import { ItpAdvisorComponent } from './itp-advisor/itp-advisor.component';
 import { DownloadReferenceComponent } from './download-reference/download-reference.component';
 import { RedownloadReferenceComponent } from './redownload-reference/redownload-reference.component';
+import { RetrieveEmailComponent } from './retrieve-email/retrieve-email.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RedownloadReferenceComponent } from './redownload-reference/redownload-
     ItpAdvisorAssignedComponent,
     ItpAdvisorComponent,
     DownloadReferenceComponent,
-    RedownloadReferenceComponent
+    RedownloadReferenceComponent,
+    RetrieveEmailComponent
   ],
   imports: [
     BrowserModule,

@@ -4,3 +4,15 @@
 .progress-bar {
     width: 22%;
 }
+
+html {
+    overflow-x: hidden;
+}
+
+html, body, .main {
+height: 100%;
+}
+
+.title {
+margin-bottom: 40px;
+}

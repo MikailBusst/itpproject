@@ -4,3 +4,8 @@
 .progress-bar {
     width: 11%;
 }
+
+.title {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
