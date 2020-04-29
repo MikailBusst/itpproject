@@ -1,0 +1,24 @@
+@import url("../../../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("../../styles.css");
+
+.error {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card {
+border-bottom: none;
+}
+
+.title {
+margin-top: -25px;
+}
+
+input[type=submit] {
+width: 200px;
+}
+
+.subheader {
+margin-bottom: 40px;
+}

@@ -1,0 +1,46 @@
+<body (window:resize)="onResize($event)">
+    <app-menu></app-menu>
+
+    <div class="main">
+        <div class="card" style="margin-top: 100px;">
+            <p class="subheader">Create New Account</p>
+        </div>
+        <div class="title">
+            <h1>Sign Up</h1>
+        </div>
+        
+        <div class="form-area">
+            <form id="signup" name="login" onsubmit="check_empty()">
+                <div class="card">
+                    <p>First Name</p>
+                    <input onblur="verify_first_name()" style="max-width: 350px;" name="first_name" type="text" placeholder="Name">
+                    <div class="error"><p id="first_name_error"></p></div>
+                    <p>Last Name</p>
+                    <input onblur="verify_last_name()" style="max-width: 350px;" name="last_name" type="text" placeholder="Last Name">
+                    <div class="error"><p id="last_name_error"></p></div>
+                         <p>Email Address</p>
+                        <input onblur="verify_email()" style="max-width: 400px;" name="email" type="text" placeholder="example@email.com">
+                    <div class="error"><p id="email_error"></p></div>
+                    <p>Password</p>
+                    <input onblur="verify_password()" style="max-width: 400px;" name="password" type="password" placeholder="Password">
+                    <div class="error"><p id="password_error"></p></div>
+                    <p>Confirm Password</p>
+                    <input onblur="verify_confirm_password()" style="max-width: 400px;" name="confirm_password" type="password" placeholder="Password">
+                    <div class="error"><p id="confirm_password_error"></p></div>
+                    
+                    <div class="card" style="width: 100%;">
+                        <div class="error" style="margin-bottom: 30px;"><p id="master_error"></p></div>
+                    </div>
+                    
+                    
+                   
+                     <div class="card" style="width: 100%; margin-top: -40px;">
+                         <div class="proceed_section" id="proceed_section">
+                            <input type="submit" ontouchstart="" value="Sign Up">
+                        </div>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
