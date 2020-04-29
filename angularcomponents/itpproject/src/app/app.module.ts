@@ -20,6 +20,7 @@ import { ResubmitDocumentsComponent } from './resubmit-documents/resubmit-docume
 import { SignupComponent } from './signup/signup.component';
 import { SubmitDocumentsComponent } from './submit-documents/submit-documents.component';
 import { SubmitAppendixAComponent } from './submit-appendix-a/submit-appendix-a.component';
+import { DisclaimerVerificationComponent } from './disclaimer-verification/disclaimer-verification.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { SubmitAppendixAComponent } from './submit-appendix-a/submit-appendix-a.
     ResubmitDocumentsComponent,
     SignupComponent,
     SubmitDocumentsComponent,
-    SubmitAppendixAComponent
+    SubmitAppendixAComponent,
+    DisclaimerVerificationComponent
   ],
   imports: [
     BrowserModule,

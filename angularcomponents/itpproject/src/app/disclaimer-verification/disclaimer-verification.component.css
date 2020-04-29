@@ -1,0 +1,27 @@
+@import url("../../../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("../../styles.css");
+
+.progress-bar {
+    width: 89%;
+}
+
+input[type=text], input[type=password] {
+ max-width: 300px;
+}
+
+.error {
+ margin-top: 10px;
+}
+
+#proceed_section {
+ margin-top: 0px;
+}
+
+input[type=submit] {
+ width: 275px;
+ margin-bottom: 50px;
+}
+
+p#master_error {
+ margin-left: 10px;
+}
