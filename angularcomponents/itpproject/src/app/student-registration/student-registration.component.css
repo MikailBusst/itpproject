@@ -1,0 +1,15 @@
+@import url("../../../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("../../styles.css");
+
+.error {
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+#proceed_section {
+margin-top: -50px;
+}
+
+input[type=submit] {
+width: 200px;
+}
