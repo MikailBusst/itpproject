@@ -1,0 +1,24 @@
+<body (window:resize)="onResize($event)">
+    <app-menu></app-menu>
+      
+      <div class="main">
+          <div class="card">
+              <p class="subheader">Reset Password</p>
+          </div>
+          <div class="title">
+              <h1>Type in your Email</h1>
+              
+              <form name="retrieve_email" onsubmit="check_empty()">
+                  <input name="email" type="text" onblur="email_validation()" placeholder="example@email.com">
+                  <div class="error"><p id="email_error"></p></div>
+                  
+                  <div class="card" style="padding-left: 0; width: 100%; margin-top: 80px; padding-right: 0px">
+                      <div class="proceed_section" id="proceed_section">
+                          <input type="submit" value="Send One Time Password  &#x276F;"> <button onclick="cancel()" id="proceed-red">Cancel</button>
+                      </div>
+                  </div>
+              </form>
+              <p id="width"></p>
+          </div>
+      </div>
+</body>

@@ -1,0 +1,37 @@
+@import url("../../../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("../../styles.css");
+
+.error {
+    margin-top: 30px;
+}
+
+#proceed_section {
+    padding-right: 0px;
+}
+
+#proceed-red {
+width: 275px;
+}
+
+.card {
+border-bottom: none;
+}
+
+.title {
+margin-top: -20px;
+}
+
+.subheader {
+margin-bottom: 40px;
+}
+
+input[type=text] {
+max-width: 400px;
+margin-top: 50px;
+}
+
+input[type=submit] {
+width: 275px;
+margin-right: 10px;
+margin-left: 0px;
+}
