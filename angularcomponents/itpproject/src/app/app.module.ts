@@ -19,6 +19,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { ResubmitDocumentsComponent } from './resubmit-documents/resubmit-documents.component';
 import { SignupComponent } from './signup/signup.component';
 import { SubmitDocumentsComponent } from './submit-documents/submit-documents.component';
+import { SubmitAppendixAComponent } from './submit-appendix-a/submit-appendix-a.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SubmitDocumentsComponent } from './submit-documents/submit-documents.co
     ResetPasswordComponent,
     ResubmitDocumentsComponent,
     SignupComponent,
-    SubmitDocumentsComponent
+    SubmitDocumentsComponent,
+    SubmitAppendixAComponent
   ],
   imports: [
     BrowserModule,

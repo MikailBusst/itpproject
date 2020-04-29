@@ -1,0 +1,32 @@
+@import url("../../../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("../../styles.css");
+
+html, body {
+    overflow-x: hidden;
+}
+
+.error {
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+h1 {
+word-break: break-word;
+margin-bottom: 20px;
+}
+
+.progress {
+margin-bottom: 20px;
+}
+
+.progress-bar {
+width: 67%;
+}
+
+#proceed_section {
+margin-left: 0;
+}
+
+input[type=submit] {
+width: 200px;
+}
