@@ -313,6 +313,7 @@ input[type=submit], .submit_mobile_button, #loginbtn, #proceed-red {
 
 .subtitle{
     margin-left: 5px;
+    margin-bottom: 20px;
 }
 
 input[type=submit]{
