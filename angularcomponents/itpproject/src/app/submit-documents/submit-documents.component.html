@@ -1,0 +1,174 @@
+<body (window:resize)="onResize($event)">
+    <app-menu></app-menu>
+    
+    <div class="main">
+        <div class="card" style="margin-bottom: 30px; border-bottom: none;" onclick="window.location.href = 'student_registration.html'">
+            <button class="back-button">&#x276E; Register for ITP T3 2019/20</button>
+        </div>
+        
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+            <span class="sr-only">11% Complete</span>
+          </div>
+        </div>
+        
+        <div class="card" style="border-bottom: none;">
+            <p class="subheader">Documents</p>
+        </div>
+        <div class="title">
+            <h1 class="big_header">ITP T3 2019/20 Documents</h1>
+        </div>
+        
+        <div class="card" style="border-bottom: 2px solid black; padding-bottom: 10px;">
+            <p class="subheader-bottom">Please download, fill up and submit these documents.</p>
+            <p style="font-size: 20px; font-weight: 200; color: grey;">No comment from Academic Advisor.</p>
+        </div>
+        
+        <div class="title">
+            <h2>Download Documents</h2>
+        </div>
+        
+        <section class="download_section">
+            <div id="inner-download-section" class="inner-download-section">
+                <a href="Documents/ITP Checklist_ Form T3201920.docx" download>
+                    <div class="dc document_card">
+                        <img src="../../assets/document_icons_png/doc.png">
+                        <div class="ct">
+                            <p>ITP Checklist_ Form T3201920.docx</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="Documents/Cover Letter- sample.docx" download>
+                    <div class="dc document_card">
+                        <img id="cover_letter" src="../../assets/document_icons_png/doc.png">
+                        <div class="ct">
+                            <p>Cover Letter- sample.docx</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="Documents/SAMPLE_RESUME.zip" download>
+                    <div class="dc document_card">
+                        <img id="sample_resume" src="../../assets/document_icons_png/zip.png">
+                        <div class="ct">
+                            <p>SAMPLE_RESUME.zip</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="Documents/Agreement Form for Foreign Company Attachment T3 2019_2020.doc" download>
+                    <div class="dc document_card">
+                        <img id="agreement_form" src="../../assets/document_icons_png/doc.png">
+                        <div class="ct">
+                            <p>Agreement Form for Foreign Company Attachment T3 2019_2020.doc</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="Documents/Company List for ITP Trimester 3 2018_19.xlsx" download>
+                    <div class="dc document_card">
+                        <img id="company_list_1" src="../../assets/document_icons_png/xls.png">
+                        <div class="ct">
+                            <p>Company List for ITP Trimester 3 2018_19.xlsx</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="Documents/Company List for ITP Trimester 3 2019_20.xlsx" download>
+                    <div class="dc document_card">
+                        <img id="company_list_2" src="../../assets/document_icons_png/xls.png">
+                        <div class="ct">
+                            <p>Company List for ITP Trimester 3 2019_20.xlsx</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="Documents/ITP No.JPG" download>
+                    <div class="dc document_card">
+                        <img id="itp" src="../../assets/document_icons_png/jpg.png">
+                        <div class="ct">
+                            <p>ITP No.JPG</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="Documents/Manual Registration Form.PDF" download>
+                    <div class="dc document_card">
+                        <img id="manual_regisration" src="../../assets/document_icons_png/pdf.png">
+                        <div class="ct">
+                            <p>Manual Registration Form.PDF</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="Documents/Guidelines for Internship Programme - Trimester 3 Session 2019_2020_Updated.docx" download>
+                    <div class="dc document_card">
+                        <img id="guidelines" src="../../assets/document_icons_png/doc.png">
+                        <div class="ct">
+                            <p>Guidelines for Internship Programme - Trimester 3 Session 2019_2020_Updated.docx</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <div class="card"></div>
+        <div class="title">
+            <h2>Submit Documents</h2>
+        </div>
+        <form name="submit_documents" onsubmit="check_files()">
+            <div class="upload_card">
+                <p>Manual Registration Form</p>
+                <input ontouchstart="" type="file" id="manual_regisration_form" name="manual_registration_form" class="file_submission" onchange="display_manual_regisration_form()">
+                    <p id="manual_regisration_form_file_name">Sample File</p>
+            </div>
+            
+            <div class="upload_card">
+                <p>Checklist</p>
+                <input ontouchstart="" type="file" name="checklist" id="checklist" class="file_submission" onchange="display_checklist()">
+                    <p id="checklist_file_name">Sample File</p>
+            </div>
+            
+            <div class="upload_card">
+                <p>Online Transcripts</p>
+                <input ontouchstart="" type="file" name="online_transcripts" id="online_transcripts" onchange="display_online_transcripts()" class="file_submission">
+                    <p id="online_transcripts_file_name">Sample File</p>
+            </div>
+            
+            <div class="upload_card">
+                <p>Course Structure</p>
+                <input ontouchstart="" type="file" name="course_structure" id="course_structure" onchange="display_course_structure()" class="file_submission">
+                    <p id="course_structure_file_name">Sample File</p>
+            </div>
+            
+            <div class="upload_card">
+                <p>Insurance Payment Document (Original Copy)</p>
+                <input ontouchstart="" type="file" name="insurance" id="insurance" onchange="display_insurance()" class="file_submission">
+                    <p id="insurance_file_name">Sample File</p>
+            </div>
+            
+            <div class="upload_card">
+                <p>Resume</p>
+                <input ontouchstart="" type="file" name="resume" id="resume" onchange="display_resume()" class="file_submission">
+                    <p id="resume_file_name">Sample File</p>
+            </div>
+            
+            <div class="upload_card">
+                <p>Sample Cover Letter</p>
+                <input ontouchstart="" type="file" name="cover_letter_file" id="cover_letter_file" onchange="display_cover_letter()" class="file_submission">
+                    <p id="cover_letter_file_name">Sample File</p>
+            </div>
+    
+        
+        <div class="card" style="border-bottom: none;">
+            <div class="error"><p id="master_error">Sample Error</p></div>
+            <div class="proceed_section" id="proceed_section" style="margin-left: 0;">
+                <input ontouchstart="" type="submit" value="Submit to Academic Advisor  &#x276F;">
+            </div>
+        </div>
+    </form>
+    <p id="width"></p>
+    <p style="text-align: center; font-size: 10px; margin-top: 100px;">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+    </div>
+</body>

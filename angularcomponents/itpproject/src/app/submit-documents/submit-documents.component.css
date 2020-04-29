@@ -1,0 +1,28 @@
+@import url("../../../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("../../styles.css");
+
+html, body {
+    overflow-x: hidden;
+}
+
+.document_card{
+margin-left: 5px;
+}
+
+.error {
+margin-bottom: 60px;
+margin-top: 0px;
+}
+
+.progress-bar {
+width: 11%;
+}
+
+p.subheader-bottom {
+margin-bottom: 30px;
+}
+
+input[type=submit] {
+font-size: 16px;
+width: 275px;
+}
