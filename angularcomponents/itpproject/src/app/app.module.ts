@@ -24,6 +24,7 @@ import { DisclaimerVerificationComponent } from './disclaimer-verification/discl
 import { StudentRegistrationComponent } from './student-registration/student-registration.component';
 import { CompanyRegistrationComponent } from './company-registration/company-registration.component';
 import { EditCompanyRegistrationComponent } from './edit-company-registration/edit-company-registration.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { EditCompanyRegistrationComponent } from './edit-company-registration/ed
     DisclaimerVerificationComponent,
     StudentRegistrationComponent,
     CompanyRegistrationComponent,
-    EditCompanyRegistrationComponent
+    EditCompanyRegistrationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

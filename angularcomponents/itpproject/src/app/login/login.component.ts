@@ -1,0 +1,78 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+    var width = window.innerWidth;
+    
+    //document.getElementById("width").innerHTML = width;
+    
+    if(width < 888){
+        $("body").removeClass("login");
+        $("body").addClass("login-mobile");
+        
+        $("card").removeClass("card-login");
+        $("card").addClass("card-login-mobile");
+        
+        $("card-left").removeClass("create-account");
+        $("card-left").addClass("create-account-mobile");
+        
+        $("login").removeClass("login-area");
+        $("login").addClass("login-area-mobile");
+        
+        $("login-below").removeClass("create-account-2");
+        $("login-below").addClass("create-account-mobile-2");
+    }
+  }
+
+  onResize(event) {
+    this.check_resize()
+  }
+
+  check_resize(): void {
+    var width = window.innerWidth;
+    
+    //document.getElementById("width").innerHTML = width;
+    
+    if(width < 888){
+        $("body").removeClass("login");
+        $("body").addClass("login-mobile");
+        
+        $("card").removeClass("card-login");
+        $("card").addClass("card-login-mobile");
+        
+        $("card-left").removeClass("create-account");
+        $("card-left").addClass("create-account-mobile");
+        
+        $("login").removeClass("login-area");
+        $("login").addClass("login-area-mobile");
+        
+        $("login-below").removeClass("create-account-2");
+        $("login-below").addClass("create-account-mobile-2");
+    }
+    
+    else{
+        $("body").removeClass("login-mobile");
+        $("body").addClass("login");
+        
+        $("card").removeClass("card-login-mobile");
+        $("card").addClass("card-login");
+        
+        $("card-left").removeClass("create-account-mobile");
+        $("card-left").addClass("create-account");
+        
+        $("login").removeClass("login-area-mobile");
+        $("login").addClass("login-area");
+        
+        $("login-below").removeClass("create-account-mobile-2");
+        $("login-below").addClass("create-account-2");
+    }
+  }
+}

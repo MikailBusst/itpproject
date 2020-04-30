@@ -1,0 +1,17 @@
+@import url("../../../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("../../styles.css");
+
+.error {
+    margin: 0px auto;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+input[type=submit] {
+margin-left: -10px;
+}
+
+.form-area {
+margin-bottom: 100px;
+}
