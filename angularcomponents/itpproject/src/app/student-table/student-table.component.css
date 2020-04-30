@@ -1,0 +1,63 @@
+@import url("../../../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("../../styles.css");
+
+html {
+    overflow-x: hidden;
+}
+
+   ::-webkit-scrollbar {
+     -webkit-appearance: none;
+     width: 0px;
+     height: 10px;
+   }
+
+   ::-webkit-scrollbar-thumb {
+     border-radius: 4px;
+     background-color: rgba(0, 0, 0, .5);
+     box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+   }
+
+.navbar {
+width: 95%;
+}
+
+.proceed_section_mobile{
+    padding-left: -2%;
+}
+
+.collapse, .collapsing {
+position:absolute;
+z-index: 2;
+top: 100px;
+}
+
+.navbar-collapse {
+background-color: #FEFEFE;
+width: 95%;
+left: 0.1px;
+padding-left: 4%;
+}
+
+.card {
+border-bottom: none;
+position: absolute;
+}
+
+.subheader {
+position: absolute;
+margin-left: 0px;
+}
+
+.list {
+padding-top: 500px;
+}
+
+input[type=submit] {
+width: 250px;
+margin-right: 10px;
+margin-left: 0px;
+}
+
+.proceed_section {
+padding-left: 20px;
+}

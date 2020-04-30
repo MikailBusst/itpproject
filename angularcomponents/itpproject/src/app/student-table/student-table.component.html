@@ -1,0 +1,567 @@
+<body (window:resize)="onResize($event)">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: absolute;">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">ITP Project</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link current-page" href="student_table.html">Student Table</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="student_registration.html">Register</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <div class="card" style="margin-top: 100px; width: 100%; max-width: 100%;">
+        <div class="title" style="margin-bottom: 50px; margin-left: 2.7%;">
+            <p class="subheader">List</p>
+        </div>
+        <div class="title" style="margin-bottom: 0px; margin-left: 2.5%;">
+            <h1 style="position: absolute;">Students</h1>
+        </div>
+    </div>
+    
+    <div id="filter-area" class="filter-area">
+        <div class="filter-size-text">
+            <h3>Length</h3>
+        </div>
+        <div class="filter-size">
+            <div (click)="activate_twenty()" style="float: left; margin-right: 40px;" class="button twenty_button"><p>25</p></div> <div (click)="activate_fifty()" class="button fifty_button" style="float: left;"><p>50</p></div> <div (click)="activate_hundred()" style="float: right;" class="button hundred_button"><p>100</p></div>
+        </div>
+    </div>
+    
+    <main class="main">
+        <div class="card" style="max-width: 1296px; background-color: #FEFEFE; box-shadow: none; border: none; top: 290px;">
+            <form>
+                <input id="search" name="search" type="text" placeholder="Search">
+            </form>
+        </div>
+
+                   <!--<list class="myUL">
+                        <ul>
+                          <li><a style="border-top-left-radius: 20px; border-top: none; border-top-right-radius: 20px;" href="#">Adele</a></li>
+                          <li><a href="#">Agnes</a></li>
+
+                          <li><a href="#">Billy</a></li>
+                          <li><a href="#">Bob</a></li>
+
+                          <li><a style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border-bottom: none;" href="#">Cindy</a></li>
+                        </ul>
+                    </list>-->
+    
+        <div class="list">
+            <form>
+               <table>
+                   <tr>
+                       <th style="min-width: 400px;">Full Name</th>
+                       <th style="min-width: 150px;">Student ID</th>
+                       <th>Email Address</th>
+                       <th style="min-width: 150px;">Student Major</th>
+                       <th style="min-width: 150px;">Final Semester</th>
+                       <th style="min-width: 170px;">Student Contact</th>
+                       <th style="min-width: 400px; text-align: left;">Attatched Company</th>
+                       <th style="min-width: 800px; text-align: left;">Company Address</th>
+                       <th style="min-width: 200px;">Company Postcode</th>
+                       <th style="min-width: 300px; text-align: left;">Company State/Province</th>
+                       <th style="min-width: 200px; text-align: left;">Company Country</th>
+                       <th style="min-width: 200px;">Company Telephone</th>
+                       <th>Allowance/Stipend/Remuneration</th>
+                       <th style="min-width: 400px; text-align: left;">Company Supervisor</th>
+                       <th style="min-width: 300px; text-align: left;">Supervisor Designation</th>
+                       <th style="min-width: 500px;">Supervisor Department</th>
+                       <th style="min-width: 200px;">Supervisor Contact</th>
+                       <th style="min-width: 350px;">Supervisor Email Address</th>
+                       <th style="min-width: 300px;">Advisor</th>
+                   </tr>
+                   <tr>
+                       <td>Mikail bin Muhammad Azman Busst</td>
+                       <td style="text-align: center;">1161202389</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161202389@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123855083</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Michelle Vervloesem</td>
+                       <td style="text-align: center;">1161201906</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161201906@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123456789</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Mikail bin Muhammad Azman Busst</td>
+                       <td style="text-align: center;">1161202389</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161202389@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123855083</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Michelle Vervloesem</td>
+                       <td style="text-align: center;">1161201906</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161201906@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123456789</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Mikail bin Muhammad Azman Busst</td>
+                       <td style="text-align: center;">1161202389</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161202389@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123855083</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Michelle Vervloesem</td>
+                       <td style="text-align: center;">1161201906</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161201906@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123456789</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Mikail bin Muhammad Azman Busst</td>
+                       <td style="text-align: center;">1161202389</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161202389@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123855083</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Michelle Vervloesem</td>
+                       <td style="text-align: center;">1161201906</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161201906@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123456789</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Mikail bin Muhammad Azman Busst</td>
+                       <td style="text-align: center;">1161202389</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161202389@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123855083</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Michelle Vervloesem</td>
+                       <td style="text-align: center;">1161201906</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161201906@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123456789</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Mikail bin Muhammad Azman Busst</td>
+                       <td style="text-align: center;">1161202389</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161202389@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123855083</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Michelle Vervloesem</td>
+                       <td style="text-align: center;">1161201906</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161201906@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123456789</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Mikail bin Muhammad Azman Busst</td>
+                       <td style="text-align: center;">1161202389</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161202389@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123855083</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Michelle Vervloesem</td>
+                       <td style="text-align: center;">1161201906</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161201906@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123456789</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Mikail bin Muhammad Azman Busst</td>
+                       <td style="text-align: center;">1161202389</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161202389@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123855083</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Michelle Vervloesem</td>
+                       <td style="text-align: center;">1161201906</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161201906@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123456789</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Mikail bin Muhammad Azman Busst</td>
+                       <td style="text-align: center;">1161202389</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161202389@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123855083</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>Michelle Vervloesem</td>
+                       <td style="text-align: center;">1161201906</td>
+                       <td><a href="mailto:1161202389@student.mmu.edu.my">1161201906@student.mmu.edu.my</a></td>
+                       <td style="text-align: center;">AI</td>
+                       <td style="text-align: center;">No</td>
+                       <td style="text-align: center;">+60123456789</td>
+                       <td>Multimedia University Melaka</td>
+                       <td>Jalan Ayer Keroh Lama, Bukit Beruang</td>
+                       <td style="text-align: center;">75450</td>
+                       <td>Melaka</td>
+                       <td>Malaysia</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;">RM0.00</td>
+                       <td>Dr. Wee Kuok Kwee</td>
+                       <td>Senior Lecturer</td>
+                       <td>Faculty of Information Science and Technology (FIST)</td>
+                       <td style="text-align: center;">+601234567</td>
+                       <td style="text-align: center;"><a href="mailto:wee.kuok.kwee@mmu.edu.my">wee.kuok.kwee@mmu.edu.my</a></td>
+                       <td><select id="custom-dropdown" name="supervisor">
+                           <option>Not Assigned</option>
+                           <option value="a">Lecturer A</option>
+                           <option value="b">Lecturer B</option>
+                           <option value="c">Lecturer C</option>
+                       </select></td>
+                   </tr>
+               </table>
+               <div class="card" style="margin-top: 150px; margin-left: 0px;">
+                   <div id="proceed_section" class="proceed_section">
+                       <input type="submit" value="Save Changes"> <button onclick="cancel()" id="proceed-red">Cancel</button>
+                   </div>
+               </div>
+           </form>
+        </div>
+    </main>
+    <div id="page_number" class="page_number">
+        <div class="page_links">
+            <p><a href="#"><</a> <a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">></a></p>
+        </div>
+    </div>
+    <p id="width"></p>
+</body>

@@ -25,6 +25,7 @@ import { StudentRegistrationComponent } from './student-registration/student-reg
 import { CompanyRegistrationComponent } from './company-registration/company-registration.component';
 import { EditCompanyRegistrationComponent } from './edit-company-registration/edit-company-registration.component';
 import { LoginComponent } from './login/login.component';
+import { StudentTableComponent } from './student-table/student-table.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { LoginComponent } from './login/login.component';
     StudentRegistrationComponent,
     CompanyRegistrationComponent,
     EditCompanyRegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    StudentTableComponent
   ],
   imports: [
     BrowserModule,
