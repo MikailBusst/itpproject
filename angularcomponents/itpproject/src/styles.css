@@ -472,7 +472,7 @@ input[type=text], input[type=password]{
 }
 
 input[type=radio]:checked ~ .check {
-  border: 5px solid #015897;
+  border: 5px solid #015897!important;
 }
 
 input[type=radio]:checked ~ .check::before{
