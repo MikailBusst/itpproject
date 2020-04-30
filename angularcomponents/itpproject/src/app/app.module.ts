@@ -23,6 +23,7 @@ import { SubmitAppendixAComponent } from './submit-appendix-a/submit-appendix-a.
 import { DisclaimerVerificationComponent } from './disclaimer-verification/disclaimer-verification.component';
 import { StudentRegistrationComponent } from './student-registration/student-registration.component';
 import { CompanyRegistrationComponent } from './company-registration/company-registration.component';
+import { EditCompanyRegistrationComponent } from './edit-company-registration/edit-company-registration.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { CompanyRegistrationComponent } from './company-registration/company-reg
     SubmitAppendixAComponent,
     DisclaimerVerificationComponent,
     StudentRegistrationComponent,
-    CompanyRegistrationComponent
+    CompanyRegistrationComponent,
+    EditCompanyRegistrationComponent
   ],
   imports: [
     BrowserModule,
