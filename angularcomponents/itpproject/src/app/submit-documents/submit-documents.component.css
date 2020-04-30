@@ -26,3 +26,8 @@ input[type=submit] {
 font-size: 16px;
 width: 275px;
 }
+
+.back-button {
+    position: relative; 
+    right: 7px;
+}

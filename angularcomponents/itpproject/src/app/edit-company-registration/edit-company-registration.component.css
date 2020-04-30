@@ -16,3 +16,9 @@ input[type=submit] {
     margin-top: 0px;
     margin-bottom: 50px;
 }
+
+.back-button {
+    font-size: 18px; 
+    position: relative; 
+    right: 3px;
+}

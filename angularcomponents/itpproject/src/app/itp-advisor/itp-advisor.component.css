@@ -5,3 +5,8 @@
     margin-top: 20px;
     margin-bottom: 40px;
 }
+
+.back-button {
+    position: relative; 
+    right: 3px;
+}

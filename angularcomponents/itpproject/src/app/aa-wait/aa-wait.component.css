@@ -9,3 +9,8 @@
     margin-top: 20px;
     margin-bottom: 60px;
 }
+
+.back-button {
+    position: relative; 
+    right: 7px;
+}

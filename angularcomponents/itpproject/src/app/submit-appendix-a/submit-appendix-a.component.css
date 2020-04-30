@@ -30,3 +30,8 @@ margin-left: 0;
 input[type=submit] {
 width: 200px;
 }
+
+.back-button {
+    position: relative; 
+    right: 7px;
+}
