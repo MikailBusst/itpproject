@@ -26,6 +26,7 @@ import { CompanyRegistrationComponent } from './company-registration/company-reg
 import { EditCompanyRegistrationComponent } from './edit-company-registration/edit-company-registration.component';
 import { LoginComponent } from './login/login.component';
 import { StudentTableComponent } from './student-table/student-table.component';
+import { AaApproveComponent } from './aa-approve/aa-approve.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { StudentTableComponent } from './student-table/student-table.component';
     CompanyRegistrationComponent,
     EditCompanyRegistrationComponent,
     LoginComponent,
-    StudentTableComponent
+    StudentTableComponent,
+    AaApproveComponent
   ],
   imports: [
     BrowserModule,

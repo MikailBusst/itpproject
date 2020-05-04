@@ -37,7 +37,9 @@ export class SignupComponent implements OnInit {
           $("#proceed_section").removeClass("proceed_section_mobile");
           $("#proceed_section").addClass("proceed_section");
       }
-}
+  }
+
+  
 
 
 }

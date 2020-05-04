@@ -1,0 +1,38 @@
+@import url("../../../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("../../styles.css");
+
+#student_details p{
+    font-weight: 200;
+    font-size: 20px;
+}
+
+#countries{
+    max-width: 170px;
+}
+
+img{
+    height: 30px;
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+.right-section{
+    float: right;
+    position: relative;
+    bottom: 250px;
+}
+
+h1 {
+word-break: break-word;
+}
+
+.error {
+margin-bottom: 70px;
+margin-top: -50px;
+}
+
+input[type=submit] {
+width: 250px;
+margin-right: 10px;
+margin-left: 0px;
+}

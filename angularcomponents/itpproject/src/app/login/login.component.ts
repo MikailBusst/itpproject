@@ -18,17 +18,17 @@ export class LoginComponent implements OnInit {
         $("body").removeClass("login");
         $("body").addClass("login-mobile");
         
-        $("card").removeClass("card-login");
-        $("card").addClass("card-login-mobile");
+        $("#card").removeClass("card-login");
+        $("#card").addClass("card-login-mobile");
         
-        $("card-left").removeClass("create-account");
-        $("card-left").addClass("create-account-mobile");
+        $("#card-left").removeClass("create-account");
+        $("#card-left").addClass("create-account-mobile");
         
-        $("login").removeClass("login-area");
-        $("login").addClass("login-area-mobile");
+        $("#login").removeClass("login-area");
+        $("#login").addClass("login-area-mobile");
         
-        $("login-below").removeClass("create-account-2");
-        $("login-below").addClass("create-account-mobile-2");
+        $("#login-below").removeClass("create-account-2");
+        $("#login-below").addClass("create-account-mobile-2");
     }
   }
 
@@ -45,34 +45,34 @@ export class LoginComponent implements OnInit {
         $("body").removeClass("login");
         $("body").addClass("login-mobile");
         
-        $("card").removeClass("card-login");
-        $("card").addClass("card-login-mobile");
+        $("#card").removeClass("card-login");
+        $("#card").addClass("card-login-mobile");
         
-        $("card-left").removeClass("create-account");
-        $("card-left").addClass("create-account-mobile");
+        $("#card-left").removeClass("create-account");
+        $("#card-left").addClass("create-account-mobile");
         
-        $("login").removeClass("login-area");
-        $("login").addClass("login-area-mobile");
+        $("#login-section").removeClass("login-area");
+        $("#login-section").addClass("login-area-mobile");
         
-        $("login-below").removeClass("create-account-2");
-        $("login-below").addClass("create-account-mobile-2");
+        $("#login-below").removeClass("create-account-2");
+        $("#login-below").addClass("create-account-mobile-2");
     }
     
     else{
         $("body").removeClass("login-mobile");
         $("body").addClass("login");
         
-        $("card").removeClass("card-login-mobile");
-        $("card").addClass("card-login");
+        $("#card").removeClass("card-login-mobile");
+        $("#card").addClass("card-login");
         
-        $("card-left").removeClass("create-account-mobile");
-        $("card-left").addClass("create-account");
+        $("#card-left").removeClass("create-account-mobile");
+        $("#card-left").addClass("create-account");
         
-        $("login").removeClass("login-area-mobile");
-        $("login").addClass("login-area");
+        $("#login-section").removeClass("login-area-mobile");
+        $("#login-section").addClass("login-area");
         
-        $("login-below").removeClass("create-account-mobile-2");
-        $("login-below").addClass("create-account-2");
+        $("#login-below").removeClass("create-account-mobile-2");
+        $("#login-below").addClass("create-account-2");
     }
   }
 }

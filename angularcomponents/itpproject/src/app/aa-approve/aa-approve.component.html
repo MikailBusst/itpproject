@@ -1,0 +1,54 @@
+<body (window:resize)="onResize($event)">
+    <app-menu></app-menu>
+
+    <div class="main">
+        <div class="card" style="border-bottom: none;">
+           <p class="subheader">Approve Students</p>
+       </div>
+       <div class="title">
+           <h1>ITP T3 2019/20 Placement Approval</h1>
+       </div>
+       <div class="card" style="padding-bottom: 10px;">
+           <p class="subheader-bottom">Approve your students' ITP placement here.</p>
+       </div>
+       
+       <form name="approve_form">
+           <div class="card" id="student_details" style="padding: 10px; padding-bottom: 30px; display: block;">
+               <p>Mikail bin Muhammad Azman Busst</p>
+               <p>1161202389</p>
+               <p><a href="mailto:mikailbusst@me.com">mikailbusst@me.com</a></p>
+               <p>+60123855083</p>
+               <p><a href="Documents/test.zip" download><img src="../../assets/document_icons_png/zip.png"> 1161202389_documents.zip</a></p>
+               <div class="sectionrs right-section">
+                   <select id="custom-dropdown" name="aa_approval">
+                       <option value="approved">Approved</option>
+                       <option value="not approved" selected>Not Approved</option>
+                   </select>
+                   <input type="text" placeholder="Send comment to student" name="aa_comment">
+                </div>
+           </div>
+           
+           <div class="card" id="student_details" style="padding: 10px; display: block; padding-bottom: 30px; ">
+               <p>Michelle Vervloesem</p>
+               <p>1161201906</p>
+               <p><a href="mailto:example@email.com">example@email.com</a></p>
+               <p>+60123456789</p>
+               <p><a href="Documents/test.zip" download><img src="../../assets/document_icons_png/zip.png"> 1161201906_documents.zip</a></p>
+               <div class="sectionrs right-section">
+                   <select id="custom-dropdown" name="aa_approval">
+                       <option value="approved">Approved</option>
+                       <option value="not approved" selected>Not Approved</option>
+                   </select>
+                   <input type="text" placeholder="Send comment to student" name="aa_comment">
+                </div>
+           </div>
+          <div class="card" style="border-bottom: none; padding-top: 0px;">
+               <div class="error"><p id="master_error"></p></div>
+               <div class="proceed_section" id="proceed_section">
+                   <input type="submit" ontouchstart="" value="Save Changes"> <button ontouchstart="" onclick="cancel()" id="proceed-red">Cancel</button>
+               </div>
+           </div>
+       </form>
+       <p id="width"></p>
+    </div>
+</body>
