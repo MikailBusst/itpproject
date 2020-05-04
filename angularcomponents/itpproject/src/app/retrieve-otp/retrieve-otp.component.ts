@@ -55,38 +55,32 @@ export class RetrieveOtpComponent implements OnInit {
 
   check_empty(data): void {
     var password = data.password
-    var password_status = false;
     
     if(password == ""){
-        event.preventDefault();
-        password_status = false;
-        document.getElementById("password_error").innerHTML = "Please enter your One Time Password";
+        event.preventDefault()
+        document.getElementById("password_error").innerHTML = "Please enter your One Time Password"
     }
     else{
-        this.password_validation(data);
+        this.password_validation(data)
     }
   }
 
   password_validation(data): void {
     var password = data.password
-    var password_status = false;
     
     if(password == ""){
-        event.preventDefault();
-        password_status = false;
-        document.getElementById("password_error").innerHTML = "Please enter your One Time Password";
+        event.preventDefault()
+        document.getElementById("password_error").innerHTML = "Please enter your One Time Password"
     }
     else{
         if(password == "password"){
-            event.preventDefault();
-            password_status = true;
-            document.getElementById("password_error").innerHTML = "";
-            window.location.href = "reset.html";
+            event.preventDefault()
+            document.getElementById("password_error").innerHTML = ""
+            window.location.href = "reset.html"
         }
         else{
-            event.preventDefault();
-            password_status = false;
-            document.getElementById("password_error").innerHTML = "The password typed is incorrect.";
+            event.preventDefault()
+            document.getElementById("password_error").innerHTML = "The password typed is incorrect."
         }
     }
   }
