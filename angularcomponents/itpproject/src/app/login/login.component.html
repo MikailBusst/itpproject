@@ -6,7 +6,7 @@
         </div>
         
         <div class="form-area">
-            <form id="login" name="login" onsubmit="check_empty()">
+            <form id="login" #loginForm="ngForm" (ngSubmit)="check_empty(loginForm.value)">
                 <div id="card" class="card-login">
                     
                     <div id="card-left" class="create-account">
@@ -14,9 +14,9 @@
                         <p><a href="signup.html">Create Account</a></p>
                     </div><div id="login-section" class="login-area">
                         <p>Email</p>
-                        <input name="email" type="text" placeholder="example@email.com">
+                        <input name="email" type="text" placeholder="example@email.com" ngModel>
                         <p style="margin-top: 50px;">Password</p>
-                        <input name="password" type="password" placeholder="Password">
+                        <input name="password" type="password" placeholder="Password" ngModel>
                         <div class="error"><p id="login_error"></p></div>
                         <div class="login_links">
                             <p style="font-size: 20px;"><a href="retrieve_email.html">Forgot Password?</a></p>

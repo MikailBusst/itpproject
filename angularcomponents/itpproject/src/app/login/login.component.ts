@@ -75,4 +75,25 @@ export class LoginComponent implements OnInit {
         $("#login-below").addClass("create-account-2");
     }
   }
+
+  check_empty(data): void {
+    var email = data.email
+    var password = data.password
+    
+    if(email == "" && password == ""){
+        event.preventDefault();
+        document.getElementById("login_error").innerHTML = "Please enter your email address and password.";
+    }
+    else if(email == ""){
+        event.preventDefault();
+        document.getElementById("login_error").innerHTML = "Please enter your email address.";
+    }
+    else if(password == ""){
+        event.preventDefault();
+        document.getElementById("login_error").innerHTML = "Please enter your password";
+    }
+    else{
+        document.getElementById("login_error").innerHTML = "";
+    }
+  }
 }
