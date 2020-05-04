@@ -51,6 +51,44 @@ export class RetrieveOtpComponent implements OnInit {
         $("#proceed_section").removeClass("proceed_section_mobile");
         $("#proceed_section").addClass("proceed_section");
     }
-}
+  }
+
+  check_empty(data): void {
+    var password = data.password
+    var password_status = false;
+    
+    if(password == ""){
+        event.preventDefault();
+        password_status = false;
+        document.getElementById("password_error").innerHTML = "Please enter your One Time Password";
+    }
+    else{
+        this.password_validation(data);
+    }
+  }
+
+  password_validation(data): void {
+    var password = data.password
+    var password_status = false;
+    
+    if(password == ""){
+        event.preventDefault();
+        password_status = false;
+        document.getElementById("password_error").innerHTML = "Please enter your One Time Password";
+    }
+    else{
+        if(password == "password"){
+            event.preventDefault();
+            password_status = true;
+            document.getElementById("password_error").innerHTML = "";
+            window.location.href = "reset.html";
+        }
+        else{
+            event.preventDefault();
+            password_status = false;
+            document.getElementById("password_error").innerHTML = "The password typed is incorrect.";
+        }
+    }
+  }
 
 }

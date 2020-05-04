@@ -9,8 +9,8 @@
             <h1>Type in the One Time Password</h1>
             <p style="margin-top: 20px; font-size: 20px;">Type in the One Time Password we have sent to your email. (The hardcoded password is "password")</p>
             
-            <form name="retrieve_otp" onsubmit="check_empty()">
-                <input name="password" type="password" onblur="password_validation()" placeholder="One Time Password">
+            <form #retrieveOTPForm="ngForm" (ngSubmit)="check_empty(retrieveOTPForm.value)">
+                <input name="password" type="password" placeholder="One Time Password" ngModel>
                 <div class="error"><p id="password_error"></p></div>
                 
                 <div class="card" style="width: 100%; margin-top: 80px; margin-bottom: 50px;">
