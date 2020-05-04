@@ -8,8 +8,8 @@
           <div class="title">
               <h1>Type in your Email</h1>
               
-              <form name="retrieve_email" onsubmit="check_empty()">
-                  <input name="email" type="text" onblur="email_validation()" placeholder="example@email.com">
+              <form #retrieveEmailForm="ngForm" (ngSubmit)="check_empty(retrieveEmailForm.value)">
+                  <input name="email" type="text" (blur)="email_validation(retrieveEmailForm.value)" placeholder="example@email.com" ngModel>
                   <div class="error"><p id="email_error"></p></div>
                   
                   <div class="card" style="padding-left: 0; width: 100%; margin-top: 80px; padding-right: 0px">

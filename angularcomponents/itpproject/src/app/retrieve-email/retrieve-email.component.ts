@@ -51,6 +51,50 @@ export class RetrieveEmailComponent implements OnInit {
         $("#proceed_section").removeClass("proceed_section_mobile");
         $("#proceed_section").addClass("proceed_section");
     }
-}
+  }
+
+  check_empty(data): void {
+    event.preventDefault()
+
+    var email = data.email
+    var email_status = false
+    
+    if(email == ""){
+        event.preventDefault()
+        email_status = false
+        document.getElementById("email_error").innerHTML = "Please enter your email address"
+    }
+    else{
+        this.email_validation(data)
+    }
+  }
+
+  email_validation(data): void {
+    var email = data.email
+    var email_status = false
+    
+    if(email == ""){
+        event.preventDefault()
+        email_status = false
+         document.getElementById("email_error").innerHTML = "Please enter your email address"
+    }
+    else{
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        
+        if(mailformat.test(email)){
+            if(email.indexOf("@student.mmu.edu.my", email.length - "@student.mmu.edu.my".length) !== -1){
+                email_status = true
+                document.getElementById("email_error").innerHTML = ""
+            }
+            else{
+                document.getElementById("email_error").innerHTML = "You must have an MMU student email address in order for you to continue."
+            }
+        }
+        else{
+            email_status = false
+            document.getElementById("email_error").innerHTML = "Please enter a valid email address."
+        }
+    }
+  }
 
 }
