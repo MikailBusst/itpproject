@@ -15,26 +15,26 @@
         </div>
     
         <div class="form-area">
-            <form id="registration" name="student_registration" onsubmit="check_empty()">
+            <form id="registration" #studentRegistrationForm="ngForm" (ngSubmit)="check_empty(studentRegistrationForm.value)">
                 <div class="card" style="border-bottom: 2px solid black; padding-bottom: 10px;">
                     <p class="subheader-bottom">Please fill in all the required details before submitting this form.</p>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Email address (for us to contact you)</p>
-                    <input name="student_email" onblur="validate_student_email()" type="text" placeholder="example@email.com" style="max-width: 400px;">
+                    <input name="student_email" (blur)="validate_student_email(studentRegistrationForm.value)" type="text" placeholder="example@email.com" style="max-width: 400px;" ngModel>
                     <div class="error"><p id="student_email_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Student ID</p>
-                    <input name="student_id" onblur="validate_student_id()" class="effect-16" type="text" placeholder="Student ID" style="max-width: 150px;">
+                    <input name="student_id" (blur)="validate_student_id(studentRegistrationForm.value)" class="effect-16" type="text" placeholder="Student ID" style="max-width: 150px;" ngModel>
                     <div class="error"><p id="student_id_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Full Name as in Camsys</p>
-                    <input name="student_name" onblur="validate_student_name()" style="max-width: 400px;" type="text" placeholder="Full Name">
+                    <input name="student_name" (blur)="validate_student_name(studentRegistrationForm.value)" style="max-width: 400px;" type="text" placeholder="Full Name" ngModel>
                     <div class="error"><p id="student_name_error"></p></div>
                 </div>
                 
@@ -43,42 +43,42 @@
                    <div class="radiocontainer">
                      <ul>
                      <li>
-                       <input onclick="validate_major()" type="radio" id="st" name="sm" value="st">
+                       <input (click)="validate_major()" type="radio" id="st" name="sm" value="st" ngModel>
                        <label for="st">ST</label>
                        
                        <div class="check"></div>
                      </li>
                      
                      <li>
-                       <input onclick="validate_major()" type="radio" id="dcn" name="sm" value="dcn">
+                       <input (click)="validate_major()" type="radio" id="dcn" name="sm" value="dcn" ngModel>
                        <label for="dcn">DCN</label>
                        
                        <div class="check"><div class="inside"></div></div>
                      </li>
                      
                      <li>
-                       <input onclick="validate_major()" type="radio" id="ai" name="sm" value="ai">
+                       <input (click)="validate_major()" type="radio" id="ai" name="sm" value="ai" ngModel>
                        <label for="ai">AI</label>
                        
                        <div class="check"><div class="inside"></div></div>
                      </li>
                      
                      <li>
-                       <input onclick="validate_major()" type="radio" id="itm" name="sm" value="itm">
+                       <input (click)="validate_major()" type="radio" id="itm" name="sm" value="itm" ngModel>
                        <label for="itm">ITM</label>
                        
                        <div class="check"><div class="inside"></div></div>
                      </li>
                      
                      <li>
-                       <input onclick="validate_major()" type="radio" id="bio" name="sm" value="bio">
+                       <input (click)="validate_major()" type="radio" id="bio" name="sm" value="bio" ngModel>
                        <label for="bio">BIO</label>
                        
                        <div class="check"><div class="inside"></div></div>
                      </li>
                      
                      <li>
-                       <input onclick="validate_major()" type="radio" id="bis" name="sm" value="bis">
+                       <input (click)="validate_major()" type="radio" id="bis" name="sm" value="bis" ngModel>
                        <label for="bis">BIS</label>
                        
                        <div class="check"><div class="inside"></div></div>
@@ -90,13 +90,13 @@
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Total Completed Credit Hours as in Trimester 1 2019/20 Excluding Arts & Humanities</p>
-                    <input name="student_credit_hours" onblur="validate_student_credit_hours()" type="text" placeholder="Total Credit Hours" style="max-width: 200px;">
+                    <input name="student_credit_hours" (blur)="validate_student_credit_hours(studentRegistrationForm.value)" type="text" placeholder="Total Credit Hours" style="max-width: 200px;" ngModel>
                     <div class="error"><p id="student_credit_hours_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Number of Credit Hours Registered in Trimester 2 2019/20 (Excluding Arts & Humanities)</p>
-                    <input name="student_credit_hours_trimester" onblur="validate_student_credit_hours_trimester()" type="text" placeholder="Credit Hours" style="max-width: 200px;">
+                    <input name="student_credit_hours_trimester" (blur)="validate_student_credit_hours_trimester(studentRegistrationForm.value)" type="text" placeholder="Credit Hours" style="max-width: 200px;" ngModel>
                     <div class="error"><p id="student_credit_hours_trimester_error"></p></div>
                 </div>
                 
@@ -105,14 +105,14 @@
                     <div class="radiocontainer">
                       <ul>
                       <li>
-                        <input onclick="validate_final_semester()" type="radio" id="yes" name="t3" value="yes">
+                        <input (click)="validate_final_semester()" type="radio" id="yes" name="t3" value="yes" ngModel>
                         <label for="yes">Yes</label>
                         
                         <div class="check"></div>
                       </li>
                       
                       <li>
-                        <input onclick="validate_final_semester()" type="radio" id="no" name="t3" value="no">
+                        <input (click)="validate_final_semester()" type="radio" id="no" name="t3" value="no" ngModel>
                         <label for="no">No</label>
                         
                         <div class="check"><div class="inside"></div></div>
@@ -337,13 +337,13 @@
                         <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
                         <option data-countryCode="ZM" value="260">Zambia (+260)</option>
                         <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
-                    </select><input name="student_mobile" onblur="validate_student_mobile()" type="text" placeholder="123456789" style="max-width: 200px;">
+                    </select><input name="student_mobile" (blur)="validate_student_mobile(studentRegistrationForm.value)" type="text" placeholder="123456789" style="max-width: 200px;" ngModel>
                     <div class="error"><p id="student_mobile_error"></p></div>
                 </div>
                 
                 <div class="upload_card">
                     <p>Resume (Latest)</p>
-                    <input type="file" ontouchstart="" name="resume" id="resume" onchange="display_resume()" class="file_submission">
+                    <input type="file" ontouchstart="" name="resume" id="resume" (change)="display_resume(studentRegistrationForm.value)" class="file_submission" ngModel>
                         <p id="resume_file_name"></p>
                 </div>
                 
