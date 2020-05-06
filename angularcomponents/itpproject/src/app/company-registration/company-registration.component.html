@@ -18,26 +18,26 @@
         </div>
     
         <div class="form-area">
-            <form id="registration" name="registration" onsubmit="check_empty()">
+            <form id="registration" #registrationForm="ngForm" (submit)="check_empty(registrationForm.value)">
                 <div class="card" style="border-bottom: 2px solid black; padding-bottom: 10px;">
                     <p class="subheader-bottom">Please fill in all the required details before submitting this form.</p>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Email address (for us to contact you)</p>
-                    <input name="student_email" onblur="validate_student_email()" type="text" placeholder="example@email.com" style="max-width: 400px;">
+                    <input name="student_email" (blur)="validate_student_email(registrationForm.value)" type="text" placeholder="example@email.com" style="max-width: 400px;" ngModel>
                     <div class="error"><p id="student_email_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Student ID</p>
-                    <input name="student_id" onblur="validate_student_id()" class="effect-16" type="text" placeholder="Student ID" style="max-width: 150px;">
+                    <input name="student_id" (blur)="validate_student_id(registrationForm.value)" class="effect-16" type="text" placeholder="Student ID" style="max-width: 150px;" ngModel>
                     <div class="error"><p id="student_id_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Full Name</p>
-                    <input name="student_name" onblur="validate_student_name()" style="max-width: 400px;" type="text" placeholder="Full Name">
+                    <input name="student_name" (blur)="validate_student_name(registrationForm.value)" style="max-width: 400px;" type="text" placeholder="Full Name" ngModel>
                     <div class="error"><p id="student_name_error"></p></div>
                 </div>
                 
@@ -46,42 +46,42 @@
                    <div class="radiocontainer">
                      <ul>
                      <li>
-                       <input onclick="validate_major()" type="radio" id="st" name="sm" value="st">
+                       <input (click)="validate_major(registrationForm.value)" type="radio" id="st" name="sm" value="st" ngModel>
                        <label for="st">ST</label>
                        
                        <div class="check"></div>
                      </li>
                      
                      <li>
-                       <input onclick="validate_major()" type="radio" id="dcn" name="sm" value="dcn">
+                       <input (click)="validate_major(registrationForm.value)" type="radio" id="dcn" name="sm" value="dcn" ngModel>
                        <label for="dcn">DCN</label>
                        
                        <div class="check"><div class="inside"></div></div>
                      </li>
                      
                      <li>
-                       <input onclick="validate_major()" type="radio" id="ai" name="sm" value="ai">
+                       <input (click)="validate_major(registrationForm.value)" type="radio" id="ai" name="sm" value="ai" ngModel>
                        <label for="ai">AI</label>
                        
                        <div class="check"><div class="inside"></div></div>
                      </li>
                      
                      <li>
-                       <input onclick="validate_major()" type="radio" id="itm" name="sm" value="itm">
+                       <input (click)="validate_major(registrationForm.value)" type="radio" id="itm" name="sm" value="itm" ngModel>
                        <label for="itm">ITM</label>
                        
                        <div class="check"><div class="inside"></div></div>
                      </li>
                      
                      <li>
-                       <input onclick="validate_major()" type="radio" id="bio" name="sm" value="bio">
+                       <input (click)="validate_major(registrationForm.value)" type="radio" id="bio" name="sm" value="bio" ngModel>
                        <label for="bio">BIO</label>
                        
                        <div class="check"><div class="inside"></div></div>
                      </li>
                      
                      <li>
-                       <input onclick="validate_major()" type="radio" id="bis" name="sm" value="bis">
+                       <input (click)="validate_major(registrationForm.value)" type="radio" id="bis" name="sm" value="bis" ngModel>
                        <label for="bis">BIS</label>
                        
                        <div class="check"><div class="inside"></div></div>
@@ -96,14 +96,14 @@
                     <div class="radiocontainer">
                       <ul>
                       <li>
-                        <input onclick="validate_final_semester()" type="radio" id="yes" name="t3" value="yes">
+                        <input (click)="validate_final_semester(registrationForm.value)" type="radio" id="yes" name="t3" value="yes" ngModel>
                         <label for="yes">Yes</label>
                         
                         <div class="check"></div>
                       </li>
                       
                       <li>
-                        <input onclick="validate_final_semester()" type="radio" id="no" name="t3" value="no">
+                        <input (click)="validate_final_semester(registrationForm.value)" type="radio" id="no" name="t3" value="no" ngModel>
                         <label for="no">No</label>
                         
                         <div class="check"><div class="inside"></div></div>
@@ -329,13 +329,13 @@
                         <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
                         <option data-countryCode="ZM" value="260">Zambia (+260)</option>
                         <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
-                    </select><input name="student_mobile" onblur="validate_student_mobile()" type="text" placeholder="123456789" style="max-width: 200px;">
+                    </select><input name="student_mobile" (blur)="validate_student_mobile(registrationForm.value)" type="text" placeholder="123456789" style="max-width: 200px;" ngModel>
                     <div class="error" style="margin-bottom: 20px;"><p id="student_mobile_error"></p></div>
                 </div>
                 
                 <div class="card" style="display: block; padding-bottom: 30px;">
                     <p>ITP Start Date</p>
-                    <select id="custom-dropdown" name="itp_start_date" style="max-width: 100px;">
+                    <select id="custom-dropdown" name="itp_start_date" style="max-width: 100px;" (change)="startDateChange($event)">
                         <option value="none">Day</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -368,7 +368,7 @@
                         <option value="29">29</option>
                         <option value="30">30</option>
                         <option value="31">31</option>
-                    </select> <select id="custom-dropdown" name="itp_start_month" style="max-width: 150px;">
+                    </select> <select id="custom-dropdown" name="itp_start_month" style="max-width: 150px;" (change)="startMonthChange($event)">
                         <option value="none">Month</option>
                         <option value="1">January</option>
                         <option value="2">February</option>
@@ -382,7 +382,7 @@
                         <option value="10">October</option>
                         <option value="11">November</option>
                         <option value="12">December</option>
-                    </select> <select id="custom-dropdown" name="itp_start_year" style="max-width: 100px; float: none; margin-bottom: 0px;">
+                    </select> <select id="custom-dropdown" name="itp_start_year" style="max-width: 100px; float: none; margin-bottom: 0px;" (change)="startYearChange($event)">
                         <option value="none">Year</option>
                         <option value="2020">2020</option>
                         <option value="2021">2021</option>
@@ -392,7 +392,7 @@
                 
                 <div class="card" style="display: block; padding-bottom: 30px;">
                     <p>ITP End Date</p>
-                    <select id="custom-dropdown" name="itp_end_date" style="max-width: 100px;">
+                    <select id="custom-dropdown" name="itp_end_date" style="max-width: 100px;" (change)="endDateChange($event)">
                         <option value="none">Day</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -425,7 +425,7 @@
                         <option value="29">29</option>
                         <option value="30">30</option>
                         <option value="31">31</option>
-                    </select> <select id="custom-dropdown" name="itp_end_month" style="max-width: 150px;">
+                    </select> <select id="custom-dropdown" name="itp_end_month" style="max-width: 150px;" (change)="endMonthChange($event)">
                         <option value="none">Month</option>
                         <option value="1">January</option>
                         <option value="2">February</option>
@@ -439,7 +439,7 @@
                         <option value="10">October</option>
                         <option value="11">November</option>
                         <option value="12">December</option>
-                    </select> <select id="custom-dropdown" name="itp_end_year" style="max-width: 100px; float: none; margin-bottom: 0px;">
+                    </select> <select id="custom-dropdown" name="itp_end_year" style="max-width: 100px; float: none; margin-bottom: 0px;" (change)="endYearChange($event)">
                         <option value="none">Year</option>
                         <option value="2020">2020</option>
                         <option value="2021">2021</option>
@@ -449,25 +449,25 @@
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Attatched Company Name</p>
-                    <input name="company_name" onblur="validate_company_name()" style="max-width: 500px;" type="text" placeholder="Company Name">
+                    <input name="company_name" (blur)="validate_company_name(registrationForm.value)" style="max-width: 500px;" type="text" placeholder="Company Name" ngModel>
                     <div class="error"><p id="company_name_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Company Address</p>
-                    <input name="company_address" onblur="validate_company_address()" class="effect-16" type="text" placeholder="Company Address" style="max-width: 800px;">
+                    <input name="company_address" (blur)="validate_company_address(registrationForm.value)" class="effect-16" type="text" placeholder="Company Address" style="max-width: 800px;" ngModel>
                     <div class="error"><p id="company_address_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Postcode</p>
-                    <input name="company_postcode" onblur="validate_company_postcode()" style="max-width: 100px;" type="text" placeholder="12345">
+                    <input name="company_postcode" (blur)="validate_company_postcode(registrationForm.value)" style="max-width: 100px;" type="text" placeholder="12345" ngModel>
                     <div class="error"><p id="company_postcode_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>State/Province</p>
-                    <input name="company_state" onblur="validate_company_state()" type="text" placeholder="Company State" style="max-width: 300px;">
+                    <input name="company_state" (blur)="validate_company_state(registrationForm.value)" type="text" placeholder="Company State" style="max-width: 300px;" ngModel>
                     <div class="error"><p id="company_state_error"></p></div>
                 </div>
                 
@@ -937,13 +937,13 @@
                         <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
                         <option data-countryCode="ZM" value="260">Zambia (+260)</option>
                         <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
-                    </select><input name="company_telephone" onblur="validate_company_telephone()" type="text" placeholder="61234567" style="max-width: 200px; margin-bottom: 0px;">
+                    </select><input name="company_telephone" (blur)="validate_company_telephone(registrationForm.value)" type="text" placeholder="61234567" style="max-width: 200px; margin-bottom: 0px;" ngModel>
                     <div class="error" style="margin-bottom: 40px;"><p id="company_telephone_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Monthly Allowance/Stipend/Remuneration<br /><div class="subtitle">In Malaysian Ringgit (MYR)</div>
-                    <input name="allowance" onblur="validate_allowance()" style="max-width: 100px;" type="text" placeholder="1000.00">
+                    <input name="allowance" (blur)="validate_allowance(registrationForm.value)" style="max-width: 100px;" type="text" placeholder="1000.00" ngModel>
 
                     <div class="error"><p id="allowance_error"></p></div>
                 </div>
@@ -954,47 +954,47 @@
                      <div class="radiocontainer">
                         <ul>
                             <li>
-                                <input onclick="select_title()" type="radio" id="mr" name="title" value="mr">
+                                <input (click)="select_title(registrationForm.value)" type="radio" id="mr" name="title" value="mr" ngModel>
                                 <label for="mr">Mr.</label>
                                               
                                 <div class="check"></div>
                             </li>
                                             
                             <li>
-                                <input onclick="select_title()" type="radio" id="ms" name="title" value="ms">
+                                <input (click)="select_title(registrationForm.value)" type="radio" id="ms" name="title" value="ms" ngModel>
                                 <label for="ms">Ms.</label>
                                               
                                 <div class="check"><div class="inside"></div></div>
                             </li>
                                             
                             <li>
-                                <input onclick="select_title()" type="radio" id="mrs" name="title" value="mrs">
+                                <input (click)="select_title(registrationForm.value)" type="radio" id="mrs" name="title" value="mrs" ngModel>
                                 <label for="mrs">Mrs.</label>
                                               
                                 <div class="check"><div class="inside"></div></div>
                             </li>
                                             
                             <li>
-                                <input onclick="select_title()" type="radio" id="dr" name="title" value="dr">
+                                <input (click)="select_title(registrationForm.value)" type="radio" id="dr" name="title" value="dr" ngModel>
                                 <label for="dr">Dr.</label>
                                               
                                 <div class="check"><div class="inside"></div></div>
                             </li>
                                             
                             <li>
-                                <input onclick="select_title()" type="radio" id="prof" name="title" value="prof">
+                                <input (click)="select_title(registrationForm.value)" type="radio" id="prof" name="title" value="prof" ngModel>
                                 <label for="prof">Prof.</label>
                                               
                                 <div class="check"><div class="inside"></div></div>
                             </li>
                                             
                             <li>
-                                <input onclick="select_other()" type="radio" id="otheropt" name="title" value="otheropt">
+                                <input (click)="select_other(registrationForm.value)" type="radio" id="otheropt" name="title" value="otheropt" ngModel>
                                 <label for="otheropt">Other</label>
                                               
                                 <div class="check"><div class="inside"></div></div>
                             </li>
-                            <input style="margin-top: 50px; max-width: 150px;" name="other_title" onblur="validate_other_title()" onkeyup="select_other()" id="othertxtbox" type="text" placeholder="Title">
+                            <input style="margin-top: 50px; max-width: 150px;" name="other_title" (blur)="validate_other_title(registrationForm.value)" [(ngModel)]="other_title_field" id="othertxtbox" type="text" placeholder="Title" [readonly]="isReadOnly">
                         </ul>
                     </div>
                     <div class="error" style="margin-bottom: 60px;"><p id="title_error"></p></div>
@@ -1002,25 +1002,25 @@
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>First Name of Company Supervisor</p>
-                    <input name="supervisor_first_name" onblur="validate_supervisor_first_name()" style="max-width: 350px;" type="text" placeholder="First Name">
+                    <input name="supervisor_first_name" (blur)="validate_supervisor_first_name(registrationForm.value)" style="max-width: 350px;" type="text" placeholder="First Name" ngModel>
                     <div class="error"><p id="supervisor_first_name_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Last Name of Company Supervisor</p>
-                    <input name="supervisor_last_name" onblur="validate_supervisor_last_name()" style="max-width: 350px;" type="text" placeholder="Last Name">
+                    <input name="supervisor_last_name" (blur)="validate_supervisor_last_name(registrationForm.value)" style="max-width: 350px;" type="text" placeholder="Last Name" ngModel>
                     <div class="error"><p id="supervisor_last_name_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Company Supervisor's Designation</p>
-                    <input name="supervisor_designation" onblur="validate_supervisor_designation()" type="text" placeholder="Designation" style="max-width: 400px;">
+                    <input name="supervisor_designation" (blur)="validate_supervisor_designation(registrationForm.value)" type="text" placeholder="Designation" style="max-width: 400px;" ngModel>
                     <div class="error"><p id="supervisor_designation_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Department of Company Supervisor</p>
-                    <input name="supervisor_department" onblur="validate_supervisor_department()" style="max-width: 500px;" type="text" placeholder="Department">
+                    <input name="supervisor_department" (blur)="validate_supervisor_department(registrationForm.value)" style="max-width: 500px;" type="text" placeholder="Department" ngModel>
                     <div class="error"><p id="supervisor_department_error"></p></div>
                 </div>
                 
@@ -1240,13 +1240,13 @@
                             <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
                             <option data-countryCode="ZM" value="260">Zambia (+260)</option>
                             <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
-                        </select><input name="supervisor_contact" onblur="validate_supervisor_contact()" style="max-width: 200px;" type="text" placeholder="123456789">
+                        </select><input name="supervisor_contact" (blur)="validate_supervisor_contact(registrationForm.value)" style="max-width: 200px;" type="text" placeholder="123456789" ngModel>
                     <div class="error" style="margin-bottom: 20px;"><p id="supervisor_contact_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Company Supervisor's Email Address</p>
-                    <input name="supervisor_email" onblur="validate_supervisor_email()" style="max-width: 400px;" type="text" placeholder="example@email.com">
+                    <input name="supervisor_email" (blur)="validate_supervisor_email(registrationForm.value)" style="max-width: 400px;" type="text" placeholder="example@email.com" ngModel>
                     <div class="error"><p id="supervisor_email_error"></p></div>
                 </div>
                 <div class="card" style="border-bottom: none;">
