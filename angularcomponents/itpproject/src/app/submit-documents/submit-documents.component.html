@@ -30,7 +30,7 @@
         
         <section class="download_section">
             <div id="inner-download-section" class="inner-download-section">
-                <a href="Documents/ITP Checklist_ Form T3201920.docx" download>
+                <a href="../../assets/Documents/ITP Checklist_ Form T3201920.docx" download>
                     <div class="dc document_card">
                         <img src="../../assets/document_icons_png/doc.png">
                         <div class="ct">
@@ -39,7 +39,7 @@
                     </div>
                 </a>
                 
-                <a href="Documents/Cover Letter- sample.docx" download>
+                <a href="../../assets/Documents/Cover Letter- sample.docx" download>
                     <div class="dc document_card">
                         <img id="cover_letter" src="../../assets/document_icons_png/doc.png">
                         <div class="ct">
@@ -48,7 +48,7 @@
                     </div>
                 </a>
                 
-                <a href="Documents/SAMPLE_RESUME.zip" download>
+                <a href="../../assets/Documents/SAMPLE_RESUME.zip" download>
                     <div class="dc document_card">
                         <img id="sample_resume" src="../../assets/document_icons_png/zip.png">
                         <div class="ct">
@@ -57,7 +57,7 @@
                     </div>
                 </a>
                 
-                <a href="Documents/Agreement Form for Foreign Company Attachment T3 2019_2020.doc" download>
+                <a href="../../assets/Documents/Agreement Form for Foreign Company Attachment T3 2019_2020.doc" download>
                     <div class="dc document_card">
                         <img id="agreement_form" src="../../assets/document_icons_png/doc.png">
                         <div class="ct">
@@ -66,7 +66,7 @@
                     </div>
                 </a>
                 
-                <a href="Documents/Company List for ITP Trimester 3 2018_19.xlsx" download>
+                <a href="../../assets/Documents/Company List for ITP Trimester 3 2018_19.xlsx" download>
                     <div class="dc document_card">
                         <img id="company_list_1" src="../../assets/document_icons_png/xls.png">
                         <div class="ct">
@@ -75,7 +75,7 @@
                     </div>
                 </a>
                 
-                <a href="Documents/Company List for ITP Trimester 3 2019_20.xlsx" download>
+                <a href="../../assets/Documents/Company List for ITP Trimester 3 2019_20.xlsx" download>
                     <div class="dc document_card">
                         <img id="company_list_2" src="../../assets/document_icons_png/xls.png">
                         <div class="ct">
@@ -84,7 +84,7 @@
                     </div>
                 </a>
                 
-                <a href="Documents/ITP No.JPG" download>
+                <a href="../../assets/Documents/ITP No.JPG" download>
                     <div class="dc document_card">
                         <img id="itp" src="../../assets/document_icons_png/jpg.png">
                         <div class="ct">
@@ -93,7 +93,7 @@
                     </div>
                 </a>
                 
-                <a href="Documents/Manual Registration Form.PDF" download>
+                <a href="../../assets/Documents/Manual Registration Form.PDF" download>
                     <div class="dc document_card">
                         <img id="manual_regisration" src="../../assets/document_icons_png/pdf.png">
                         <div class="ct">
@@ -102,7 +102,7 @@
                     </div>
                 </a>
                 
-                <a href="Documents/Guidelines for Internship Programme - Trimester 3 Session 2019_2020_Updated.docx" download>
+                <a href="../../assets/Documents/Guidelines for Internship Programme - Trimester 3 Session 2019_2020_Updated.docx" download>
                     <div class="dc document_card">
                         <img id="guidelines" src="../../assets/document_icons_png/doc.png">
                         <div class="ct">
@@ -117,46 +117,46 @@
         <div class="title">
             <h2>Submit Documents</h2>
         </div>
-        <form name="submit_documents" onsubmit="check_files()">
+        <form #submitDocumentsForm="ngForm" (ngSubmit)="check_files()">
             <div class="upload_card">
                 <p>Manual Registration Form</p>
-                <input ontouchstart="" type="file" id="manual_regisration_form" name="manual_registration_form" class="file_submission" onchange="display_manual_regisration_form()">
-                    <p id="manual_regisration_form_file_name"></p>
+                <input ontouchstart="" type="file" id="manual_registration_form" name="manual_registration_form" class="file_submission" (change)="display_manual_registration_form(submitDocumentsForm.value)" ngModel>
+                    <p id="manual_registration_form_file_name"></p>
             </div>
             
             <div class="upload_card">
                 <p>Checklist</p>
-                <input ontouchstart="" type="file" name="checklist" id="checklist" class="file_submission" onchange="display_checklist()">
+                <input ontouchstart="" type="file" name="checklist" id="checklist" class="file_submission" (change)="display_checklist(submitDocumentsForm.value)" ngModel>
                     <p id="checklist_file_name"></p>
             </div>
             
             <div class="upload_card">
                 <p>Online Transcripts</p>
-                <input ontouchstart="" type="file" name="online_transcripts" id="online_transcripts" onchange="display_online_transcripts()" class="file_submission">
+                <input ontouchstart="" type="file" name="online_transcripts" id="online_transcripts" (change)="display_online_transcripts(submitDocumentsForm.value)" class="file_submission" ngModel>
                     <p id="online_transcripts_file_name"></p>
             </div>
             
             <div class="upload_card">
                 <p>Course Structure</p>
-                <input ontouchstart="" type="file" name="course_structure" id="course_structure" onchange="display_course_structure()" class="file_submission">
+                <input ontouchstart="" type="file" name="course_structure" id="course_structure" (change)="display_course_structure(submitDocumentsForm.value)" class="file_submission" ngModel>
                     <p id="course_structure_file_name"></p>
             </div>
             
             <div class="upload_card">
                 <p>Insurance Payment Document (Original Copy)</p>
-                <input ontouchstart="" type="file" name="insurance" id="insurance" onchange="display_insurance()" class="file_submission">
+                <input ontouchstart="" type="file" name="insurance" id="insurance" (change)="display_insurance(submitDocumentsForm.value)" class="file_submission" ngModel>
                     <p id="insurance_file_name"></p>
             </div>
             
             <div class="upload_card">
                 <p>Resume</p>
-                <input ontouchstart="" type="file" name="resume" id="resume" onchange="display_resume()" class="file_submission">
+                <input ontouchstart="" type="file" name="resume" id="resume" (change)="display_resume(submitDocumentsForm.value)" class="file_submission" ngModel>
                     <p id="resume_file_name"></p>
             </div>
             
             <div class="upload_card">
                 <p>Sample Cover Letter</p>
-                <input ontouchstart="" type="file" name="cover_letter_file" id="cover_letter_file" onchange="display_cover_letter()" class="file_submission">
+                <input ontouchstart="" type="file" name="cover_letter_file" id="cover_letter_file" (change)="display_cover_letter(submitDocumentsForm.value)" class="file_submission" ngModel>
                     <p id="cover_letter_file_name"></p>
             </div>
     

@@ -1167,9 +1167,9 @@ p.subheader-bottom {
     padding-right: 10px;
 }
 
-p#resume_file_name, p#manual_regisration_form_file_name, p#checklist_file_name, p#online_transcripts_file_name, p#course_structure_file_name, p#course_structure_file_name, p#insurance_file_name, p#cover_letter_file_name, p#undertaking_file_name, p#offer_letter_file_name {
-    font-weight: 200;
-    font-size: 20px;
+p#resume_file_name, p#manual_registration_form_file_name, p#checklist_file_name, p#online_transcripts_file_name, p#course_structure_file_name, p#course_structure_file_name, p#insurance_file_name, p#cover_letter_file_name, p#undertaking_file_name, p#offer_letter_file_name {
+    font-weight: 200!important;
+    font-size: 20px!important;
 }
 
 input[type=file] {
