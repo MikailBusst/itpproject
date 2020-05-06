@@ -10,22 +10,22 @@
         </div>
         
         <div class="form-area">
-            <form id="signup" name="login" onsubmit="check_empty()">
+            <form id="signup" #signupForm="ngForm" (ngSubmit)="check_empty(signupForm.value)">
                 <div class="card">
                     <p>First Name</p>
-                    <input onblur="verify_first_name()" style="max-width: 350px;" name="first_name" type="text" placeholder="Name">
+                    <input (blur)="verify_first_name(signupForm.value)" style="max-width: 350px;" name="first_name" type="text" placeholder="Name" ngModel>
                     <div class="error"><p id="first_name_error"></p></div>
                     <p>Last Name</p>
-                    <input onblur="verify_last_name()" style="max-width: 350px;" name="last_name" type="text" placeholder="Last Name">
+                    <input (blur)="verify_last_name(signupForm.value)" style="max-width: 350px;" name="last_name" type="text" placeholder="Last Name" ngModel>
                     <div class="error"><p id="last_name_error"></p></div>
                          <p>Email Address</p>
-                        <input onblur="verify_email()" style="max-width: 400px;" name="email" type="text" placeholder="example@email.com">
+                        <input (blur)="verify_email(signupForm.value)" style="max-width: 400px;" name="email" type="text" placeholder="example@email.com" ngModel>
                     <div class="error"><p id="email_error"></p></div>
                     <p>Password</p>
-                    <input onblur="verify_password()" style="max-width: 400px;" name="password" type="password" placeholder="Password">
+                    <input (blur)="verify_password(signupForm.value)" style="max-width: 400px;" name="password" type="password" placeholder="Password" ngModel>
                     <div class="error"><p id="password_error"></p></div>
                     <p>Confirm Password</p>
-                    <input onblur="verify_confirm_password()" style="max-width: 400px;" name="confirm_password" type="password" placeholder="Password">
+                    <input (blur)="verify_confirm_password(signupForm.value)" style="max-width: 400px;" name="confirm_password" type="password" placeholder="Confirm Password" ngModel>
                     <div class="error"><p id="confirm_password_error"></p></div>
                     
                     <div class="card" style="width: 100%;">
