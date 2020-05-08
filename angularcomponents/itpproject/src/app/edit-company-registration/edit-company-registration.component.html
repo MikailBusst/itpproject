@@ -13,26 +13,26 @@
         </div>
     
         <div class="form-area">
-            <form id="registration" name="registration" onsubmit="check_empty()">
+            <form id="registration" (ngSubmit)="check_empty()">
                 <div class="card" style="border-bottom: 2px solid black; padding-bottom: 10px;">
                     <p class="subheader-bottom">Please fill in all the required details before submitting this form.</p>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Email address (for us to contact you)</p>
-                    <input name="student_email" onblur="validate_student_email()" type="text" value="1161202389@student.mmu.edu.my" placeholder="example@email.com" style="max-width: 400px;">
+                    <input name="student_email" (blur)="validate_student_email($event)" type="text" value="1161202389@student.mmu.edu.my" placeholder="example@email.com" style="max-width: 400px;">
                     <div class="error"><p id="student_email_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Student ID</p>
-                    <input name="student_id" onblur="validate_student_id()" value="1161202389" type="text" placeholder="Student ID" style="max-width: 150px;">
+                    <input name="student_id" (blur)="validate_student_id($event)" value="1161202389" type="text" placeholder="Student ID" style="max-width: 150px;">
                     <div class="error"><p id="student_id_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Full Name</p>
-                    <input name="student_name" onblur="validate_student_name()" style="max-width: 400px;" type="text" value="Mikail bin Muhammad Azman Busst" placeholder="Full Name">
+                    <input name="student_name" (blur)="validate_student_name($event)" style="max-width: 400px;" type="text" value="Mikail bin Muhammad Azman Busst" placeholder="Full Name" >
                     <div class="error"><p id="student_name_error"></p></div>
                 </div>
                 
@@ -41,42 +41,42 @@
                    <div class="radiocontainer">
                      <ul>
                      <li>
-                       <input onclick="validate_major()" type="radio" id="st" name="sm" value="st">
+                       <input type="radio" id="st" name="sm" value="st">
                        <label for="st">ST</label>
                        
                        <div class="check"></div>
                      </li>
                      
                      <li>
-                       <input onclick="validate_major()" type="radio" id="dcn" name="sm" value="dcn">
+                       <input type="radio" id="dcn" name="sm" value="dcn">
                        <label for="dcn">DCN</label>
                        
                        <div class="check"><div class="inside"></div></div>
                      </li>
                      
                      <li>
-                       <input onclick="validate_major()" checked type="radio" id="ai" name="sm" value="ai">
+                       <input checked type="radio" id="ai" name="sm" value="ai">
                        <label for="ai">AI</label>
                        
                        <div class="check"><div class="inside"></div></div>
                      </li>
                      
                      <li>
-                       <input onclick="validate_major()" type="radio" id="itm" name="sm" value="itm">
+                       <input type="radio" id="itm" name="sm" value="itm">
                        <label for="itm">ITM</label>
                        
                        <div class="check"><div class="inside"></div></div>
                      </li>
                      
                      <li>
-                       <input onclick="validate_major()" type="radio" id="bio" name="sm" value="bio">
+                       <input type="radio" id="bio" name="sm" value="bio">
                        <label for="bio">BIO</label>
                        
                        <div class="check"><div class="inside"></div></div>
                      </li>
                      
                      <li>
-                       <input onclick="validate_major()" type="radio" id="bis" name="sm" value="bis">
+                       <input type="radio" id="bis" name="sm" value="bis">
                        <label for="bis">BIS</label>
                        
                        <div class="check"><div class="inside"></div></div>
@@ -91,14 +91,14 @@
                     <div class="radiocontainer">
                       <ul>
                       <li>
-                        <input onclick="validate_final_semester()" type="radio" id="yes" name="t3" value="yes">
+                        <input type="radio" id="yes" name="t3" value="yes">
                         <label for="yes">Yes</label>
                         
                         <div class="check"></div>
                       </li>
                       
                       <li>
-                        <input onclick="validate_final_semester()" checked type="radio" id="no" name="t3" value="no">
+                        <input checked type="radio" id="no" name="t3" value="no">
                         <label for="no">No</label>
                         
                         <div class="check"><div class="inside"></div></div>
@@ -324,13 +324,13 @@
                         <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
                         <option data-countryCode="ZM" value="260">Zambia (+260)</option>
                         <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
-                    </select><input name="student_mobile" onblur="validate_student_mobile()" type="text" placeholder="123456789" style="max-width: 200px;">
+                    </select><input name="student_mobile" (blur)="validate_student_mobile($event)" type="text" value="123855083" placeholder="123456789" style="max-width: 200px;">
                     <div class="error" style="margin-bottom: 20px;"><p id="student_mobile_error"></p></div>
                 </div>
                 
                 <div class="card" style="display: block; padding-bottom: 30px;">
                     <p>ITP Start Date</p>
-                    <select id="custom-dropdown" name="itp_start_date" style="max-width: 100px;">
+                    <select id="custom-dropdown" name="itp_start_date" style="max-width: 100px;" (change)="startDateChange($event)">
                         <option value="none">Day</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -363,7 +363,7 @@
                         <option value="29">29</option>
                         <option value="30">30</option>
                         <option value="31">31</option>
-                    </select> <select id="custom-dropdown" name="itp_start_month" style="max-width: 150px;">
+                    </select> <select id="custom-dropdown" name="itp_start_month" style="max-width: 150px;" (change)="startMonthChange($event)">
                         <option value="none">Month</option>
                         <option value="1">January</option>
                         <option value="2">February</option>
@@ -377,7 +377,7 @@
                         <option value="10">October</option>
                         <option value="11">November</option>
                         <option value="12">December</option>
-                    </select> <select id="custom-dropdown" name="itp_start_year" style="max-width: 100px; float: none; margin-bottom: 0px;">
+                    </select> <select id="custom-dropdown" name="itp_start_year" style="max-width: 100px; float: none; margin-bottom: 0px;" (change)="startYearChange($event)">
                         <option value="none">Year</option>
                         <option value="2020" selected>2020</option>
                         <option value="2021">2021</option>
@@ -387,7 +387,7 @@
                 
                 <div class="card" style="display: block; padding-bottom: 30px;">
                     <p>ITP End Date</p>
-                    <select id="custom-dropdown" name="itp_end_date" style="max-width: 100px;">
+                    <select id="custom-dropdown" name="itp_end_date" style="max-width: 100px;" (change)="endDateChange($event)">
                         <option value="none">Day</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -420,7 +420,7 @@
                         <option value="29">29</option>
                         <option value="30">30</option>
                         <option value="31">31</option>
-                    </select> <select id="custom-dropdown" name="itp_end_month" style="max-width: 150px;">
+                    </select> <select id="custom-dropdown" name="itp_end_month" style="max-width: 150px;" (change)="endMonthChange($event)">
                         <option value="none">Month</option>
                         <option value="1">January</option>
                         <option value="2">February</option>
@@ -434,7 +434,7 @@
                         <option value="10">October</option>
                         <option value="11">November</option>
                         <option value="12">December</option>
-                    </select> <select id="custom-dropdown" name="itp_end_year" style="max-width: 100px; float: none; margin-bottom: 0px;">
+                    </select> <select id="custom-dropdown" name="itp_end_year" style="max-width: 100px; float: none; margin-bottom: 0px;" (change)="endYearChange($event)">
                         <option value="none">Year</option>
                         <option value="2020" selected>2020</option>
                         <option value="2021">2021</option>
@@ -444,25 +444,25 @@
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Attatched Company Name</p>
-                    <input name="company_name" onblur="validate_company_name()" style="max-width: 500px;" type="text" value="Multimedia University" placeholder="Company Name">
+                    <input name="company_name" (blur)="validate_company_name($event)" style="max-width: 500px;" type="text" value="Multimedia University" placeholder="Company Name">
                     <div class="error"><p id="company_name_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Company Address</p>
-                    <input name="company_address" onblur="validate_company_address()"  type="text" value="Jalan Ayer Keroh Lama, 75450 Bukit Beruang, Melaka" placeholder="Company Address" style="max-width: 800px;">
+                    <input name="company_address" (blur)="validate_company_address($event)"  type="text" value="Jalan Ayer Keroh Lama, 75450 Bukit Beruang, Melaka" placeholder="Company Address" style="max-width: 800px;">
                     <div class="error"><p id="company_address_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Postcode</p>
-                    <input name="company_postcode" onblur="validate_company_postcode()" style="max-width: 100px;" value="75450" type="text" placeholder="12345">
+                    <input name="company_postcode" (blur)="validate_company_postcode($event)" style="max-width: 100px;" value="75450" type="text" placeholder="12345">
                     <div class="error"><p id="company_postcode_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>State/Province</p>
-                    <input name="company_state" onblur="validate_company_state()" type="text" value="Melaka" placeholder="Company State" style="max-width: 300px;">
+                    <input name="company_state" (blur)="validate_company_state($event)" type="text" value="Melaka" placeholder="Company State" style="max-width: 300px;">
                     <div class="error"><p id="company_state_error"></p></div>
                 </div>
                 
@@ -932,13 +932,13 @@
                         <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
                         <option data-countryCode="ZM" value="260">Zambia (+260)</option>
                         <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
-                    </select><input name="company_telephone" onblur="validate_company_telephone()" type="text" placeholder="61234567" style="max-width: 200px; margin-bottom: 0px;">
+                    </select><input name="company_telephone" (blur)="validate_company_telephone($event)" type="text" placeholder="61234567" value="61234567" style="max-width: 200px; margin-bottom: 0px;">
                     <div class="error" style="margin-bottom: 40px;"><p id="company_telephone_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Monthly Allowance/Stipend/Remuneration<br /><div class="subtitle">In Malaysian Ringgit (MYR)</div>
-                    <input name="allowance" onblur="validate_allowance()" style="max-width: 100px;" type="text" value="0.00" placeholder="1000.00">
+                    <input name="allowance" (blur)="validate_allowance($event)" style="max-width: 100px;" type="text" value="0.00" placeholder="1000.00">
 
                     <div class="error"><p id="allowance_error"></p></div>
                 </div>
@@ -949,47 +949,47 @@
                      <div class="radiocontainer">
                         <ul>
                             <li>
-                                <input onclick="select_title()" type="radio" id="mr" name="title" value="mr">
+                                <input (click)="select_title()" type="radio" id="mr" name="title" value="mr">
                                 <label for="mr">Mr.</label>
                                               
                                 <div class="check"></div>
                             </li>
                                             
                             <li>
-                                <input onclick="select_title()" type="radio" id="ms" name="title" value="ms">
+                                <input (click)="select_title()" type="radio" id="ms" name="title" value="ms">
                                 <label for="ms">Ms.</label>
                                               
                                 <div class="check"><div class="inside"></div></div>
                             </li>
                                             
                             <li>
-                                <input onclick="select_title()" type="radio" id="mrs" name="title" value="mrs">
+                                <input (click)="select_title()" type="radio" id="mrs" name="title" value="mrs">
                                 <label for="mrs">Mrs.</label>
                                               
                                 <div class="check"><div class="inside"></div></div>
                             </li>
                                             
                             <li>
-                                <input onclick="select_title()" checked type="radio" id="dr" name="title" value="dr">
+                                <input (click)="select_title()" checked type="radio" id="dr" name="title" value="dr">
                                 <label for="dr">Dr.</label>
                                               
                                 <div class="check"><div class="inside"></div></div>
                             </li>
                                             
                             <li>
-                                <input onclick="select_title()" type="radio" id="prof" name="title" value="prof">
+                                <input (click)="select_title()" type="radio" id="prof" name="title" value="prof">
                                 <label for="prof">Prof.</label>
                                               
                                 <div class="check"><div class="inside"></div></div>
                             </li>
                                             
                             <li>
-                                <input onclick="select_other()" type="radio" id="otheropt" name="title" value="otheropt">
+                                <input (click)="select_other()" type="radio" id="otheropt" name="title" value="otheropt">
                                 <label for="otheropt">Other</label>
                                               
                                 <div class="check"><div class="inside"></div></div>
                             </li>
-                            <input style="margin-top: 50px; max-width: 150px;" name="other_title" onblur="validate_other_title()" onkeyup="select_other()" id="othertxtbox" type="text" placeholder="Title">
+                            <input style="margin-top: 50px; max-width: 150px;" name="other_title" (blur)="validate_other_title($event)" [(ngModel)]="other_title_field" id="othertxtbox" type="text" placeholder="Title" [readonly]="isReadOnly">
                         </ul>
                     </div>
                     <div class="error" style="margin-bottom: 60px;"><p id="title_error"></p></div>
@@ -997,25 +997,25 @@
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>First Name of Company Supervisor</p>
-                    <input name="supervisor_first_name" onblur="validate_supervisor_first_name()" style="max-width: 350px;" value="Wee" type="text" placeholder="First Name">
+                    <input name="supervisor_first_name" (blur)="validate_supervisor_first_name($event)" style="max-width: 350px;" value="Wee" type="text" placeholder="First Name">
                     <div class="error"><p id="supervisor_first_name_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Last Name of Company Supervisor</p>
-                    <input name="supervisor_last_name" onblur="validate_supervisor_last_name()" style="max-width: 350px;" value="Kuok Kwee" type="text" placeholder="Last Name">
+                    <input name="supervisor_last_name" (blur)="validate_supervisor_last_name($event)" style="max-width: 350px;" value="Kuok Kwee" type="text" placeholder="Last Name">
                     <div class="error"><p id="supervisor_last_name_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Company Supervisor's Designation</p>
-                    <input name="supervisor_designation" onblur="validate_supervisor_designation()" type="text" value="Senior Lecturer" placeholder="Designation" style="max-width: 400px;">
+                    <input name="supervisor_designation" (blur)="validate_supervisor_designation($event)" type="text" value="Senior Lecturer" placeholder="Designation" style="max-width: 400px;">
                     <div class="error"><p id="supervisor_designation_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Department of Company Supervisor</p>
-                    <input name="supervisor_department" onblur="validate_supervisor_department()" value="Faculty of Information Science and Technology (FIST)" style="max-width: 500px;" type="text" placeholder="Department">
+                    <input name="supervisor_department" (blur)="validate_supervisor_department($event)" value="Faculty of Information Science and Technology (FIST)" style="max-width: 500px;" type="text" placeholder="Department">
                     <div class="error"><p id="supervisor_department_error"></p></div>
                 </div>
                 
@@ -1235,20 +1235,20 @@
                             <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
                             <option data-countryCode="ZM" value="260">Zambia (+260)</option>
                             <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
-                        </select><input name="supervisor_contact" onblur="validate_supervisor_contact()" style="max-width: 200px;" type="text" placeholder="123456789">
+                        </select><input name="supervisor_contact" (blur)="validate_supervisor_contact($event)" style="max-width: 200px;" type="text" placeholder="123456789" value="123456789">
                     <div class="error" style="margin-bottom: 20px;"><p id="supervisor_contact_error"></p></div>
                 </div>
                 
                 <div class="card" style="padding-bottom: 30px;">
                     <p>Company Supervisor's Email Address</p>
-                    <input name="supervisor_email" onblur="validate_supervisor_email()" style="max-width: 400px;" value="wee.kuok.kwee@mmu.edu.my" type="text" placeholder="example@email.com">
+                    <input name="supervisor_email" (blur)="validate_supervisor_email($event)" style="max-width: 400px;" value="wee.kuok.kwee@mmu.edu.my" type="text" placeholder="example@email.com">
                     <div class="error"><p id="supervisor_email_error"></p></div>
                 </div>
                 <div class="card" style="border-bottom: none;">
-                    <div class="error" style="margin-top: 10px; margin-bottom: 40px;"><p id="master_error"></p></div>
-                        <div class="proceed_section" id="proceed_section">
-                            <input type="submit" ontouchstart="" value="Submit  &#x276F;">
-                        </div>
+                    <div class="error" style="margin-top: -20px;"><p id="master_error"></p></div>
+                    <div class="proceed_section" id="proceed_section">
+                        <input type="submit" ontouchstart="" value="Save Changes"> <button ontouchstart="" id="proceed-red">Cancel</button>
+                    </div>
                 </div>
             </form>
         </div>
