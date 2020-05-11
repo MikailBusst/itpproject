@@ -24,6 +24,10 @@ export class AaApproveComponent implements OnInit {
     }
   }
 
+  cancel(): void {
+    window.history.back()
+  }
+
   onResize(event) {
     this.check_resize()
   }
@@ -48,6 +52,6 @@ export class AaApproveComponent implements OnInit {
     else{
         $(".sectionrs").addClass("right-section");
     }
-}
+  }
 
 }

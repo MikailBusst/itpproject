@@ -29,6 +29,10 @@ export class DisclaimerVerificationComponent implements OnInit {
     this.check_resize()
   }
 
+  redirect(): void {
+    window.location.href = "/disclaimer"
+  }
+
   check_resize(): void {
     var width = window.innerWidth;
     
@@ -111,7 +115,7 @@ export class DisclaimerVerificationComponent implements OnInit {
     else{
         event.preventDefault();
         document.getElementById("master_error").innerHTML = "";
-        window.location.href = 'registration_complete.html'
+        window.location.href = '/registration_complete'
     }
   }
 

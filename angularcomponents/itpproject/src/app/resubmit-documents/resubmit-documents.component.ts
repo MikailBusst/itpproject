@@ -29,6 +29,10 @@ export class ResubmitDocumentsComponent implements OnInit {
     this.check_resize()
   }
 
+  redirect(): void {
+    window.location.href = "/registration_complete"
+  }
+
   check_resize(){
     var width = window.innerWidth;
     

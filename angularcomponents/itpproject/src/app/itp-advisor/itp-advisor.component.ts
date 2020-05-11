@@ -12,4 +12,8 @@ export class ItpAdvisorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  redirect(): void {
+    window.location.href = "/registration_complete"
+  }
+
 }

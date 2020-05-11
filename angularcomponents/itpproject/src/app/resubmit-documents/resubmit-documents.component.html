@@ -2,7 +2,7 @@
     <app-menu></app-menu>
 
     <div class="main">
-        <div class="card" style="margin-bottom: 30px; border-bottom: none;" onclick="window.location.href = 'registration.html'">
+        <div class="card" style="margin-bottom: 30px; border-bottom: none;" (click)="redirect()">
             <button class="back-button">&#x276E; Back</button>
         </div>
         <div class="card" style="border-bottom: none;">
@@ -16,7 +16,7 @@
             <p class="subheader-bottom">You may resubmit any of the documents below.</p>
         </div>
         
-        <form #resubmitDocumentsForm="ngForm">
+        <form #resubmitDocumentsForm="ngForm" (ngSubmit)="redirect()">
             <div class="upload_card">
                 <p>Manual Registration Form</p>
                 <input type="file" id="manual_registration_form" name="manual_registration_form" class="file_submission" (change)="display_manual_registration_form(resubmitDocumentsForm.value)" ngModel>
@@ -64,7 +64,7 @@
             </div>
             <div class="card" style="border-bottom: none; margin-top: 50px;">
                 <div class="proceed_section" id="proceed_section">
-                    <input type="submit" value="Save Changes"> <button id="proceed-red">Cancel</button>
+                    <input type="submit" value="Save Changes"> <button id="proceed-red" (click)="redirect()">Cancel</button>
                 </div>
             </div>
         </form>

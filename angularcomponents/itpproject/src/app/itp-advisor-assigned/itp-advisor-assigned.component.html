@@ -2,7 +2,7 @@
     <app-menu></app-menu>
       
       <div class="main">
-          <div class="card" style="margin-bottom: 30px; border-bottom: none;" onclick="window.location.href = 'registration.html'">
+          <div class="card" style="margin-bottom: 30px; border-bottom: none;" (click)="redirect_back()">
               <button style="position: relative; right: 7px;" class="back-button">&#x276E; Register Company</button>
           </div>
           <div class="progress" style="margin-bottom: 60px;">
@@ -31,7 +31,7 @@
               Monday: 12PM - 1PM<br />
               Thursday: 9AM - 10AM</p>
           </div>
-          <div class="card" style="margin-bottom: 30px; border-bottom: none; margin-top: 30px;" onclick="window.location.href = 'submit_appendix_a.html'">
+          <div class="card" style="margin-bottom: 30px; border-bottom: none; margin-top: 30px;" (click)="redirect_forward()">
               <button class="back-button" style="font-size: 25px; margin-bottom: 50px;">Submit Appendix A &#x276F;</button>
           </div>
       </div>

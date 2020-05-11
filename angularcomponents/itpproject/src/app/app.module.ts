@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
@@ -59,7 +60,105 @@ import { AaApproveComponent } from './aa-approve/aa-approve.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {
+        path: 'disclaimer',
+        component: DisclaimerComponent
+      },
+      {
+        path: 'aa_wait',
+        component: AaWaitComponent
+      },
+      {
+        path: 'itp_advisor_assign',
+        component: ItpAdvisorAssignComponent
+      },
+      {
+        path: 'registration_failure',
+        component: RegistrationFailureComponent
+      },
+      {
+        path: 'registration_complete',
+        component: RegistrationCompleteComponent
+      },
+      {
+        path: 'itp_advisor_assigned',
+        component: ItpAdvisorAssignedComponent
+      },
+      {
+        path: 'itp_advisor',
+        component: ItpAdvisorComponent
+      },
+      {
+        path: 'download_reference',
+        component: DownloadReferenceComponent
+      },
+      {
+        path: 'redownload_reference',
+        component: RedownloadReferenceComponent
+      },
+      {
+        path: 'retrieve_email',
+        component: RetrieveEmailComponent
+      },
+      {
+        path: 'retrieve_otp',
+        component: RetrieveOtpComponent
+      },
+      {
+        path: 'reset_password',
+        component: ResetPasswordComponent
+      },
+      {
+        path: 'resubmit_documents',
+        component: ResubmitDocumentsComponent
+      },
+      {
+        path: 'signup',
+        component: SignupComponent
+      },
+      {
+        path: 'submit_documents',
+        component: SubmitDocumentsComponent
+      },
+      {
+        path: 'submit_appendix_a',
+        component: SubmitAppendixAComponent
+      },
+      {
+        path: 'disclaimer_verification',
+        component: DisclaimerVerificationComponent
+      },
+      {
+        path: 'student_registration',
+        component: StudentRegistrationComponent
+      },
+      {
+        path: 'company_registration',
+        component: CompanyRegistrationComponent
+      },
+      {
+        path: 'edit_company_registration',
+        component: EditCompanyRegistrationComponent
+      },
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'student_table',
+        component: StudentTableComponent
+      },
+      {
+        path: 'aa_approve',
+        component: AaApproveComponent
+      },
+      {
+        path: '',
+        component: StudentRegistrationComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

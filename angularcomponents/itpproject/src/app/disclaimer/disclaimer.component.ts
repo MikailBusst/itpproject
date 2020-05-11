@@ -25,7 +25,15 @@ export class DisclaimerComponent implements OnInit {
 
   onResize(event) {
     this.check_resize()
-}
+  }
+
+  redirect_back(): void {
+    window.location.href = "/submit_appendix_a"
+  }
+
+  redirect_forward(): void {
+    window.location.href = "/disclaimer_verification"
+  }
 
   check_resize(): void {
     var width = window.innerWidth;

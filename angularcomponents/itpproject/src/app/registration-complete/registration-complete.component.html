@@ -18,24 +18,24 @@
              <p class="subheader-bottom">Your ITP Registration is now complete. You may edit any of the information or documents that you have submitted.</p>
          </div>
          
-         <a href="edit_details.html">
+         <a [routerLink]="['/edit_company_registration']" routerLinkActive="router-link-active" >
              <div class="card" id="link-card" style="margin-top: -20px;">
                  <p style="color: #015897;">Edit Details</p>
              </div>
          </a>
-         <a href="redownload_reference.html">
+         <a [routerLink]="['/redownload_reference']" routerLinkActive="router-link-active" >
              <div class="card" id="link-card" style="margin-top: -20px;">
                  <p style="color: #015897;">Download Reference Letter</p>
               </div>
          </a>
-         <a href="resubmit_documents.html">
+         <a [routerLink]="['/resubmit_documents']" routerLinkActive="router-link-active" >
              <div class="card" id="link-card" style="margin-top: -20px;">
                  <p style="color: #015897;">Resubmit Documents</p>
              </div>
           </a>
-          <a href="resubmit_documents.html">
+          <a [routerLink]="['/itp_advisor']" routerLinkActive="router-link-active" >
             <div class="card" id="link-card" style="margin-top: -20px; margin-bottom: 100px;">
-                <p style="color: #015897;">Academic Advisor</p>
+                <p style="color: #015897;">ITP Advisor</p>
             </div>
          </a>
       </div>

@@ -871,6 +871,11 @@ export class CompanyRegistrationComponent implements OnInit {
         }
         else{
             document.getElementById("master_error").innerHTML = "";
+            window.location.href="/itp_advisor_assign"
         }
+    }
+
+    redirect(): void {
+        window.location.href="/download_reference"
     }
 }

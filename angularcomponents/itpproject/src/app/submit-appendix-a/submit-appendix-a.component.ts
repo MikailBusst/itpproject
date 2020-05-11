@@ -46,6 +46,10 @@ export class SubmitAppendixAComponent implements OnInit {
         this.check_resize()
     }
 
+    redirect(): void {
+        window.location.href = "/itp_advisor_assigned"
+    }
+
     check_resize(): void {
         var width = window.innerWidth;
         
@@ -136,8 +140,7 @@ export class SubmitAppendixAComponent implements OnInit {
             }
         }
         else {
-            event.preventDefault()
-            window.location.href = "disclaimer.html"
+            window.location.href = "/disclaimer"
         }
     }
 }

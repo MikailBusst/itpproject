@@ -2,7 +2,7 @@
     <body (window:resize)="onResize($event)">
         <app-menu></app-menu>
         <div class="main">
-            <div class="card" style="margin-bottom: 30px; border-bottom: none;" onclick="window.location.href = 'submit_appendix_a.html'">
+            <div class="card" style="margin-bottom: 30px; border-bottom: none;" (click)="redirect_back()">
                 <button style="position: relative; right: 7px;" class="back-button">&#x276E; Submit Appendix A</button>
             </div>
             
@@ -31,7 +31,7 @@
 
             <div class="paper" style="border: none; margin-top: -10px;">
                 <div class="proceed_section" id="proceed_section">
-                    <button class="back-button" onclick="window.location.href = 'disclaimer_verification.html'" style="font-size: 30px;">Agree &#x276F;</button>
+                    <button class="back-button" (click)="redirect_forward()" style="font-size: 30px;">Agree &#x276F;</button>
                 </div>
             </div>
         </div>

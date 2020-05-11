@@ -2,7 +2,7 @@
     <app-menu></app-menu>
       
     <div class="main">
-        <div class="card" style="margin-bottom: 30px; border-bottom: none;" onclick="window.location.href = 'submit_documents.html'">
+        <div class="card" style="margin-bottom: 30px; border-bottom: none;" (click)="redirect_back()">
             <button style="position: relative; right: 7px;" class="back-button">&#x276E; Submit Documents</button>
         </div>
         <div class="progress">
@@ -34,7 +34,7 @@
         </section>
     
         <div class="card" style="margin-bottom: 30px; border-bottom: none; margin-top: 80px; padding-left: 0px;">
-            <button class="back-button" onclick="window.location.href = 'registration.html'">Register Company &#x276F;</button>
+            <button class="back-button" (click)="redirect_forward()">Register Company &#x276F;</button>
         </div>
         
         <p id="width"></p>

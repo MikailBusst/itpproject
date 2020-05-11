@@ -10,6 +10,13 @@ export class AaWaitComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    setInterval(() => {
+      window.location.href="/download_reference"
+  }, 5000)
+  }
+
+  redirect(): void {
+    window.location.href="/submit_documents"
   }
 
 }

@@ -2,7 +2,7 @@
     <app-menu></app-menu>
 
     <div class="main">
-        <div class="card" style="margin-bottom: 30px; border-bottom: none;" onclick="window.location.href = 'download_reference.html'">
+        <div class="card" style="margin-bottom: 30px; border-bottom: none;" (click)="redirect()">
             <button class="back-button">&#x276E; Back</button>
         </div>
         <div class="card" style="border-bottom: none;">
@@ -1247,7 +1247,7 @@
                 <div class="card" style="border-bottom: none;">
                     <div class="error" style="margin-top: -20px;"><p id="master_error"></p></div>
                     <div class="proceed_section" id="proceed_section">
-                        <input type="submit" ontouchstart="" value="Save Changes"> <button ontouchstart="" id="proceed-red">Cancel</button>
+                        <input type="submit" ontouchstart="" value="Save Changes"> <button ontouchstart="" id="proceed-red" (click)="redirect()">Cancel</button>
                     </div>
                 </div>
             </form>

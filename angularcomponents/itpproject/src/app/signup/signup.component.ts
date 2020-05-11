@@ -226,6 +226,7 @@ export class SignupComponent implements OnInit {
   master_verify(): void {
     if(this.first_name_status == true && this.last_name_status == true && this.email_status == true && this.password_status == true && this.confirm_password_status == true){
         document.getElementById("master_error").innerHTML = ""
+        window.location.href = "/login"
     }
     else{
         event.preventDefault()

@@ -32,6 +32,10 @@ export class RedownloadReferenceComponent implements OnInit {
     this.check_proceed_resize()
   }
 
+  redirect(): void {
+    window.location.href = "/registration_complete"
+  }
+
   check_proceed_resize(): void {
     var width = window.innerWidth;
     

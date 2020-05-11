@@ -32,6 +32,14 @@ export class DownloadReferenceComponent implements OnInit {
     this.check_proceed_resize()
   }
 
+  redirect_back(): void {
+    window.location.href = "/submit_documents"
+  }
+
+  redirect_forward(): void {
+    window.location.href = "/company_registration"
+  }
+
   check_proceed_resize(): void {
     var width = window.innerWidth;
     

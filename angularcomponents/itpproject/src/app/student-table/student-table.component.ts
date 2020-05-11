@@ -36,6 +36,10 @@ export class StudentTableComponent implements OnInit {
     this.check_resize()
   }
 
+  cancel(): void {
+    window.history.back()
+  }
+
   check_resize(): void {
     var width = window.innerWidth;
     

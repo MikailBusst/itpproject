@@ -308,8 +308,8 @@ export class StudentRegistrationComponent implements OnInit {
         document.getElementById("master_error").innerHTML = "Please enter all the required details."
     }
     else {
-        event.preventDefault()
         document.getElementById("master_error").innerHTML = ""
+        window.location.href="/submit_documents"
     }
   }
 }

@@ -12,4 +12,12 @@ export class ItpAdvisorAssignedComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  redirect_back(): void {
+    window.location.href = "/company_registration"
+  }
+
+  redirect_forward(): void {
+    window.location.href = "/submit_appendix_a"
+  }
+
 }

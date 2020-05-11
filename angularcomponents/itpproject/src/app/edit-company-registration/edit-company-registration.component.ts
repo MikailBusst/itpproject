@@ -72,6 +72,10 @@ export class EditCompanyRegistrationComponent implements OnInit {
     this.check_resize()
   }
 
+  redirect(): void {
+      window.location.href = "/registration_complete"
+  }
+
   check_resize(): void {
     var width = window.innerWidth;
     
@@ -785,11 +789,12 @@ validate_dates(): void {
 
 validate_master(): void {
     if(this.student_email_status == false || this.student_id_status == false || this.student_name_status == false || this.student_mobile_status == false || this.itp_start_status == false || this.itp_end_status == false || this.company_name_status == false || this.company_address_status == false || this.company_postcode_status == false || this.company_state_status == false || this.company_telephone_status == false || this.allowance_status == false || this.supervisor_title_status == false || this.supervisor_first_name_status == false || this.supervisor_last_name_status == false || this.supervisor_designation_status == false || this.supervisor_department_status == false || this.supervisor_contact_status == false || this.supervisor_email_status == false){
-        event.preventDefault();
-        document.getElementById("master_error").innerHTML = "Please enter all the required details.";
+        event.preventDefault()
+        document.getElementById("master_error").innerHTML = "Please enter all the required details."
     }
     else{
-        document.getElementById("master_error").innerHTML = "";
+        document.getElementById("master_error").innerHTML = ""
+        this.redirect()
     }
 }
 

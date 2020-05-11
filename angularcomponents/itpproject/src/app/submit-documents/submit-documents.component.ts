@@ -53,6 +53,10 @@ export class SubmitDocumentsComponent implements OnInit {
         this.check_resize()
     }
 
+    redirect(): void {
+        window.location.href = "/student_registration"
+    }
+
     check_resize(){
         var width = window.innerWidth
         
@@ -202,9 +206,8 @@ export class SubmitDocumentsComponent implements OnInit {
             }
         }
         else{
-            event.preventDefault();
-            document.getElementById("master_error").innerHTML = "";
-            window.location.href = "aa_wait.html";
+            document.getElementById("master_error").innerHTML = ""
+            window.location.href = "/aa_wait"
         }
     }
 
