@@ -33,7 +33,7 @@ export class RedownloadReferenceComponent implements OnInit {
   }
 
   redirect(): void {
-    window.location.href = "/registration_complete"
+    window.location.href = "/itpproject/registration_complete"
   }
 
   check_proceed_resize(): void {

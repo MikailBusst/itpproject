@@ -119,6 +119,7 @@ export class ResetPasswordComponent implements OnInit {
     
     if(password_format.test(new_password)){
         document.getElementById("reset_error").innerHTML = "";
+        window.location.href = "/itpproject/login"
     }
     else{
         event.preventDefault();

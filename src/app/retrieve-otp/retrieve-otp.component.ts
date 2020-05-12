@@ -76,7 +76,7 @@ export class RetrieveOtpComponent implements OnInit {
         if(password == "password"){
             event.preventDefault()
             document.getElementById("password_error").innerHTML = ""
-            window.location.href = "/reset_password"
+            window.location.href = "/itpproject/reset_password"
         }
         else{
             event.preventDefault()

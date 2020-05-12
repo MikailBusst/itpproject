@@ -30,7 +30,7 @@ export class DisclaimerVerificationComponent implements OnInit {
   }
 
   redirect(): void {
-    window.location.href = "/disclaimer"
+    window.location.href = "/itpproject/disclaimer"
   }
 
   check_resize(): void {
@@ -115,7 +115,7 @@ export class DisclaimerVerificationComponent implements OnInit {
     else{
         event.preventDefault();
         document.getElementById("master_error").innerHTML = "";
-        window.location.href = '/registration_complete'
+        window.location.href = '/itpproject/registration_complete'
     }
   }
 

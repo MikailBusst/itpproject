@@ -33,11 +33,11 @@ export class DownloadReferenceComponent implements OnInit {
   }
 
   redirect_back(): void {
-    window.location.href = "/submit_documents"
+    window.location.href = "/itpproject/submit_documents"
   }
 
   redirect_forward(): void {
-    window.location.href = "/company_registration"
+    window.location.href = "/itpproject/company_registration"
   }
 
   check_proceed_resize(): void {

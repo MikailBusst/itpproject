@@ -84,7 +84,7 @@ export class RetrieveEmailComponent implements OnInit {
         if(mailformat.test(email)){
             if(email.indexOf("@student.mmu.edu.my", email.length - "@student.mmu.edu.my".length) !== -1){
               document.getElementById("email_error").innerHTML = ""
-              window.location.href = "/retrieve_otp"
+              window.location.href = "/itpproject/retrieve_otp"
             }
             else{
                 document.getElementById("email_error").innerHTML = "You must have an MMU student email address in order for you to continue."

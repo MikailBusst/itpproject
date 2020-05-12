@@ -73,7 +73,7 @@ export class EditCompanyRegistrationComponent implements OnInit {
   }
 
   redirect(): void {
-      window.location.href = "/registration_complete"
+      window.location.href = "/itpproject/registration_complete"
   }
 
   check_resize(): void {

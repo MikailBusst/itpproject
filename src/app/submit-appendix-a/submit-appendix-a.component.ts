@@ -47,7 +47,7 @@ export class SubmitAppendixAComponent implements OnInit {
     }
 
     redirect(): void {
-        window.location.href = "/itp_advisor_assigned"
+        window.location.href = "/itpproject/itp_advisor_assigned"
     }
 
     check_resize(): void {
@@ -140,7 +140,7 @@ export class SubmitAppendixAComponent implements OnInit {
             }
         }
         else {
-            window.location.href = "/disclaimer"
+            window.location.href = "/itpproject/disclaimer"
         }
     }
 }

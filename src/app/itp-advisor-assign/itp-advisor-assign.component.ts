@@ -11,12 +11,12 @@ export class ItpAdvisorAssignComponent implements OnInit {
 
   ngOnInit(): void {
     setInterval(() => {
-      window.location.href="/itp_advisor_assigned"
+      window.location.href="/itpproject/itp_advisor_assigned"
   }, 5000)
   }
 
   redirect(): void {
-    window.location.href = "/company_registration"
+    window.location.href = "/itpproject/company_registration"
   }
 
 }

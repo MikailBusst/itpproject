@@ -54,7 +54,7 @@ export class SubmitDocumentsComponent implements OnInit {
     }
 
     redirect(): void {
-        window.location.href = "/student_registration"
+        window.location.href = "/itpproject/student_registration"
     }
 
     check_resize(){
@@ -207,7 +207,7 @@ export class SubmitDocumentsComponent implements OnInit {
         }
         else{
             document.getElementById("master_error").innerHTML = ""
-            window.location.href = "/aa_wait"
+            window.location.href = "/itpproject/aa_wait"
         }
     }
 

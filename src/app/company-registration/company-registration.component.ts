@@ -890,6 +890,6 @@ export class CompanyRegistrationComponent implements OnInit {
     }
 
     redirect(): void {
-        window.location.href="/download_reference"
+        window.location.href="/itpproject/download_reference"
     }
 }

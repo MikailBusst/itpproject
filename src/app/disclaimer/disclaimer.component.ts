@@ -28,11 +28,11 @@ export class DisclaimerComponent implements OnInit {
   }
 
   redirect_back(): void {
-    window.location.href = "/submit_appendix_a"
+    window.location.href = "/itpproject/submit_appendix_a"
   }
 
   redirect_forward(): void {
-    window.location.href = "/disclaimer_verification"
+    window.location.href = "/itpproject/disclaimer_verification"
   }
 
   check_resize(): void {

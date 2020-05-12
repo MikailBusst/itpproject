@@ -13,7 +13,7 @@ export class ItpAdvisorComponent implements OnInit {
   }
 
   redirect(): void {
-    window.location.href = "/registration_complete"
+    window.location.href = "/itpproject/registration_complete"
   }
 
 }

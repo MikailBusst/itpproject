@@ -309,7 +309,7 @@ export class StudentRegistrationComponent implements OnInit {
     }
     else {
         document.getElementById("master_error").innerHTML = ""
-        window.location.href="/submit_documents"
+        window.location.href="/itpproject/submit_documents"
     }
   }
 }
