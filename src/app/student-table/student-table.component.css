@@ -19,10 +19,16 @@ html {
 
 .navbar {
 width: 95%;
+padding-top: 5px;
 }
 
 .proceed_section_mobile{
     padding-left: -2%;
+}
+
+.container {
+  padding-right: 0px;
+  padding-left: 33px;
 }
 
 .collapse, .collapsing {
