@@ -146,13 +146,13 @@ export class SignupComponent implements OnInit {
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
         
         if(mailformat.test(this.email)) {
-            this.email_status = true
-            document.getElementById("email_error").innerHTML = ""
-        }
-        else {
-            event.preventDefault()
-            this.email_status = false
-            document.getElementById("email_error").innerHTML = "Please enter a valid email address."
+            if(this.email.indexOf("@student.mmu.edu.my", this.email.length - "@student.mmu.edu.my".length) !== -1){
+                this.email_status = true
+                document.getElementById("email_error").innerHTML = ""
+            }
+            else{
+                document.getElementById("email_error").innerHTML = "You must have an MMU student email address in order to continue."
+            }
         }
     }
   }
