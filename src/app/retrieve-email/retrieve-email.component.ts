@@ -34,26 +34,26 @@ export class RetrieveEmailComponent implements OnInit {
   }
 
   check_resize(): void {
-    var width = window.innerWidth;
+    var width = window.innerWidth
     
     console.log(width)
     
     if(width <= 375){
-        $("body").removeClass("body-desktop");
-        $("body").addClass("body-mobile");
+        $("body").removeClass("body-desktop")
+        $("body").addClass("body-mobile")
     }
     else{
-        $("body").removeClass("body-mobile");
-        $("body").addClass("body-desktop");
+        $("body").removeClass("body-mobile")
+        $("body").addClass("body-desktop")
     }
     
    if(width < 723){
-        $("#proceed_section").removeClass("proceed_section");
-        $("#proceed_section").addClass("proceed_section_mobile");
+        $("#proceed_section").removeClass("proceed_section")
+        $("#proceed_section").addClass("proceed_section_mobile")
     }
     else{
-        $("#proceed_section").removeClass("proceed_section_mobile");
-        $("#proceed_section").addClass("proceed_section");
+        $("#proceed_section").removeClass("proceed_section_mobile")
+        $("#proceed_section").addClass("proceed_section")
     }
   }
 
@@ -64,7 +64,7 @@ export class RetrieveEmailComponent implements OnInit {
     
     if(email == ""){
         event.preventDefault()
-        document.getElementById("email_error").innerHTML = "Please enter your email address"
+        document.getElementById("email_error").innerHTML = "Please enter your email address."
     }
     else{
         this.email_validation(data)
@@ -76,7 +76,7 @@ export class RetrieveEmailComponent implements OnInit {
     
     if(email == ""){
         event.preventDefault()
-        document.getElementById("email_error").innerHTML = "Please enter your email address"
+        document.getElementById("email_error").innerHTML = "Please enter your email address."
     }
     else{
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
@@ -87,7 +87,7 @@ export class RetrieveEmailComponent implements OnInit {
               window.location.href = "/itpproject/retrieve_otp"
             }
             else{
-                document.getElementById("email_error").innerHTML = "You must have an MMU student email address in order for you to continue."
+                document.getElementById("email_error").innerHTML = "Please enter your MMU student email address."
             }
         }
         else{

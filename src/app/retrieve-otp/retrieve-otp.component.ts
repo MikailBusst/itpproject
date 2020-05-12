@@ -15,13 +15,13 @@ export class RetrieveOtpComponent implements OnInit {
     //document.getElementById("width").innerHTML = width;
     
     if(width < 375){
-           $("body").removeClass("body-desktop");
-           $("body").addClass("body-mobile");
+           $("body").removeClass("body-desktop")
+           $("body").addClass("body-mobile")
        }
     
     if(width < 601){
-        $("#proceed_section").removeClass("proceed_section");
-        $("#proceed_section").addClass("proceed_section_mobile");
+        $("#proceed_section").removeClass("proceed_section")
+        $("#proceed_section").addClass("proceed_section_mobile")
     }
   }
 
@@ -30,26 +30,26 @@ export class RetrieveOtpComponent implements OnInit {
   }
 
   check_resize(): void {
-    var width = window.innerWidth;
+    var width = window.innerWidth
     
     //document.getElementById("width").innerHTML = width;
     
     if(width <= 375){
-           $("body").removeClass("body-desktop");
-           $("body").addClass("body-mobile");
+           $("body").removeClass("body-desktop")
+           $("body").addClass("body-mobile")
        }
        else{
-           $("body").removeClass("body-mobile");
-           $("body").addClass("body-desktop");
+           $("body").removeClass("body-mobile")
+           $("body").addClass("body-desktop")
        }
     
     if(width < 601){
-        $("#proceed_section").removeClass("proceed_section");
-        $("#proceed_section").addClass("proceed_section_mobile");
+        $("#proceed_section").removeClass("proceed_section")
+        $("#proceed_section").addClass("proceed_section_mobile")
     }
     else{
-        $("#proceed_section").removeClass("proceed_section_mobile");
-        $("#proceed_section").addClass("proceed_section");
+        $("#proceed_section").removeClass("proceed_section_mobile")
+        $("#proceed_section").addClass("proceed_section")
     }
   }
 
@@ -58,7 +58,7 @@ export class RetrieveOtpComponent implements OnInit {
     
     if(password == ""){
         event.preventDefault()
-        document.getElementById("password_error").innerHTML = "Please enter your One Time Password"
+        document.getElementById("password_error").innerHTML = "Please enter your One Time Password."
     }
     else{
         this.password_validation(data)
@@ -70,7 +70,7 @@ export class RetrieveOtpComponent implements OnInit {
     
     if(password == ""){
         event.preventDefault()
-        document.getElementById("password_error").innerHTML = "Please enter your One Time Password"
+        document.getElementById("password_error").innerHTML = "Please enter your One Time Password."
     }
     else{
         if(password == "password"){
@@ -80,7 +80,7 @@ export class RetrieveOtpComponent implements OnInit {
         }
         else{
             event.preventDefault()
-            document.getElementById("password_error").innerHTML = "The password typed is incorrect."
+            document.getElementById("password_error").innerHTML = "Password is incorrect."
         }
     }
   }

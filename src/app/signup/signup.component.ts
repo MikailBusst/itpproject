@@ -22,13 +22,13 @@ export class SignupComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    var width = window.innerWidth;
+    var width = window.innerWidth
     
     //document.getElementById("width").innerHTML = width;
     
    if(width < 410){
-        $("#proceed_section").removeClass("proceed_section");
-        $("#proceed_section").addClass("proceed_section_mobile");
+        $("#proceed_section").removeClass("proceed_section")
+        $("#proceed_section").addClass("proceed_section_mobile")
     }
   }
 
@@ -42,12 +42,12 @@ export class SignupComponent implements OnInit {
     //document.getElementById("width").innerHTML = width;
     
     if(width < 410){
-          $("#proceed_section").removeClass("proceed_section");
-          $("#proceed_section").addClass("proceed_section_mobile");
+          $("#proceed_section").removeClass("proceed_section")
+          $("#proceed_section").addClass("proceed_section_mobile")
     }
       else{
-          $("#proceed_section").removeClass("proceed_section_mobile");
-          $("#proceed_section").addClass("proceed_section");
+          $("#proceed_section").removeClass("proceed_section_mobile")
+          $("#proceed_section").addClass("proceed_section")
       }
   }
 
@@ -151,7 +151,7 @@ export class SignupComponent implements OnInit {
                 document.getElementById("email_error").innerHTML = ""
             }
             else{
-                document.getElementById("email_error").innerHTML = "You must have an MMU student email address in order to continue."
+                document.getElementById("email_error").innerHTML = "Please enter your MMU student email address."
             }
         }
     }
@@ -184,7 +184,7 @@ export class SignupComponent implements OnInit {
         if(this.password != this.confirm_password) {
             event.preventDefault()
             this.confirm_password_status = false
-            document.getElementById("confirm_password_error").innerHTML = "Your confirmed password does not match your new password."
+            document.getElementById("confirm_password_error").innerHTML = "Your confirmed password does not match your password."
         }
         else {
             var character_counter = 0
@@ -198,7 +198,7 @@ export class SignupComponent implements OnInit {
                     if(character_counter >= 2) {
                         event.preventDefault()
                         this.confirm_password_status = false
-                        document.getElementById("confirm_password_error").innerHTML = "Your password must be at least 8 characters long, has at least one lowercase letter, one uppercase letter, one numeric digit, one special character, no spaces and cannot have a character repeated three times in a row."
+                        document.getElementById("confirm_password_error").innerHTML = "Your password must be at least 8 characters long, have at least one lowercase letter, one uppercase letter, one numeric digit, one special character, no spaces and cannot have a character repeated three times or more in a row."
                         return
                     }
                 }
@@ -217,7 +217,7 @@ export class SignupComponent implements OnInit {
             else{
                 event.preventDefault()
                 this.confirm_password_status = false
-                document.getElementById("confirm_password_error").innerHTML = "Your password must be at least 8 characters long, has at least one lowercase letter, one uppercase letter, one numeric digit, one special character, no spaces and cannot have a character repeated three times in a row."
+                document.getElementById("confirm_password_error").innerHTML = "Your password must be at least 8 characters long, have at least one lowercase letter, one uppercase letter, one numeric digit, one special character, no spaces and cannot have a character repeated three times or more in a row."
             }
         }
     }

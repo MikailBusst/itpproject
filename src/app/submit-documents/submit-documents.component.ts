@@ -17,7 +17,7 @@ export class SubmitDocumentsComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
-        var width = window.innerWidth;
+        var width = window.innerWidth
         
         //document.getElementById("width").innerHTML = width;
         
@@ -173,36 +173,36 @@ export class SubmitDocumentsComponent implements OnInit {
 
     check_files(): void {
         if(this.manual_registration_status == false || this.checklist_status == false || this.online_transcript_status == false || this.course_structure_status == false || this.insurance_status == false || this.resume_status == false || this.cover_letter_status == false){
-            event.preventDefault();
+            event.preventDefault()
             
-            document.getElementById("master_error").innerHTML = "Please submit the required documents before continuing.";
+            document.getElementById("master_error").innerHTML = "You must submit the required documents before you can continue."
             
             if(this.manual_registration_status == false){
-                document.getElementById("manual_regisration_form_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>Please upload your manual registration form.</span>";
+                document.getElementById("manual_regisration_form_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>Please upload your manual registration form.</span>"
             }
             
             if(this.checklist_status == false){
-                document.getElementById("checklist_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>Please upload your checklist.</span>";
+                document.getElementById("checklist_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>Please upload your checklist.</span>"
             }
             
             if(this.online_transcript_status == false){
-                document.getElementById("online_transcripts_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>Please upload your online transcript.</span>";
+                document.getElementById("online_transcripts_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>Please upload your online transcript.</span>"
             }
             
             if(this.course_structure_status == false){
-                document.getElementById("course_structure_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>Please upload your course structure.</span>";
+                document.getElementById("course_structure_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>Please upload your course structure.</span>"
             }
             
             if(this.insurance_status == false){
-                document.getElementById("insurance_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>Please upload the original copy of your insurance payment document.</span>";
+                document.getElementById("insurance_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>Please upload the original copy of your insurance payment document.</span>"
             }
             
             if(this.resume_status == false){
-                document.getElementById("resume_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>Please upload your resume.</span>";
+                document.getElementById("resume_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>Please upload your resume.</span>"
             }
             
             if(this.cover_letter_status == false){
-                document.getElementById("cover_letter_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>Please upload a sample of your cover letter.</span>";
+                document.getElementById("cover_letter_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>Please upload your sample cover letter.</span>"
             }
         }
         else{

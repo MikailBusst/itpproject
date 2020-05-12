@@ -61,7 +61,7 @@ export class CompanyRegistrationComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
-        var width = window.innerWidth;
+        var width = window.innerWidth
         
         //document.getElementById("width").innerHTML = width;
         
@@ -120,7 +120,7 @@ export class CompanyRegistrationComponent implements OnInit {
     }
 
     check_resize(): void {
-        var width = window.innerWidth;
+        var width = window.innerWidth
         
         //document.getElementById("width").innerHTML = width;
         
@@ -166,7 +166,7 @@ export class CompanyRegistrationComponent implements OnInit {
         
         if(this.student_id == ""){
             event.preventDefault()
-            document.getElementById("student_id_error").innerHTML = "Please enter you Student ID."
+            document.getElementById("student_id_error").innerHTML = "Please enter your Student ID."
             document.getElementById("master_error").innerHTML = "Please enter all the required details."
         }
         else{
@@ -193,7 +193,7 @@ export class CompanyRegistrationComponent implements OnInit {
         
         if(this.final_semester == ""){
             event.preventDefault()
-            document.getElementById("t3_error").innerHTML = "Please tell us if this is your final semester or not."
+            document.getElementById("t3_error").innerHTML = "Please select an option."
             document.getElementById("master_error").innerHTML = "Please enter all the required details."
         }
         else{
@@ -211,17 +211,17 @@ export class CompanyRegistrationComponent implements OnInit {
         
         if(this.itp_start_date == "" || this.itp_start_date == "none"){
             event.preventDefault()
-            document.getElementById("itp_start_error").innerHTML = "Please select the starting date of your ITP."
+            document.getElementById("itp_start_error").innerHTML = "Please select your ITP starting date."
             document.getElementById("master_error").innerHTML = "Please enter all the required details."
         }
         else if(this.itp_start_month == "" || this.itp_start_month == "none"){
             event.preventDefault()
-            document.getElementById("itp_start_error").innerHTML = "Please select the starting month of your ITP."
+            document.getElementById("itp_start_error").innerHTML = "Please select your ITP starting month."
             document.getElementById("master_error").innerHTML = "Please enter all the required details."
         }
         else if(this.itp_start_year == "" || this.itp_start_year == "none"){
             event.preventDefault()
-            document.getElementById("itp_start_error").innerHTML = "Please select the starting year for your ITP."
+            document.getElementById("itp_start_error").innerHTML = "Please select your ITP starting year."
             document.getElementById("master_error").innerHTML = "Please enter all the required details."
         }
         else{
@@ -230,17 +230,17 @@ export class CompanyRegistrationComponent implements OnInit {
         
         if(this.itp_end_date == "" || this.itp_end_date == "none"){
             event.preventDefault()
-            document.getElementById("itp_end_error").innerHTML = "Please select the date your ITP ends."
+            document.getElementById("itp_end_error").innerHTML = "Please select your ITP end date."
             document.getElementById("master_error").innerHTML = "Please enter all the required details."
         }
         else if(this.itp_end_month == "" || this.itp_end_month == "none"){
             event.preventDefault()
-            document.getElementById("itp_end_error").innerHTML = "Please select the month your ITP ends."
+            document.getElementById("itp_end_error").innerHTML = "Please select your ITP end month."
             document.getElementById("master_error").innerHTML = "Please enter all the required details."
         }
         else if(this.itp_end_year == "" || this.itp_end_year == "none"){
             event.preventDefault()
-            document.getElementById("itp_end_error").innerHTML = "Please select the year your ITP ends."
+            document.getElementById("itp_end_error").innerHTML = "Please select your ITP end year."
             document.getElementById("master_error").innerHTML = "Please enter all the required details."
         }
         else{
@@ -259,7 +259,7 @@ export class CompanyRegistrationComponent implements OnInit {
         
         if(this.company_address == ""){
             event.preventDefault()
-            document.getElementById("company_address_error").innerHTML = "Please enter the company address."
+            document.getElementById("company_address_error").innerHTML = "Please enter the company's address."
             document.getElementById("master_error").innerHTML = "Please enter all the required details."
         }
         else{
@@ -295,7 +295,7 @@ export class CompanyRegistrationComponent implements OnInit {
         
         if(this.allowance == ""){
             event.preventDefault()
-            document.getElementById("allowance_error").innerHTML = "Please enter your allowance. Type in 0 if you do not have any allowance."
+            document.getElementById("allowance_error").innerHTML = "Please enter your allowance. Enter '0' if you are not recieving anything."
             document.getElementById("master_error").innerHTML = "Please enter all the required details."
         }
         else{
@@ -329,7 +329,7 @@ export class CompanyRegistrationComponent implements OnInit {
         if(this.supervisor_designation == ""){
             event.preventDefault()
             document.getElementById("supervisor_designation_error").innerHTML = "Please enter your supervisor's designation."
-            document.getElementById("master_error").innerHTML = "Please enter all the required details.";
+            document.getElementById("master_error").innerHTML = "Please enter all the required details."
         }
         else{
             this.validate_supervisor_designation(data)
@@ -337,7 +337,7 @@ export class CompanyRegistrationComponent implements OnInit {
         
         if(this.supervisor_department == ""){
             event.preventDefault()
-            document.getElementById("supervisor_department_error").innerHTML = "Please enter your supervisor's department"
+            document.getElementById("supervisor_department_error").innerHTML = "Please enter your supervisor's department."
             document.getElementById("master_error").innerHTML = "Please enter all the required details."
         }
         else{
@@ -381,7 +381,7 @@ export class CompanyRegistrationComponent implements OnInit {
                     document.getElementById("student_email_error").innerHTML = ""
                 }
                 else{
-                    document.getElementById("student_email_error").innerHTML = "You must have an MMU student email address in order to continue."
+                    document.getElementById("student_email_error").innerHTML = "Please enter your MMU student email address."
                 }
             }
             else{
@@ -436,7 +436,7 @@ export class CompanyRegistrationComponent implements OnInit {
 
         if(this.student_name == ""){
             this.student_name_status = false
-            document.getElementById("student_name_error").innerHTML = "Please enter a valid name."
+            document.getElementById("student_name_error").innerHTML = "Please enter your full name."
         }
         else{
             this.student_name_status = true
@@ -508,7 +508,7 @@ export class CompanyRegistrationComponent implements OnInit {
             }
             else{
                 this.supervisor_contact_status = false
-                document.getElementById("supervisor_contact_error").innerHTML = "Please enter a valid number."
+                document.getElementById("supervisor_contact_error").innerHTML = "Please enter a valid phone number."
             }
         }
     }
@@ -531,7 +531,7 @@ export class CompanyRegistrationComponent implements OnInit {
         
         if(this.company_address == ""){
             this.company_address_status = false
-            document.getElementById("company_address_error").innerHTML = "Please enter the company address."
+            document.getElementById("company_address_error").innerHTML = "Please enter the company's address."
         }
         else{
             this.company_address_status = true
@@ -576,7 +576,7 @@ export class CompanyRegistrationComponent implements OnInit {
         
         if(this.allowance == ""){
             this.allowance_status = false
-            document.getElementById("allowance_error").innerHTML = "Please enter your allowance. Type in 0 if you do not have any allowance."
+            document.getElementById("allowance_error").innerHTML = "Please enter your allowance. Enter '0' if you are not recieving anything."
         }
         else{
             var price_format = /^\d+(?:\.\d{0,2})$/
@@ -597,7 +597,7 @@ export class CompanyRegistrationComponent implements OnInit {
         
         if(this.supervisor_title == "" && data.otheropt.checked == true){
             this.supervisor_title_status = false
-            document.getElementById("title_error").innerHTML = "Please enter a title for your supervisor."
+            document.getElementById("title_error").innerHTML = "Please enter your supervisor's title."
         }
         
         else if(this.supervisor_title == "" && (data.mr.checked == true || data.ms.checked == true || data.mrs.checked || data.dr.checked == true || data.prof.checked == true)){
@@ -674,7 +674,7 @@ export class CompanyRegistrationComponent implements OnInit {
         
         if(this.supervisor_title == ""){
             this.supervisor_title_status = false
-            document.getElementById("title_error").innerHTML = "Please enter the title for your supervisor."
+            document.getElementById("title_error").innerHTML = "Please enter your supervisor's title."
         }
         else{
             this.supervisor_title_status = true
@@ -691,7 +691,7 @@ export class CompanyRegistrationComponent implements OnInit {
 
     validate_dates(): void {
         if(Number(this.itp_end_year) < Number(this.itp_start_year)){
-            document.getElementById("itp_end_error").innerHTML = "Please select a valid year for the end year of your ITP."
+            document.getElementById("itp_end_error").innerHTML = "Please select a valid ITP end year."
             this.itp_start_status = false
             this.itp_end_status = false
         }
@@ -700,13 +700,13 @@ export class CompanyRegistrationComponent implements OnInit {
             
             if(Number(this.itp_end_month) < Number(this.itp_start_month)){
                 if(Number(this.itp_end_year) == Number(this.itp_start_year)){
-                    document.getElementById("itp_end_error").innerHTML = "Please select a valid month for the end month of your ITP."
+                    document.getElementById("itp_end_error").innerHTML = "Please select a valid ITP end month."
                     this.itp_start_status = false
                     this.itp_end_status = false
                 }
                 else{
                     if((Number(this.itp_end_date) < Number(this.itp_start_date)) && (Number(this.itp_start_month) == Number(this.itp_end_month)) && (Number(this.itp_end_year) == Number(this.itp_start_year))) {
-                        document.getElementById("itp_end_error").innerHTML = "Please select a valid date for the end of your ITP."
+                        document.getElementById("itp_end_error").innerHTML = "Please select a valid ITP end date."
                         this.itp_start_status = false
                         this.itp_end_status = false
                     }
@@ -752,7 +752,7 @@ export class CompanyRegistrationComponent implements OnInit {
                         
                         if(Number(this.itp_end_date) == 31){
                             if(Number(this.itp_end_month) == 2 || Number(this.itp_end_month) == 4 || Number(this.itp_end_month) == 6 || Number(this.itp_end_month) == 9 || Number(this.itp_end_month) == 11){
-                                document.getElementById("itp_end_error").innerHTML = "Please select a valid date for the month.";
+                                document.getElementById("itp_end_error").innerHTML = "Please select a valid date for the month."
                                 this.itp_end_status = false
                             }
                             else{
@@ -791,7 +791,7 @@ export class CompanyRegistrationComponent implements OnInit {
             }
             else{
                 if((Number(this.itp_end_date) < Number(this.itp_start_date)) && (Number(this.itp_start_month) == Number(this.itp_end_month)) && (Number(this.itp_end_year) == Number(this.itp_start_year))) {
-                    document.getElementById("itp_end_error").innerHTML = "Please select a valid date for the end of your ITP."
+                    document.getElementById("itp_end_error").innerHTML = "Please select a valid ITP end date."
                     this.itp_start_status = false
                     this.itp_end_status = false
                 }
@@ -881,10 +881,10 @@ export class CompanyRegistrationComponent implements OnInit {
 
         if(this.student_email_status == false || this.student_id_status == false || this.student_name_status == false || this.major_status == false || this.final_semester_status == false || this.student_mobile_status == false || this.itp_start_status == false || this.itp_end_status == false || this.company_name_status == false || this.company_address_status == false || this.company_postcode_status == false || this.company_state_status == false || this.company_telephone_status == false || this.allowance_status == false || this.supervisor_title_status == false || this.supervisor_first_name_status == false || this.supervisor_last_name_status == false || this.supervisor_designation_status == false || this.supervisor_department_status == false || this.supervisor_contact_status == false || this.supervisor_email_status == false){
             event.preventDefault();
-            document.getElementById("master_error").innerHTML = "Please enter all the required details.";
+            document.getElementById("master_error").innerHTML = "Please enter all the required details."
         }
         else{
-            document.getElementById("master_error").innerHTML = "";
+            document.getElementById("master_error").innerHTML = ""
             window.location.href="/itpproject/itp_advisor_assign"
         }
     }

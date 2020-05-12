@@ -10,17 +10,17 @@ export class AaApproveComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    var width = window.innerWidth;
+    var width = window.innerWidth
     
     //document.getElementById("width").innerHTML = width;
     
     if(width < 601){
-        $("#proceed_section").removeClass("proceed_section");
-        $("#proceed_section").addClass("proceed_section_mobile");
+        $("#proceed_section").removeClass("proceed_section")
+        $("#proceed_section").addClass("proceed_section_mobile")
     }
     
     if(width < 850){
-        $("#sectionrs").removeClass("right-section");
+        $("#sectionrs").removeClass("right-section")
     }
   }
 
@@ -38,19 +38,19 @@ export class AaApproveComponent implements OnInit {
     //document.getElementById("width").innerHTML = width;
     
     if(width < 601){
-        $("#proceed_section").removeClass("proceed_section");
-        $("#proceed_section").addClass("proceed_section_mobile");
+        $("#proceed_section").removeClass("proceed_section")
+        $("#proceed_section").addClass("proceed_section_mobile")
     }
     else{
-        $("#proceed_section").removeClass("proceed_section_mobile");
-        $("#proceed_section").addClass("proceed_section");
+        $("#proceed_section").removeClass("proceed_section_mobile")
+        $("#proceed_section").addClass("proceed_section")
     }
     
     if(width < 850){
-        $(".sectionrs").removeClass("right-section");
+        $(".sectionrs").removeClass("right-section")
     }
     else{
-        $(".sectionrs").addClass("right-section");
+        $(".sectionrs").addClass("right-section")
     }
   }
 
