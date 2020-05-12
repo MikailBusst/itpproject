@@ -15,20 +15,20 @@ export class LoginComponent implements OnInit {
     //document.getElementById("width").innerHTML = width;
     
     if(width < 888){
-        $("body").removeClass("login");
-        $("body").addClass("login-mobile");
-        
-        $("#card").removeClass("card-login");
-        $("#card").addClass("card-login-mobile");
-        
-        $("#card-left").removeClass("create-account");
-        $("#card-left").addClass("create-account-mobile");
-        
-        $("#login").removeClass("login-area");
-        $("#login").addClass("login-area-mobile");
-        
-        $("#login-below").removeClass("create-account-2");
-        $("#login-below").addClass("create-account-mobile-2");
+      $("body").removeClass("login");
+      $("body").addClass("login-mobile");
+      
+      $("#card").removeClass("card-login");
+      $("#card").addClass("card-login-mobile");
+      
+      $("#card-left").removeClass("create-account");
+      $("#card-left").addClass("create-account-mobile");
+      
+      $("#login-section").removeClass("login-area");
+      $("#login-section").addClass("login-area-mobile");
+      
+      $("#login-below").removeClass("create-account-2");
+      $("#login-below").addClass("create-account-mobile-2");
     }
   }
 
