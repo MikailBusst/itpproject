@@ -3,35 +3,52 @@
 
 .error {
     margin-top: 30px;
+    margin-bottom: -20px;
 }
 
 #proceed_section {
     padding-right: 0px;
+    margin-top: -50px;
 }
 
 #proceed-red {
-width: 275px;
+    width: 275px;
 }
 
 .card {
-border-bottom: none;
+    border-bottom: none;
 }
 
 .title {
-margin-top: -20px;
+    margin-top: -20px;
 }
 
 .subheader {
-margin-bottom: 40px;
-}
+    margin-bottom: 40px;
+}       
 
 input[type=text] {
-max-width: 400px;
-margin-top: 50px;
+    max-width: 400px;
+    margin-top: 50px;
 }
 
 input[type=submit] {
-width: 275px;
-margin-right: 10px;
-margin-left: 0px;
+    width: 275px;
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+.proceed_section_mobile input[type=submit] {
+    width: 275px;
+    margin-right: 10px;
+    margin-left: 13px;
+}
+
+.recaptcha {
+    margin-top: 50px;
+}
+
+.proceed_section_mobile #proceed-red {
+    position: relative;
+    left: 9px;
 }

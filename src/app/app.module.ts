@@ -28,6 +28,7 @@ import { EditCompanyRegistrationComponent } from './edit-company-registration/ed
 import { LoginComponent } from './login/login.component';
 import { StudentTableComponent } from './student-table/student-table.component';
 import { AaApproveComponent } from './aa-approve/aa-approve.component';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { AaApproveComponent } from './aa-approve/aa-approve.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    RecaptchaModule,
     RouterModule.forRoot([
       {
         path: 'disclaimer',

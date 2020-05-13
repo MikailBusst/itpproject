@@ -112,19 +112,37 @@ export class SubmitAppendixAComponent implements OnInit {
     }
 
     display_undertaking(data): void {
+        var file_extension = ""
         var undertaking_file_name = data.undertaking
+        var final_undertaking_file_name = undertaking_file_name.split("\\").pop()
+
+        file_extension = final_undertaking_file_name.split('.').pop()
         
-        document.getElementById("undertaking_file_name").innerHTML = undertaking_file_name.split("\\").pop()
-        
-        this.undertaking_status = true
+        document.getElementById("undertaking_file_name").innerHTML = final_undertaking_file_name
+
+        if(file_extension == "exe" || file_extension == "wsf" || file_extension == "scpt" || file_extension == "js" || file_extension == "vbs" || file_extension == "php" || file_extension == "asp") {
+            document.getElementById("undertaking_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>You cannot upload this file.</span>"
+        }
+        else {
+            this.undertaking_status = true
+        }
     }
 
     display_offer_letter(data): void {
+        var file_extension = ""
         var offer_letter_file_name = data.offer_letter
+        var final_offer_letter_file_name = offer_letter_file_name.split("\\").pop()
+
+        file_extension = final_offer_letter_file_name.split('.').pop()
         
-        document.getElementById("offer_letter_file_name").innerHTML = offer_letter_file_name.split("\\").pop()
-        
-        this.offer_letter_status = true
+        document.getElementById("offer_letter_file_name").innerHTML = final_offer_letter_file_name
+
+        if(file_extension == "exe" || file_extension == "wsf" || file_extension == "scpt" || file_extension == "js" || file_extension == "vbs" || file_extension == "php" || file_extension == "asp") {
+            document.getElementById("offer_letter_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>You cannot upload this file.</span>"
+        }
+        else {
+            this.offer_letter_status = true
+        }
     }
     
     check_files(): void {

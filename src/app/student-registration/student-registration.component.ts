@@ -249,11 +249,21 @@ export class StudentRegistrationComponent implements OnInit {
   }
 
   display_resume(data): void {
+    var file_extension = ""
     var resume_file_name = data.resume
+    var final_resume_file_name = resume_file_name.split("\\").pop()
+
+    file_extension = final_resume_file_name.split('.').pop()
     
-    document.getElementById("resume_file_name").innerHTML = resume_file_name.split("\\").pop()
-    
-    this.resume_status = true
+    document.getElementById("resume_file_name").innerHTML = final_resume_file_name
+
+    if(file_extension == "exe" || file_extension == "wsf" || file_extension == "scpt" || file_extension == "js" || file_extension == "vbs" || file_extension == "php" || file_extension == "asp") {
+        document.getElementById("resume_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>You cannot upload this file.</span>"
+        this.resume_status = false
+    }
+    else {
+        this.resume_status = true
+    }
   }
 
   validate_student_credit_hours(data): void {

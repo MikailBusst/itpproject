@@ -120,43 +120,43 @@
         <form #submitDocumentsForm="ngForm" (ngSubmit)="check_files()">
             <div class="upload_card">
                 <p>Manual Registration Form</p>
-                <input ontouchstart="" type="file" id="manual_registration_form" name="manual_registration_form" class="file_submission" (change)="display_manual_registration_form(submitDocumentsForm.value)" ngModel>
+                <input ontouchstart="" type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" id="manual_registration_form" name="manual_registration_form" class="file_submission" (change)="display_manual_registration_form(submitDocumentsForm.value)" ngModel>
                     <p id="manual_registration_form_file_name"></p>
             </div>
             
             <div class="upload_card">
                 <p>Checklist</p>
-                <input ontouchstart="" type="file" name="checklist" id="checklist" class="file_submission" (change)="display_checklist(submitDocumentsForm.value)" ngModel>
+                <input ontouchstart="" type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="checklist" id="checklist" class="file_submission" (change)="display_checklist(submitDocumentsForm.value)" ngModel>
                     <p id="checklist_file_name"></p>
             </div>
             
             <div class="upload_card">
                 <p>Online Transcripts</p>
-                <input ontouchstart="" type="file" name="online_transcripts" id="online_transcripts" (change)="display_online_transcripts(submitDocumentsForm.value)" class="file_submission" ngModel>
+                <input ontouchstart="" type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="online_transcripts" id="online_transcripts" (change)="display_online_transcripts(submitDocumentsForm.value)" class="file_submission" ngModel>
                     <p id="online_transcripts_file_name"></p>
             </div>
             
             <div class="upload_card">
                 <p>Course Structure</p>
-                <input ontouchstart="" type="file" name="course_structure" id="course_structure" (change)="display_course_structure(submitDocumentsForm.value)" class="file_submission" ngModel>
+                <input ontouchstart="" type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="course_structure" id="course_structure" (change)="display_course_structure(submitDocumentsForm.value)" class="file_submission" ngModel>
                     <p id="course_structure_file_name"></p>
             </div>
             
             <div class="upload_card">
                 <p>Insurance Payment Document (Original Copy)</p>
-                <input ontouchstart="" type="file" name="insurance" id="insurance" (change)="display_insurance(submitDocumentsForm.value)" class="file_submission" ngModel>
+                <input ontouchstart="" type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="insurance" id="insurance" (change)="display_insurance(submitDocumentsForm.value)" class="file_submission" ngModel>
                     <p id="insurance_file_name"></p>
             </div>
             
             <div class="upload_card">
                 <p>Resume</p>
-                <input ontouchstart="" type="file" name="resume" id="resume" (change)="display_resume(submitDocumentsForm.value)" class="file_submission" ngModel>
+                <input ontouchstart="" type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="resume" id="resume" (change)="display_resume(submitDocumentsForm.value)" class="file_submission" ngModel>
                     <p id="resume_file_name"></p>
             </div>
             
             <div class="upload_card">
                 <p>Sample Cover Letter</p>
-                <input ontouchstart="" type="file" name="cover_letter_file" id="cover_letter_file" (change)="display_cover_letter(submitDocumentsForm.value)" class="file_submission" ngModel>
+                <input ontouchstart="" type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="cover_letter_file" id="cover_letter_file" (change)="display_cover_letter(submitDocumentsForm.value)" class="file_submission" ngModel>
                     <p id="cover_letter_file_name"></p>
             </div>
     

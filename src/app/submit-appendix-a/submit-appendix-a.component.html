@@ -44,13 +44,13 @@
         <form #submitAppendixAForm="ngForm" (ngSubmit)="check_files()">
             <div class="upload_card">
                 <p>Letter of Undertaking</p>
-                <input type="file" ontouchstart="" id="undertaking" name="undertaking" class="file_submission" (change)="display_undertaking(submitAppendixAForm.value)" ngModel>
+                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" ontouchstart="" id="undertaking" name="undertaking" class="file_submission" (change)="display_undertaking(submitAppendixAForm.value)" ngModel>
                     <p id="undertaking_file_name"></p>
             </div>
             
             <div class="upload_card">
                 <p>Offer Letter</p>
-                <input type="file" ontouchstart="" name="offer_letter" id="offer_letter" (change)="display_offer_letter(submitAppendixAForm.value)" class="file_submission" ngModel>
+                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" ontouchstart="" name="offer_letter" id="offer_letter" (change)="display_offer_letter(submitAppendixAForm.value)" class="file_submission" ngModel>
                     <p id="offer_letter_file_name"></p>
             </div>
         

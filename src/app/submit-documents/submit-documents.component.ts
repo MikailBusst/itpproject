@@ -114,61 +114,129 @@ export class SubmitDocumentsComponent implements OnInit {
     }
 
     display_manual_registration_form(data): void {
+        var file_extension = ""
         var manual_registration_form_file_name = data.manual_registration_form
+        var final_manual_registration_form_file_name = manual_registration_form_file_name.split("\\").pop()
 
-        //document.getElementById("manual_registration_form_file_name").innerHTML = manual_registration_form_file_name
+        file_extension = final_manual_registration_form_file_name.split('.').pop()
         
-        document.getElementById("manual_registration_form_file_name").innerHTML = manual_registration_form_file_name.split("\\").pop()
-        
-        this.manual_registration_status = true
+        document.getElementById("manual_registration_form_file_name").innerHTML = final_manual_registration_form_file_name
+
+        if(file_extension == "exe" || file_extension == "wsf" || file_extension == "scpt" || file_extension == "js" || file_extension == "vbs" || file_extension == "php" || file_extension == "asp") {
+            document.getElementById("manual_registration_form_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>You cannot upload this file.</span>"
+            this.manual_registration_status = false
+        }
+        else {
+            this.manual_registration_status = true
+        }
     }
 
     display_checklist(data): void {
+        var file_extension = ""
         var checklist_file_name = data.checklist
+        var final_checklist_file_name = checklist_file_name.split("\\").pop()
+
+        file_extension = final_checklist_file_name.split('.').pop()
         
-        document.getElementById("checklist_file_name").innerHTML = checklist_file_name.split("\\").pop()
-        
-        this.checklist_status = true
+        document.getElementById("checklist_file_name").innerHTML = final_checklist_file_name
+
+        if(file_extension == "exe" || file_extension == "wsf" || file_extension == "scpt" || file_extension == "js" || file_extension == "vbs" || file_extension == "php" || file_extension == "asp") {
+            this.checklist_status = false
+            document.getElementById("checklist_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>You cannot upload this file.</span>"
+        }
+        else {
+            this.checklist_status = true
+        }
     }
 
     display_online_transcripts(data): void {
+        var file_extension = ""
         var online_transcripts_file_name = data.online_transcripts
+        var final_online_transcripts_file_name = online_transcripts_file_name.split("\\").pop()
+
+        file_extension = final_online_transcripts_file_name.split('.').pop()
         
-        document.getElementById("online_transcripts_file_name").innerHTML = online_transcripts_file_name.split("\\").pop()
-        
-        this.online_transcript_status = true
+        document.getElementById("online_transcripts_file_name").innerHTML = final_online_transcripts_file_name
+
+        if(file_extension == "exe" || file_extension == "wsf" || file_extension == "scpt" || file_extension == "js" || file_extension == "vbs" || file_extension == "php" || file_extension == "asp") {
+            this.online_transcript_status = false
+            document.getElementById("online_transcripts_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>You cannot upload this file.</span>"
+        }
+        else {
+            this.online_transcript_status = true
+        }
     }
 
     display_course_structure(data): void {
+        var file_extension = ""
         var course_structure_file_name = data.course_structure
+        var final_course_structure_file_name = course_structure_file_name.split("\\").pop()
+
+        file_extension = final_course_structure_file_name.split('.').pop()
         
-        document.getElementById("course_structure_file_name").innerHTML = course_structure_file_name.split("\\").pop()
-        
-        this.course_structure_status = true
+        document.getElementById("course_structure_file_name").innerHTML = final_course_structure_file_name
+
+        if(file_extension == "exe" || file_extension == "wsf" || file_extension == "scpt" || file_extension == "js" || file_extension == "vbs" || file_extension == "php" || file_extension == "asp") {
+            this.course_structure_status = false
+            document.getElementById("course_structure_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>You cannot upload this file.</span>"
+        }
+        else {
+            this.course_structure_status = true
+        }
     }
 
     display_insurance(data): void {
+        var file_extension = ""
         var insurance_file_name = data.insurance
+        var final_insurance_file_name = insurance_file_name.split("\\").pop()
+
+        file_extension = final_insurance_file_name.split('.').pop()
         
-        document.getElementById("insurance_file_name").innerHTML = insurance_file_name.split("\\").pop()
-        
-        this.insurance_status = true
+        document.getElementById("insurance_file_name").innerHTML = final_insurance_file_name
+
+        if(file_extension == "exe" || file_extension == "wsf" || file_extension == "scpt" || file_extension == "js" || file_extension == "vbs" || file_extension == "php" || file_extension == "asp") {
+            this.insurance_status = false
+            document.getElementById("insurance_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>You cannot upload this file.</span>"
+        }
+        else {
+            this.insurance_status = true
+        }
     }
 
     display_resume(data): void {
+        var file_extension = ""
         var resume_file_name = data.resume
+        var final_resume_file_name = resume_file_name.split("\\").pop()
+
+        file_extension = final_resume_file_name.split('.').pop()
         
-        document.getElementById("resume_file_name").innerHTML = resume_file_name.split("\\").pop()
-        
-        this.resume_status = true
+        document.getElementById("resume_file_name").innerHTML = final_resume_file_name
+
+        if(file_extension == "exe" || file_extension == "wsf" || file_extension == "scpt" || file_extension == "js" || file_extension == "vbs" || file_extension == "php" || file_extension == "asp") {
+            document.getElementById("resume_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>You cannot upload this file.</span>"
+            this.resume_status = false
+        }
+        else {
+            this.resume_status = true
+        }
     }
 
     display_cover_letter(data): void {
+        var file_extension = ""
         var cover_letter_file_name = data.cover_letter_file
+        var final_cover_letter_file_name = cover_letter_file_name.split("\\").pop()
+
+        file_extension = final_cover_letter_file_name.split('.').pop()
         
-        document.getElementById("cover_letter_file_name").innerHTML = cover_letter_file_name.split("\\").pop()
-        
-        this.cover_letter_status = true
+        document.getElementById("cover_letter_file_name").innerHTML = final_cover_letter_file_name
+
+        if(file_extension == "exe" || file_extension == "wsf" || file_extension == "scpt" || file_extension == "js" || file_extension == "vbs" || file_extension == "php" || file_extension == "asp") {
+            this.cover_letter_status = false
+            document.getElementById("cover_letter_file_name").innerHTML = "<span style='color: red; font-weight: 900;'>You cannot upload this file.</span>"
+        }
+        else {
+            this.cover_letter_status = true
+        }
     }
 
     check_files(): void {

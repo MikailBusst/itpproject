@@ -6,13 +6,20 @@
               <p class="subheader">Reset Password</p>
           </div>
           <div class="title">
-              <h1>Type in your Email</h1>
+              <h1>Enter your Email</h1>
               
               <form #retrieveEmailForm="ngForm" (ngSubmit)="check_empty(retrieveEmailForm.value)">
                   <input name="email" type="text" (blur)="email_validation(retrieveEmailForm.value)" placeholder="example@email.com" ngModel>
                   <div class="error"><p id="email_error"></p></div>
-                  
-                  <div class="card" style="padding-left: 0; width: 100%; margin-top: 80px; padding-right: 0px">
+
+                    <div class="card" style="margin-left: 5px; margin-top: 0px; padding-top: 0px;">
+                        <div class="recaptcha" style="transform:scale(0.9);-webkit-transform:scale(0.9);transform-origin:0 0;-webkit-transform-origin:0 0;">
+                            <re-captcha (resolved)="resolved($event)" siteKey="6LdpGvYUAAAAAMuFz_D-MAFwzChtqeLw3wj9QNpL"></re-captcha>
+                            <div class="error" style="margin-bottom: -40px; margin-left: -8px;"><p id="captcha_error" style="font-size: 25px;"></p></div>
+                        </div>
+                    </div>
+                    
+                  <div class="card" style="padding-left: 0; width: 100%; margin-top: 100px; padding-right: 0px">
                       <div class="proceed_section" id="proceed_section">
                           <input type="submit" value="Send One Time Password  &#x276F;" /> <button (mousedown)="cancel()" id="proceed-red">Cancel</button>
                       </div>

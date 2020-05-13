@@ -26,13 +26,18 @@
                     <div class="error"><p id="password_error"></p></div>
                     <p>Confirm Password</p>
                     <input (blur)="verify_confirm_password(signupForm.value)" style="max-width: 400px;" name="confirm_password" type="password" placeholder="Confirm Password" ngModel>
-                    <div class="error"><p id="confirm_password_error"></p></div>
+                    <div class="error" style="margin-bottom: 50px;"><p id="confirm_password_error"></p></div>
                     
+                    <div class="card" style="margin-left: 5px; margin-bottom: 0px;">
+                        <div class="recaptcha" style="transform:scale(0.9);-webkit-transform:scale(0.9);transform-origin:0 0;-webkit-transform-origin:0 0;">
+                            <re-captcha (resolved)="resolved($event)" siteKey="6LdpGvYUAAAAAMuFz_D-MAFwzChtqeLw3wj9QNpL"></re-captcha>
+                            <div class="error"><p id="captcha_error"></p></div>
+                        </div>
+                    </div>
+
                     <div class="card" style="width: 100%;">
                         <div class="error" style="margin-bottom: 30px;"><p id="master_error"></p></div>
                     </div>
-                    
-                    
                    
                      <div class="card" style="width: 100%; margin-top: -40px;">
                          <div class="proceed_section" id="proceed_section">

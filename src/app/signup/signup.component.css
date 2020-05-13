@@ -8,17 +8,22 @@
 }
 
 .card {
-border-bottom: none;
+    border-bottom: none;
 }
 
 .title {
-margin-top: -25px;
+    margin-top: -25px;
 }
 
 input[type=submit] {
-width: 200px;
+    width: 200px;
 }
 
 .subheader {
-margin-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.recaptcha {
+    z-index: 2;
+    margin-top: -50px;
 }
