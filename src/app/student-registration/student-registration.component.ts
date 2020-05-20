@@ -311,6 +311,11 @@ export class StudentRegistrationComponent implements OnInit {
     }
   }
 
+  setPDFValues(): void {
+    localStorage.setItem("reference_student_name", this.student_name)
+    localStorage.setItem("reference_student_id", this.student_id)
+  }
+
   validate_master(): void {
     if(this.student_email_status == false || this.student_id_status == false || this.student_name_status == false || this.major_status == false || this.final_semester_status == false || this.student_mobile_status == false || this.student_total_credit_hours_status == false || this.student_current_credit_hours_status == false || this.resume_status == false) {
         event.preventDefault()
@@ -318,6 +323,7 @@ export class StudentRegistrationComponent implements OnInit {
         document.getElementById("master_error").innerHTML = "Please enter all the required details."
     }
     else {
+        this.setPDFValues()
         document.getElementById("master_error").innerHTML = ""
         window.location.href="/itpproject/submit_documents"
     }
