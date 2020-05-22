@@ -38,14 +38,13 @@ top: 100px;
 }
 
 .navbar-collapse {
-background-color: #FEFEFE;
 width: 95%;
 left: 0.1px;
 padding-left: 4%;
 }
 
 .card {
-border-bottom: none;
+border-bottom: none!important;
 position: absolute;
 }
 

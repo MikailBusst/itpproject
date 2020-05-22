@@ -10,6 +10,7 @@ export class ResetPasswordComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.check_mode()
     var width = window.innerWidth;
     
     if(width < 410){
@@ -126,5 +127,22 @@ export class ResetPasswordComponent implements OnInit {
         document.getElementById("reset_error").innerHTML = "Your password must be at least 8 characters long, have at least one lowercase letter, one uppercase letter, one numeric digit, one special character, no spaces and cannot have a character repeated three times or more in a row."
     }
 }
+
+check_mode(): void {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        this.activateDark()
+    }
+    else {
+        this.activateLight()
+    }
+  }
+
+  activateLight(): void {
+      $("body").removeClass("darkBody")
+  }
+
+  activateDark(): void {
+      $("body").addClass("darkBody")
+  }
 
 }

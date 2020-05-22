@@ -6,7 +6,7 @@
 }
 
 .card {
-border-bottom: none;
+border-bottom: none!important;
 }
 
 #proceed_section {

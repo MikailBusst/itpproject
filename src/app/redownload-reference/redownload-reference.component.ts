@@ -22,6 +22,7 @@ export class RedownloadReferenceComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.check_mode()
     var width = window.innerWidth;
     
     if(width < 410){
@@ -191,5 +192,22 @@ export class RedownloadReferenceComponent implements OnInit {
     pdf.text("Faculty of Information Science and Technology", 32, 283)
     
     pdf.save(this.student_id + "_reference.pdf")
+  }
+
+  check_mode(): void {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        this.activateDark()
+    }
+    else {
+        this.activateLight()
+    }
+  }
+
+  activateLight(): void {
+      $("body").removeClass("darkBody")
+  }
+
+  activateDark(): void {
+      $("body").addClass("darkBody")
   }
 }

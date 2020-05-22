@@ -22,6 +22,7 @@ export class DownloadReferenceComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.check_mode()  
     var width = window.innerWidth
 
     document.getElementById("reference_name").innerHTML = this.student_id + "_reference.pdf"
@@ -201,4 +202,20 @@ export class DownloadReferenceComponent implements OnInit {
     pdf.save(this.student_id + "_reference.pdf")
   }
 
+  check_mode(): void {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        this.activateDark()
+    }
+    else {
+        this.activateLight()
+    }
+  }
+
+  activateLight(): void {
+      $("body").removeClass("darkBody")
+  }
+
+  activateDark(): void {
+      $("body").addClass("darkBody")
+  }
 }

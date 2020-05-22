@@ -10,6 +10,7 @@ export class AaApproveComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.activateDark()
     var width = window.innerWidth
     
     //document.getElementById("width").innerHTML = width;
@@ -52,6 +53,23 @@ export class AaApproveComponent implements OnInit {
     else{
         $(".sectionrs").addClass("right-section")
     }
+  }
+
+  check_mode(): void {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        this.activateDark()
+    }
+    else {
+        this.activateLight()
+    }
+  }
+
+  activateLight(): void {
+      $("body").removeClass("darkBody")
+  }
+
+  activateDark(): void {
+      $("body").addClass("darkBody")
   }
 
 }

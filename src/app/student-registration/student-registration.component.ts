@@ -29,6 +29,7 @@ export class StudentRegistrationComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.check_mode()
     var width = window.innerWidth;
     
     //document.getElementById("width").innerHTML = width;
@@ -327,5 +328,22 @@ export class StudentRegistrationComponent implements OnInit {
         document.getElementById("master_error").innerHTML = ""
         window.location.href="/itpproject/submit_documents"
     }
+  }
+
+  check_mode(): void {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        this.activateDark()
+    }
+    else {
+        this.activateLight()
+    }
+  }
+
+  activateLight(): void {
+      $("body").removeClass("darkBody")
+  }
+
+  activateDark(): void {
+      $("body").addClass("darkBody")
   }
 }

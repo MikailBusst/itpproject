@@ -17,6 +17,7 @@ export class SubmitDocumentsComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
+        this.check_mode()
         var width = window.innerWidth
         
         //document.getElementById("width").innerHTML = width;
@@ -278,5 +279,22 @@ export class SubmitDocumentsComponent implements OnInit {
             window.location.href = "/itpproject/aa_wait"
         }
     }
+
+    check_mode(): void {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            this.activateDark()
+        }
+        else {
+            this.activateLight()
+        }
+      }
+    
+      activateLight(): void {
+          $("body").removeClass("darkBody")
+      }
+    
+      activateDark(): void {
+          $("body").addClass("darkBody")
+      }
 
 }

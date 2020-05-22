@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" onload="activateDark()">
 <head>
   <meta charset="utf-8">
   <title>Itpproject</title>
@@ -8,10 +8,33 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <style>
-    html {
+    .lightBody {
       background-color: #FEFEFE;
     }
+
+    .darkBody {
+      background-color: black;
+    }
   </style>
+  
+  <script>
+    function check_mode() {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            this.activateDark()
+        }
+        else {
+            this.activateLight()
+        }
+      }
+    
+      function activateLight(){
+          $("html").removeClass("darkBody")
+      }
+    
+      function activateDark() {
+          $("html").addClass("darkBody")
+      }
+  </script>
 </head>
 <body>
   <app-root></app-root>

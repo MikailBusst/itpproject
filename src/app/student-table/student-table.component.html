@@ -1,5 +1,5 @@
 <body (window:resize)="onResize($event)">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: absolute;">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light" style="position: absolute;">
         <div class="container">
             <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="router-link-active" >ITP Project</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,13 +39,13 @@
     </div>
     
     <main class="main">
-        <div class="card" style="max-width: 1296px; background-color: #FEFEFE; box-shadow: none; border: none; top: 290px;">
+        <div class="card" style="max-width: 1296px; box-shadow: none; border: none; top: 290px;">
             <form>
                 <input id="search" name="search" type="text" placeholder="Search">
             </form>
         </div>
 
-                   <!--<list class="myUL">
+                   <!--<div class="myUL">
                         <ul>
                           <li><a style="border-top-left-radius: 20px; border-top: none; border-top-right-radius: 20px;" href="#">Adele</a></li>
                           <li><a href="#">Agnes</a></li>
@@ -55,7 +55,7 @@
 
                           <li><a style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border-bottom: none;" href="#">Cindy</a></li>
                         </ul>
-                    </list>-->
+                    </div>-->
     
         <div class="list">
             <form>
