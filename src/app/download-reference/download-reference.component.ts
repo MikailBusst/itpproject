@@ -146,11 +146,13 @@ export class DownloadReferenceComponent implements OnInit {
     switch(this.trimester) {
         case 1:
             trimester_number = this.trimester + "st"
-            break;
+            break
         case 2:
             trimester_number = this.trimester + "nd"
+            break
         case 3:
             trimester_number = this.trimester + "rd"
+            break
         default:
             trimester_number = "Undefined"
     }
