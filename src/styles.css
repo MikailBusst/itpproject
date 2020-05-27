@@ -905,6 +905,7 @@ h3{
     border: 3px solid black;
     border-radius: 10px;
     padding: 10px;
+    word-break: break-all;
 }
 
 .document_card_mobile img{
@@ -1306,7 +1307,7 @@ h1.small_header {
     background-color: rgb(37, 37, 37);
 }
 
-.darkBody .upload_card {
+.darkBody .upload_card, .darkBody .filter-size, .darkBody .document_card_mobile {
     border: 3px solid white;
 }
 
@@ -1317,10 +1318,6 @@ h1.small_header {
 
 .darkBody .file_submission:hover::before, .darkBody .file_submission_mobile:hover::before{
     background-color: #C48746;
-}
-
-.darkBody .filter-size {
-    border: 3px solid white;
 }
 
 .darkBody .filter-size .twenty_button, .darkBody .filter-size .fifty_button, .darkBody .filter-size .hundred_button, .darkBody .filter-size-mobile .twenty_button, .darkBody .filter-size-mobile .fifty_button, .darkBody .filter-size-mobile .hundred_button{

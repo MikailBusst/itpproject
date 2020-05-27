@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="lightBody">
+<html lang="en" onload="activateDark()">
 <head>
   <meta charset="utf-8">
   <title>Itpproject</title>
@@ -15,8 +15,27 @@
       background-color: black;
     }
   </style>
+  
+  <script>
+    function check_mode() {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            this.activateDark()
+        }
+        else {
+            this.activateLight()
+        }
+      }
+    
+      function activateLight(){
+          $("html").removeClass("darkBody")
+      }
+    
+      function activateDark() {
+          $("html").addClass("darkBody")
+      }
+  </script>
 </head>
 <body>
   <app-root></app-root>
-<script src="runtime-es2015.1eba213af0b233498d9d.js" type="module"></script><script src="runtime-es5.1eba213af0b233498d9d.js" nomodule defer></script><script src="polyfills-es5.9e286f6d9247438cbb02.js" nomodule defer></script><script src="polyfills-es2015.690002c25ea8557bb4b0.js" type="module"></script><script src="scripts.10dfccef73f6ef8ccf15.js" defer></script><script src="main-es2015.01fa1a0be4d500eef007.js" type="module"></script><script src="main-es5.01fa1a0be4d500eef007.js" nomodule defer></script></body>
+<script src="runtime-es2015.1eba213af0b233498d9d.js" type="module"></script><script src="runtime-es5.1eba213af0b233498d9d.js" nomodule defer></script><script src="polyfills-es5.9e286f6d9247438cbb02.js" nomodule defer></script><script src="polyfills-es2015.690002c25ea8557bb4b0.js" type="module"></script><script src="scripts.10dfccef73f6ef8ccf15.js" defer></script><script src="main-es2015.74da6b55087da6c4f6e6.js" type="module"></script><script src="main-es5.74da6b55087da6c4f6e6.js" nomodule defer></script></body>
 </html>
