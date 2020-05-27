@@ -1,6 +1,10 @@
 @import url("../../../node_modules/bootstrap/dist/css/bootstrap.min.css");
 @import url("../../styles.css");
 
+html, body {
+    overflow-x: hidden;
+}
+
 .error {
     margin-top: 20px;
     margin-bottom: 80px;

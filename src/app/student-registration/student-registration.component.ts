@@ -26,7 +26,7 @@ export class StudentRegistrationComponent implements OnInit {
   student_current_credit_hours_status = false
   resume_status = false
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.check_mode()

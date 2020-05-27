@@ -1236,7 +1236,7 @@ h1.small_header {
     background-color: #C48746;
 }
 
-.darkBody p.subheader, .darkBody #ct p, .darkBody .ct p, .darkBody login-below p a, .darkBody #link-card p {
+.darkBody p.subheader, .darkBody #ct p, .darkBody .ct p, .darkBody login-below p a, .darkBody #link-card p, .darkBody .current-page, .navbar-dark .current-page {
     color: #F79F42!important;
 }
 

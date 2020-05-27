@@ -1,5 +1,9 @@
 @import url("../styles.css");
 
+html {
+    overflow-x: hidden;
+}
+
 .lightBody {
     background-color: #FEFEFE;
 }

@@ -11,6 +11,7 @@ export class StudentTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.check_mode()
+    $("#student_table").addClass("current-page")
     var width = window.innerWidth
     
     //document.getElementById("width").innerHTML = width;
