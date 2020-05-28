@@ -1,6 +1,6 @@
 @import url("../styles.css");
 
-html {
+html, body {
     overflow-x: hidden;
 }
 
