@@ -19,47 +19,74 @@
         <form #resubmitDocumentsForm="ngForm" (ngSubmit)="check_file_error()">
             <div class="upload_card">
                 <p>Manual Registration Form</p>
-                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" id="manual_registration_form" name="manual_registration_form" class="file_submission" (change)="display_manual_registration_form(resubmitDocumentsForm.value)" ngModel>
+                <label for="manual_registration_form" class="file_submission_label file_submission">
+                    Upload File
+                </label>
+                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" id="manual_registration_form" name="manual_registration_form" (change)="display_manual_registration_form(resubmitDocumentsForm.value)" ngModel>
                     <p id="manual_registration_form_file_name">manual_registration.pdf</p>
             </div>
             <div class="upload_card">
                 <p>Checklist</p>
-                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="checklist" id="checklist" class="file_submission" (change)="display_checklist(resubmitDocumentsForm.value)" ngModel>
+                <label for="checklist" class="file_submission_label file_submission">
+                    Upload File
+                </label>
+                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="checklist" id="checklist" (change)="display_checklist(resubmitDocumentsForm.value)" ngModel>
                     <p id="checklist_file_name">checklist.pdf</p>
             </div>
             <div class="upload_card">
                 <p>Online Transcripts</p>
-                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="online_transcripts" id="online_transcripts" (change)="display_online_transcripts(resubmitDocumentsForm.value)" class="file_submission" ngModel>
+                <label for="online_transcripts" class="file_submission_label file_submission">
+                    Upload File
+                </label>
+                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="online_transcripts" id="online_transcripts" (change)="display_online_transcripts(resubmitDocumentsForm.value)" ngModel>
                     <p id="online_transcripts_file_name">transcripts.pdf</p>
             </div>
             <div class="upload_card">
                 <p>Course Structure</p>
-                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="course_structure" id="course_structure" (change)="display_course_structure(resubmitDocumentsForm.value)" class="file_submission" ngModel>
+                <label for="course_structure" class="file_submission_label file_submission">
+                    Upload File
+                </label>
+                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="course_structure" id="course_structure" (change)="display_course_structure(resubmitDocumentsForm.value)" ngModel>
                     <p id="course_structure_file_name">course_structure.pdf</p>
             </div>
             <div class="upload_card">
                 <p>Insurance Payment Document (Original Copy)</p>
-                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="insurance" id="insurance" (change)="display_insurance(resubmitDocumentsForm.value)" class="file_submission" ngModel>
+                <label for="insurance" class="file_submission_label file_submission">
+                    Upload File
+                </label>
+                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="insurance" id="insurance" (change)="display_insurance(resubmitDocumentsForm.value)" ngModel>
                     <p id="insurance_file_name">insurance.pdf</p>
             </div>
             <div class="upload_card">
                 <p>Resume</p>
-                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="resume" id="resume" (change)="display_resume(resubmitDocumentsForm.value)" class="file_submission" ngModel>
+                <label for="resume" class="file_submission_label file_submission">
+                    Upload File
+                </label>
+                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="resume" id="resume" (change)="display_resume(resubmitDocumentsForm.value)" ngModel>
                     <p id="resume_file_name">cv.pdf</p>
             </div>
             <div class="upload_card">
                 <p>Sample Cover Letter</p>
-                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="cover_letter_file" id="cover_letter_file" (change)="display_cover_letter(resubmitDocumentsForm.value)" class="file_submission" ngModel>
+                <label for="cover_letter_file" class="file_submission_label file_submission">
+                    Upload File
+                </label>
+                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="cover_letter_file" id="cover_letter_file" (change)="display_cover_letter(resubmitDocumentsForm.value)" ngModel>
                     <p id="cover_letter_file_name">Cover Letter 1.docx</p>
             </div>
             <div class="upload_card">
                 <p>Letter of Undertaking</p>
-                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" id="undertaking" name="undertaking" class="file_submission" (change)="display_undertaking(resubmitDocumentsForm.value)" ngModel>
+                <label for="undertaking" class="file_submission_label file_submission">
+                    Upload File
+                </label>
+                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" id="undertaking" name="undertaking" (change)="display_undertaking(resubmitDocumentsForm.value)" ngModel>
                     <p id="undertaking_file_name">undertaking_letter.docx</p>
             </div>
             <div class="upload_card">
                 <p>Offer Letter</p>
-                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="offer_letter" id="offer_letter" (change)="display_offer_letter(resubmitDocumentsForm.value)" class="file_submission" ngModel>
+                <label for="offer_letter" class="file_submission_label file_submission">
+                    Upload File
+                </label>
+                <input type="file" accept=".xls,.xlsx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.gif" name="offer_letter" id="offer_letter" (change)="display_offer_letter(resubmitDocumentsForm.value)" ngModel>
                     <p id="offer_letter_file_name">offer_letter.pdf</p>
             </div>
             <div class="card" style="border-bottom: none; margin-top: 50px;">

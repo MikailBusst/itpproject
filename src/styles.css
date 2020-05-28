@@ -943,9 +943,8 @@ h3{
 .file_submission {
     float: right;
     position: relative;
-    bottom: 80px;
-    left: 200px;
-    padding: 20px;
+    bottom: 60px;
+    left: 60px;
 }
 
 
@@ -1352,4 +1351,8 @@ h1.small_header {
 
 .darkBody #card-left a:hover {
     color: #F79F42;
+}
+
+input[type=file] {
+    display: none;
 }

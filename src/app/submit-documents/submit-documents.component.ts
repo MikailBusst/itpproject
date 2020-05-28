@@ -45,8 +45,8 @@ export class SubmitDocumentsComponent implements OnInit {
         }
         
         if(width < 940){
-            $("input[type=file]").removeClass("file_submission")
-            $("input[type=file]").addClass("file_submission_mobile")
+            $(".file_submission_label").removeClass("file_submission")
+            $(".file_submission_label").addClass("file_submission_mobile")
         }
     }
 
@@ -105,12 +105,12 @@ export class SubmitDocumentsComponent implements OnInit {
         }
         
         if(width < 940){
-            $("input[type=file]").removeClass("file_submission")
-            $("input[type=file]").addClass("file_submission_mobile")
+            $(".file_submission_label").removeClass("file_submission")
+            $(".file_submission_label").addClass("file_submission_mobile")
         }
         else{
-            $("input[type=file]").removeClass("file_submission_mobile")
-            $("input[type=file]").addClass("file_submission")
+            $(".file_submission_label").removeClass("file_submission_mobile")
+            $(".file_submission_label").addClass("file_submission")
         }
     }
 
