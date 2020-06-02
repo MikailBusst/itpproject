@@ -1047,8 +1047,8 @@ h3{
     overflow: hidden;
 }
 
-#link-card:hover{
-    text-decoration: underline;
+p.link-card-text:hover{
+    color: #002C4C!important;
 }
 
 #proceed-red:hover{
@@ -1214,33 +1214,54 @@ h1.small_header {
 }
 
 .darkBody input[type=radio]:checked ~ .check, .darkBody input[type=radio]:checked ~ .check::before {
-    background-color: #EF993F!important;
-    color: #EF993F!important;
+    /*background-color: #EF993F!important;
+    color: #EF993F!important;*/
+    background-color: #0078DD!important;
+    color: #0078DD!important;
 }
 
 .darkBody input[type=submit], .darkBody #loginbtn {
-    background-color: #EF993F;
+    /*background-color: #EF993F;*/
+    background-color: #0078DD;
     color: white;
 }
 
-.darkBody .radiocontainer ul li:hover label {
-    color: #EF993F!important;
+.darkBody .radiocontainer ul li:hover label, .darkBody input[type=radio]:checked ~ label {
+    color: #2495F5!important;
 }
 
 .darkBody input[type=radio]:checked ~ .check, .darkBody .radiocontainer ul li:hover .check {
-    border: 5px solid #EF993F!important;
+    border: 5px solid #0078DD!important;
 }
 
 .darkBody input[type=submit]:hover, .darkBody input[type=submit]:focus, .darkBody #loginbtn:hover, .darkBody #loginbtn:focus {
-    background-color: #C48746;
+    background-color: #004B8A;
 }
 
-.darkBody p.subheader, .darkBody #ct p, .darkBody .ct p, .darkBody login-below p a, .darkBody #link-card p, .darkBody .current-page, .navbar-dark .current-page {
-    color: #F79F42!important;
+.darkBody p.subheader, .darkBody #ct p, .darkBody .ct p, .darkBody login-below p a, .darkBody .current-page, .navbar-dark .current-page {
+    color: #2495F5!important;
+}
+
+#link-card p {
+    color: #015897;
+    -o-transition:.25s;
+    -ms-transition:.25s;
+    -moz-transition:.25s;
+    -webkit-transition:.25s;
+    transition:.25s;
+}
+
+.darkBody #link-card p {
+    color: #2495F5;
+    -o-transition:.25s;
+    -ms-transition:.25s;
+    -moz-transition:.25s;
+    -webkit-transition:.25s;
+    transition:.25s;
 }
 
 .darkBody a, .darkBody #login-below a {
-    color: #F79F42;
+    color: #2495F5;
 }
 
 .darkBody p.subheader-bottom, .darkBody .subtitle, .darkBody .radiocontainer ul li label {
@@ -1248,11 +1269,11 @@ h1.small_header {
 }
 
 .darkBody a:hover, .darkBody a:focus, .darkBody button:hover, .darkBody button:focus, .darkBody .download_section a dc ct p:hover, .darkBody #login-below p a:hover {
-    color: #C48746;
+    color: #004B8A;
 }
 
 .darkBody #proceed-red:hover, .darkBody #proceed-red:focus {
-    background-color: #C45A5A;
+    background-color: rgb(153, 67, 67);
 }
 
 .darkBody input[type=text], .darkBody input[type=password] {
@@ -1276,12 +1297,13 @@ h1.small_header {
 }
 
 .darkBody button {
-    color: #F79F42;
+    color: #0078DD;
     background-color: black;
 }
 
 .darkBody .progress-bar {
-    background-color: #F79F42!important;
+    /*background-color: #F79F42!important;*/
+    background-color: #0078DD!important;
 }
 
 .darkBody, .darkBody .paper, .darkBody .card-login, .darkBody .login-area, .darkBody .login-area-mobile, .darkBody .card-login-mobile, .darkBody .upload_card {
@@ -1289,11 +1311,11 @@ h1.small_header {
 }
 
 .darkBody .error p {
-    color: red;
+    color: #F74646;
 }
 
 .darkBody input[type=radio]:checked ~ .check {
-    border: 5px solid #EF993F;
+    border: 5px solid #0078DD;
 }
 
 .darkBody .card-login, .darkBody .login-area {
@@ -1311,12 +1333,12 @@ h1.small_header {
 }
 
 .darkBody .file_submission::before, .darkBody .file_submission_mobile::before{
-    background-color: #EF993F;
+    background-color: #0078DD;
     color: white;
 }
 
 .darkBody .file_submission:hover::before, .darkBody .file_submission_mobile:hover::before{
-    background-color: #C48746;
+    background-color: #004B8A;
 }
 
 .darkBody .filter-size .twenty_button, .darkBody .filter-size .fifty_button, .darkBody .filter-size .hundred_button, .darkBody .filter-size-mobile .twenty_button, .darkBody .filter-size-mobile .fifty_button, .darkBody .filter-size-mobile .hundred_button{
@@ -1325,7 +1347,7 @@ h1.small_header {
 }
 
 .darkBody .filter-size .twenty_button.active, .darkBody .filter-size .fifty_button.active, .darkBody .filter-size .hundred_button.active, .darkBody .filter-size-mobile .twenty_button.active, .darkBody .filter-size-mobile .fifty_button.active, .darkBody .filter-size-mobile .hundred_button.active{
-    background-color: #EF993F;
+    background-color: #0078DD;
     color: white;
 }
 
@@ -1349,10 +1371,14 @@ h1.small_header {
   background-color: #5D5C5C;
 }
 
-.darkBody #card-left a:hover {
-    color: #F79F42;
+#card-left a:hover {
+    color: #D6D6D6;
 }
 
 input[type=file] {
     display: none;
+}
+
+.darkBody p.link-card-text:hover {
+    color: #004B8A!important;
 }
