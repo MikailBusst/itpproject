@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class RetrieveEmailComponent implements OnInit {
   email_status = false
   captcha_status = false
+  dark_status = false
 
   constructor() { }
 
@@ -138,10 +139,12 @@ export class RetrieveEmailComponent implements OnInit {
 
   activateLight(): void {
       $("body").removeClass("darkBody")
+      this.dark_status = false
   }
 
   activateDark(): void {
       $("body").addClass("darkBody")
+      this.dark_status = true
   }
 
 }
