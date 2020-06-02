@@ -30,7 +30,12 @@
                     
                     <div class="card" style="margin-left: 5px; margin-bottom: 0px;">
                         <div class="recaptcha" style="transform:scale(0.9);-webkit-transform:scale(0.9);transform-origin:0 0;-webkit-transform-origin:0 0;">
-                            <re-captcha (resolved)="resolved($event)" siteKey="6LdpGvYUAAAAAMuFz_D-MAFwzChtqeLw3wj9QNpL"></re-captcha>
+                            <div *ngIf="dark_status == false">
+                                <re-captcha (resolved)="resolved($event)" siteKey="6LdpGvYUAAAAAMuFz_D-MAFwzChtqeLw3wj9QNpL"></re-captcha>
+                            </div>
+                            <div *ngIf="dark_status == true">
+                                <re-captcha (resolved)="resolved($event)" theme="dark" siteKey="6LdpGvYUAAAAAMuFz_D-MAFwzChtqeLw3wj9QNpL"></re-captcha>
+                            </div>
                             <div class="error"><p id="captcha_error"></p></div>
                         </div>
                     </div>
