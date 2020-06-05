@@ -16,3 +16,9 @@ html,body {
 .progress-bar {
     width: 78%;
 }
+
+.paper p {
+    font-size: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}

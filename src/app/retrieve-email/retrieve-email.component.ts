@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RetrieveEmailComponent implements OnInit {
   email_status = false
-  captcha_status = false
   dark_status = false
 
   constructor() { }
@@ -16,7 +15,7 @@ export class RetrieveEmailComponent implements OnInit {
     this.check_mode()
     var width = window.innerWidth;
     
-    console.log(width)
+    console.log(this.recaptcha)
     
     if(width < 375){
         $("body").removeClass("body-desktop");
@@ -75,7 +74,7 @@ export class RetrieveEmailComponent implements OnInit {
         this.email_validation(data)
     }
 
-    if(this.captcha_status == false) {
+    if(this.recaptcha == null) {
       document.getElementById("captcha_error").innerHTML = "Please check the CAPTCHA box."
     }
 
@@ -111,7 +110,7 @@ export class RetrieveEmailComponent implements OnInit {
   }
 
   master_verify(): void {
-    if(this.email_status == true && this.captcha_status == true) {
+    if(this.email_status == true && this.recaptcha != null) {
       window.location.href = "/itpproject/retrieve_otp"
     }
     else {
@@ -124,7 +123,6 @@ export class RetrieveEmailComponent implements OnInit {
   resolved(captchaResponse: any[]) {
     this.recaptcha = captchaResponse
     console.log(this.recaptcha)
-    this.captcha_status = true
     document.getElementById("captcha_error").innerHTML = ""
   }
 

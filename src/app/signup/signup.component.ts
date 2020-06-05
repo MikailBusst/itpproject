@@ -18,7 +18,6 @@ export class SignupComponent implements OnInit {
   password_status = false
   confirm_password_status = false
   warn_status = false
-  captcha_status = false
 
   dark_status = false
 
@@ -107,7 +106,7 @@ export class SignupComponent implements OnInit {
         this.verify_confirm_password(data)
     }
 
-    if(this.captcha_status == false) {
+    if(this.recaptcha == null) {
         event.preventDefault()
         document.getElementById("captcha_error").innerHTML = "Please check the CAPTCHA box."
     }
@@ -233,7 +232,7 @@ export class SignupComponent implements OnInit {
   }
 
   master_verify(): void {
-    if(this.first_name_status == true && this.last_name_status == true && this.email_status == true && this.password_status == true && this.confirm_password_status == true && this.captcha_status == true){
+    if(this.first_name_status == true && this.last_name_status == true && this.email_status == true && this.password_status == true && this.confirm_password_status == true && this.recaptcha != null){
         document.getElementById("master_error").innerHTML = ""
         //window.location.href = "/login"
         window.location.href = "/itpproject/login"
@@ -249,7 +248,6 @@ export class SignupComponent implements OnInit {
   resolved(captchaResponse: any[]) {
     this.recaptcha = captchaResponse
     console.log(this.recaptcha)
-    this.captcha_status = true
     document.getElementById("captcha_error").innerHTML = ""
   }
 
