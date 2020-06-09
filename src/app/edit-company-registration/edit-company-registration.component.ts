@@ -457,7 +457,7 @@ validate_company_postcode(event: any): void {
         document.getElementById("company_postcode_error").innerHTML = "Please enter the company's postcode."
     }
     else{
-        if(this.company_postcode.length == 5 && !isNaN(Number(this.company_postcode))){
+        if(this.company_postcode.length > 0 && this.company_postcode.length <= 10){
             this.company_postcode_status = true
             document.getElementById("company_postcode_error").innerHTML = ""
         }
